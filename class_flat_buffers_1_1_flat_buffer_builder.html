@@ -180,6 +180,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b6e42519f278e4a060895633d048070"><td class="memItemLeft" align="right" valign="top">StringOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a3b6e42519f278e4a060895633d048070">CreateString</a> (string s)</td></tr>
 <tr class="memdesc:a3b6e42519f278e4a060895633d048070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode the string <code>s</code> in the buffer using UTF-8.  <a href="#a3b6e42519f278e4a060895633d048070">More...</a><br /></td></tr>
 <tr class="separator:a3b6e42519f278e4a060895633d048070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82219d659221dfc4c271399d9e56c47a"><td class="memItemLeft" align="right" valign="top">VectorOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a82219d659221dfc4c271399d9e56c47a">CreateVectorOfTables&lt; T &gt;</a> (Offset&lt; T &gt;[] offsets)</td></tr>
+<tr class="memdesc:a82219d659221dfc4c271399d9e56c47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vector of tables.  <a href="#a82219d659221dfc4c271399d9e56c47a">More...</a><br /></td></tr>
+<tr class="separator:a82219d659221dfc4c271399d9e56c47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cacff748cbf996b52de2e31e731af41"><td class="memItemLeft" align="right" valign="top">VectorOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a7cacff748cbf996b52de2e31e731af41">EndVector</a> ()</td></tr>
 <tr class="memdesc:a7cacff748cbf996b52de2e31e731af41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data necessary to finish a vector construction.  <a href="#a7cacff748cbf996b52de2e31e731af41">More...</a><br /></td></tr>
 <tr class="separator:a7cacff748cbf996b52de2e31e731af41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -678,6 +681,45 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The offset in the buffer where the encoded string starts. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a82219d659221dfc4c271399d9e56c47a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VectorOffset FlatBuffers.FlatBufferBuilder.CreateVectorOfTables&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Offset&lt; T &gt;[]&#160;</td>
+          <td class="paramname"><em>offsets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a vector of tables. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offsets</td><td>Offsets of the tables.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
+</table>
+</dl>
+</div>
 
 </div>
 </div>

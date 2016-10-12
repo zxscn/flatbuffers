@@ -156,7 +156,12 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <div class="line">monsterobj-&gt;name = <span class="stringliteral">&quot;Bob&quot;</span>;  <span class="comment">// Change the name.</span></div>
 <div class="line">FlatBufferBuilder fbb;</div>
 <div class="line">CreateMonster(fbb, monsterobj.get());     <span class="comment">// Serialize into new buffer.</span></div>
-</div><!-- fragment --><h2>Reflection (&amp; Resizing)</h2>
+</div><!-- fragment --><h1>External references.</h1>
+<p>An additional feature of the object API is the ability to allow you to load multiple independent FlatBuffers, and have them refer to eachothers objects using hashes which are then represented as typed pointers in the object API.</p>
+<p>To make this work have a field in the objects you want to referred to which is using the string hashing feature (see <code>hash</code> attribute in the <a class="el" href="flatbuffers_guide_writing_schema.html">schema</a> documentation). Then you have a similar hash in the field referring to it, along with a <code>cpp_type</code> attribute specifying the C++ type this will refer to (this can be any C++ type, and will get a <code>*</code> added).</p>
+<p>Then, in JSON or however you create these buffers, make sure they use the same string (or hash).</p>
+<p>When you call <code>UnPack</code> (or <code>Create</code>), you'll need a function that maps from hash to the object (see <code>resolver_function_t</code> for details).</p>
+<h2>Reflection (&amp; Resizing)</h2>
 <p>There is experimental support for reflection in FlatBuffers, allowing you to read and write data even if you don't know the exact format of a buffer, and even allows you to change sizes of strings and vectors in-place.</p>
 <p>The way this works is very elegant; there is actually a FlatBuffer schema that describes schemas (!) which you can find in <code>reflection/reflection.fbs</code>. The compiler, <code>flatc</code>, can write out any schemas it has just parsed as a binary FlatBuffer, corresponding to this meta-schema.</p>
 <p>Loading in one of these binary schemas at runtime allows you traverse any FlatBuffer data that corresponds to it without knowing the exact format. You can query what fields are present, and then read/write them after.</p>

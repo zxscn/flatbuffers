@@ -214,12 +214,19 @@ Offset&lt; Vector&lt; uint8_t &gt; &gt;&#160;</td><td class="memItemRight" valig
 <tr class="memitem:a0c9e507b373d598b51052fab4fa34912"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a0c9e507b373d598b51052fab4fa34912">Finish</a> (Offset&lt; T &gt; root, const char *file_identifier=nullptr)</td></tr>
 <tr class="memdesc:a0c9e507b373d598b51052fab4fa34912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish serializing a buffer by writing the root offset.  <a href="#a0c9e507b373d598b51052fab4fa34912">More...</a><br /></td></tr>
 <tr class="separator:a0c9e507b373d598b51052fab4fa34912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba8462e408431054c99d25120326220"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7ba8462e408431054c99d25120326220"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a7ba8462e408431054c99d25120326220">FinishSizePrefixed</a> (Offset&lt; T &gt; root, const char *file_identifier=nullptr)</td></tr>
+<tr class="memdesc:a7ba8462e408431054c99d25120326220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish a buffer with a 32 bit size field pre-fixed (size of the buffer following the size field).  <a href="#a7ba8462e408431054c99d25120326220">More...</a><br /></td></tr>
+<tr class="separator:a7ba8462e408431054c99d25120326220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72b54a75e0c329e0ce0b8fab758e256"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#ac72b54a75e0c329e0ce0b8fab758e256">FlatBufferBuilder</a> (uoffset_t initial_size=1024, const simple_allocator *allocator=nullptr)</td></tr>
 <tr class="memdesc:ac72b54a75e0c329e0ce0b8fab758e256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for FlatBufferBuilder.  <a href="#ac72b54a75e0c329e0ce0b8fab758e256">More...</a><br /></td></tr>
 <tr class="separator:ac72b54a75e0c329e0ce0b8fab758e256"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16a8fd46b34ad7727406c37b65b6b27a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a16a8fd46b34ad7727406c37b65b6b27a">ForceDefaults</a> (bool fd)</td></tr>
 <tr class="memdesc:a16a8fd46b34ad7727406c37b65b6b27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">In order to save space, fields that are set to their default value don't get serialized into the buffer.  <a href="#a16a8fd46b34ad7727406c37b65b6b27a">More...</a><br /></td></tr>
 <tr class="separator:a16a8fd46b34ad7727406c37b65b6b27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ebce1f3f46832946a95952af1e9c2b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#aa1ebce1f3f46832946a95952af1e9c2b">GetBufferMinAlignment</a> ()</td></tr>
+<tr class="memdesc:aa1ebce1f3f46832946a95952af1e9c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the minimum alignment this buffer needs to be accessed properly.  <a href="#aa1ebce1f3f46832946a95952af1e9c2b">More...</a><br /></td></tr>
+<tr class="separator:aa1ebce1f3f46832946a95952af1e9c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc35f792179df4ca850492c1796d8b8"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a8dc35f792179df4ca850492c1796d8b8">GetBufferPointer</a> () const </td></tr>
 <tr class="memdesc:a8dc35f792179df4ca850492c1796d8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the serialized buffer (after you call <code>Finish()</code>).  <a href="#a8dc35f792179df4ca850492c1796d8b8">More...</a><br /></td></tr>
 <tr class="separator:a8dc35f792179df4ca850492c1796d8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1104,6 +1111,45 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a7ba8462e408431054c99d25120326220"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void flatbuffers::FlatBufferBuilder::FinishSizePrefixed </td>
+          <td>(</td>
+          <td class="paramtype">Offset&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_identifier</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finish a buffer with a 32 bit size field pre-fixed (size of the buffer following the size field). </p>
+<p>These buffers are NOT compatible with standard buffers created by Finish, i.e. you can't call GetRoot on them, you have to use GetSizePrefixedRoot instead. All &gt;32 bit quantities in this buffer will be aligned when the whole size pre-fixed buffer is aligned. These kinds of buffers are useful for creating a stream of FlatBuffers. </p>
+
+</div>
+</div>
 <a class="anchor" id="a16a8fd46b34ad7727406c37b65b6b27a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1133,6 +1179,32 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aa1ebce1f3f46832946a95952af1e9c2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t flatbuffers::FlatBufferBuilder::GetBufferMinAlignment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the minimum alignment this buffer needs to be accessed properly. </p>
+<p>This is only known once all elements have been written (after you call Finish()). You can use this information if you need to embed a FlatBuffer in some other buffer, such that you can later read it without first having to copy it into its own buffer. </p>
 
 </div>
 </div>
