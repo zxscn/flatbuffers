@@ -328,28 +328,28 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line"></div>
 <div class="line"><span class="comment">// A helper to simplify creating vectors from C-arrays.</span></div>
 <div class="line"><span class="preprocessor">#define c_vec_len(V) (sizeof(V)/sizeof((V)[0]))</span></div>
-</div><!-- fragment --> </div><p>Now we are ready to start building some buffers. In order to start, we need to create an instance of the <code>FlatBufferBuilder</code>, which will contain the buffer as it grows:</p>
+</div><!-- fragment --> </div><p>Now we are ready to start building some buffers. In order to start, we need to create an instance of the <code>FlatBufferBuilder</code>, which will contain the buffer as it grows. You can pass an initial size of the buffer (here 1024 bytes), which will grow automatically if needed:</p>
 <div class="language-cpp"> <div class="fragment"><div class="line"><span class="comment">// Create a `FlatBufferBuilder`, which will be used to create our</span></div>
 <div class="line"><span class="comment">// monsters&#39; FlatBuffers.</span></div>
-<div class="line"><a class="code" href="classflatbuffers_1_1_flat_buffer_builder.html">flatbuffers::FlatBufferBuilder</a> builder;</div>
+<div class="line"><a class="code" href="classflatbuffers_1_1_flat_buffer_builder.html">flatbuffers::FlatBufferBuilder</a> builder(1024);</div>
 </div><!-- fragment --> </div> <div class="language-java"> <div class="fragment"><div class="line"><span class="comment">// Create a `FlatBufferBuilder`, which will be used to create our</span></div>
 <div class="line"><span class="comment">// monsters&#39; FlatBuffers.</span></div>
-<div class="line">FlatBufferBuilder builder = <span class="keyword">new</span> FlatBufferBuilder(0);</div>
+<div class="line">FlatBufferBuilder builder = <span class="keyword">new</span> FlatBufferBuilder(1024);</div>
 </div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line"><span class="comment">// Create a `FlatBufferBuilder`, which will be used to create our</span></div>
 <div class="line"><span class="comment">// monsters&#39; FlatBuffers.</span></div>
-<div class="line">var builder = <span class="keyword">new</span> FlatBufferBuilder(1);</div>
+<div class="line">var builder = <span class="keyword">new</span> FlatBufferBuilder(1024);</div>
 </div><!-- fragment --> </div> <div class="language-go"> <div class="fragment"><div class="line"><span class="comment">// Create a `FlatBufferBuilder`, which will be used to create our</span></div>
 <div class="line"><span class="comment">// monsters&#39; FlatBuffers.</span></div>
-<div class="line">builder := flatbuffers.NewBuilder(0)</div>
+<div class="line">builder := flatbuffers.NewBuilder(1024)</div>
 </div><!-- fragment --> </div> <div class="language-python"> <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># Create a `FlatBufferBuilder`, which will be used to create our</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># monsters&#39; FlatBuffers.</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;builder = flatbuffers.Builder(0)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;builder = flatbuffers.Builder(1024)</div>
 </div><!-- fragment --> </div> <div class="language-javascript"> <div class="fragment"><div class="line"><span class="comment">// Create a `flatbuffer.Builder`, which will be used to create our</span></div>
 <div class="line"><span class="comment">// monsters&#39; FlatBuffers.</span></div>
-<div class="line">var builder = <span class="keyword">new</span> flatbuffers.Builder(1);</div>
+<div class="line">var builder = <span class="keyword">new</span> flatbuffers.Builder(1024);</div>
 </div><!-- fragment --> </div> <div class="language-php"> <div class="fragment"><div class="line"><span class="comment">// Create a `FlatBufferBuilder`, which will be used to create our</span></div>
 <div class="line"><span class="comment">// monsters&#39; FlatBuffers.</span></div>
-<div class="line">$builder = <span class="keyword">new</span> <a class="code" href="class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html">Google\FlatBuffers\FlatbufferBuilder</a>(0);</div>
+<div class="line">$builder = <span class="keyword">new</span> <a class="code" href="class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html">Google\FlatBuffers\FlatbufferBuilder</a>(1024);</div>
 </div><!-- fragment --> </div> <div class="language-c"> <div class="fragment"><div class="line">flatcc_builder_t builder, *B;</div>
 <div class="line">B = &amp;builder;</div>
 <div class="line"><span class="comment">// Initialize the builder object.</span></div>
@@ -564,35 +564,19 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line">ns(Weapon_vec_push(B, axe));</div>
 <div class="line">ns(Weapon_vec_ref_t) weapons = ns(Weapon_vec_end(B));</div>
 </div><!-- fragment --> </div><div class="language-cpp"> <br />
- Note there's additional convenience overloads of <code>CreateVector</code>, allowing you to work with data that's not in a <code>std::vector</code>, or allowing you to generate elements by calling a lambda. For the common case of <code>std::vector&lt;std::string&gt;</code> there's also <code>CreateVectorOfStrings</code>. </div><p>To create a <code>struct</code>, use the <code>Vec3</code> class/struct that was generated by the schema compiler:</p>
-<div class="language-cpp"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line"><span class="keyword">auto</span> pos = Vec3(1.0f, 2.0f, 3.0f);</div>
-</div><!-- fragment --> </div> <div class="language-java"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line"><span class="keywordtype">int</span> pos = Vec3.createVec3(builder, 1.0f, 2.0f, 3.0f);</div>
-</div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line">var pos = Vec3.CreateVec3(builder, 1.0f, 2.0f, 3.0f);</div>
-</div><!-- fragment --> </div> <div class="language-go"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line">pos := sample.CreateVec3(builder, 1.0, 2.0, 3.0)</div>
-</div><!-- fragment --> </div> <div class="language-python"> <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pos = MyGame.Sample.Vec3.CreateVec3(builder, 1.0, 2.0, 3.0)</div>
-</div><!-- fragment --> </div> <div class="language-javascript"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line">var pos = MyGame.Sample.Vec3.createVec3(builder, 1.0, 2.0, 3.0);</div>
-</div><!-- fragment --> </div> <div class="language-php"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line">$pos = \MyGame\Sample\Vec3::CreateVec3($builder, 1.0, 2.0, 3.0);</div>
-</div><!-- fragment --> </div> <div class="language-c"> <div class="fragment"><div class="line"><span class="comment">// Create a `Vec3`, representing the Orc&#39;s position in 3-D space.</span></div>
-<div class="line">ns(Vec3_t) pos = { 1.0f, 2.0f, 3.0f };</div>
-</div><!-- fragment --> </div><p>We have now serialized the non-scalar components of the orc, so we can serialize the monster itself:</p>
+ Note there's additional convenience overloads of <code>CreateVector</code>, allowing you to work with data that's not in a <code>std::vector</code>, or allowing you to generate elements by calling a lambda. For the common case of <code>std::vector&lt;std::string&gt;</code> there's also <code>CreateVectorOfStrings</code>. </div><p>We have now serialized the non-scalar components of the orc, so we can serialize the monster itself:</p>
 <div class="language-cpp"> <div class="fragment"><div class="line"><span class="comment">// Set his hit points to 300 and his mana to 150.</span></div>
 <div class="line"><span class="keywordtype">int</span> hp = 300;</div>
 <div class="line"><span class="keywordtype">int</span> mana = 150;</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Finally, create the monster using the `CreateMonster` helper function</span></div>
 <div class="line"><span class="comment">// to set all fields.</span></div>
-<div class="line"><span class="keyword">auto</span> orc = CreateMonster(builder, &amp;pos, mana, hp, name, inventory, Color_Red,</div>
-<div class="line">                         weapons, Equipment_Weapon, axe.Union());</div>
+<div class="line"><span class="keyword">auto</span> orc = CreateMonster(builder, Vec3(1.0f, 2.0f, 3.0f), mana, hp, name,</div>
+<div class="line">                         inventory, Color_Red, weapons, Equipment_Weapon,</div>
+<div class="line">                         axe.Union());</div>
 </div><!-- fragment --> </div> <div class="language-java"> <div class="fragment"><div class="line"><span class="comment">// Create our monster using `startMonster()` and `endMonster()`.</span></div>
 <div class="line">Monster.startMonster(builder);</div>
-<div class="line">Monster.addPos(builder, pos);</div>
+<div class="line">Monster.addPos(builder, Vec3.createVec3(builder, 1.0f, 2.0f, 3.0f));</div>
 <div class="line">Monster.addName(builder, name);</div>
 <div class="line">Monster.addColor(builder, Color.Red);</div>
 <div class="line">Monster.addHp(builder, (short)300);</div>
@@ -603,7 +587,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line"><span class="keywordtype">int</span> orc = Monster.endMonster(builder);</div>
 </div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line"><span class="comment">// Create our monster using `StartMonster()` and `EndMonster()`.</span></div>
 <div class="line">Monster.StartMonster(builder);</div>
-<div class="line">Monster.AddPos(builder, pos);</div>
+<div class="line">Monster.AddPos(builder, Vec3.CreateVec3(builder, 1.0f, 2.0f, 3.0f));</div>
 <div class="line">Monster.AddHp(builder, (short)300);</div>
 <div class="line">Monster.AddName(builder, name);</div>
 <div class="line">Monster.AddInventory(builder, inv);</div>
@@ -614,7 +598,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line">var orc = Monster.EndMonster(builder);</div>
 </div><!-- fragment --> </div> <div class="language-go"> <div class="fragment"><div class="line"><span class="comment">// Create our monster using `MonsterStart()` and `MonsterEnd()`.</span></div>
 <div class="line">sample.MonsterStart(builder)</div>
-<div class="line">sample.MonsterAddPos(builder, pos)</div>
+<div class="line">sample.MonsterAddPos(builder, sample.CreateVec3(builder, 1.0, 2.0, 3.0))</div>
 <div class="line">sample.MonsterAddHp(builder, 300)</div>
 <div class="line">sample.MonsterAddName(builder, name)</div>
 <div class="line">sample.MonsterAddInventory(builder, inv)</div>
@@ -625,20 +609,22 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line">orc := sample.MonsterEnd(builder)</div>
 </div><!-- fragment --> </div> <div class="language-python"> <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># Create our monster by using `MonsterStart()` and `MonsterEnd()`.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;MyGame.Sample.Monster.MonsterStart(builder)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;MyGame.Sample.Monster.MonsterAddPos(builder, pos)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;MyGame.Sample.Monster.MonsterAddHp(builder, 300)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;MyGame.Sample.Monster.MonsterAddName(builder, name)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;MyGame.Sample.Monster.MonsterAddInventory(builder, inv)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;MyGame.Sample.Monster.MonsterAddColor(builder,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                      MyGame.Sample.Color.Color().Red)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;MyGame.Sample.Monster.MonsterAddWeapons(builder, weapons)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;MyGame.Sample.Monster.MonsterAddEquippedType(</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    builder, MyGame.Sample.Equipment.Equipment().Weapon)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;MyGame.Sample.Monster.MonsterAddEquipped(builder, axe)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;orc = MyGame.Sample.Monster.MonsterEnd(builder)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;MyGame.Sample.Monster.MonsterAddPos(builder,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                        MyGame.Sample.Vec3.CreateVec3(builder, 1.0, 2.0, 3.0))</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;MyGame.Sample.Monster.MonsterAddHp(builder, 300)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;MyGame.Sample.Monster.MonsterAddName(builder, name)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;MyGame.Sample.Monster.MonsterAddInventory(builder, inv)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;MyGame.Sample.Monster.MonsterAddColor(builder,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                      MyGame.Sample.Color.Color().Red)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;MyGame.Sample.Monster.MonsterAddWeapons(builder, weapons)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;MyGame.Sample.Monster.MonsterAddEquippedType(</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    builder, MyGame.Sample.Equipment.Equipment().Weapon)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;MyGame.Sample.Monster.MonsterAddEquipped(builder, axe)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;orc = MyGame.Sample.Monster.MonsterEnd(builder)</div>
 </div><!-- fragment --> </div> <div class="language-javascript"> <div class="fragment"><div class="line"><span class="comment">// Create our monster by using `startMonster()` and `endMonster()`.</span></div>
 <div class="line">MyGame.Sample.Monster.startMonster(builder);</div>
-<div class="line">MyGame.Sample.Monster.addPos(builder, pos);</div>
+<div class="line">MyGame.Sample.Monster.addPos(builder,</div>
+<div class="line">                       MyGame.Sample.Vec3.createVec3(builder, 1.0, 2.0, 3.0));</div>
 <div class="line">MyGame.Sample.Monster.addHp(builder, 300);</div>
 <div class="line">MyGame.Sample.Monster.addColor(builder, MyGame.Sample.Color.Red)</div>
 <div class="line">MyGame.Sample.Monster.addName(builder, name);</div>
@@ -649,7 +635,8 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line">var orc = MyGame.Sample.Monster.endMonster(builder);</div>
 </div><!-- fragment --> </div> <div class="language-php"> <div class="fragment"><div class="line"><span class="comment">// Create our monster by using `StartMonster()` and `EndMonster()`.</span></div>
 <div class="line">\MyGame\Sample\Monster::StartMonster($builder);</div>
-<div class="line">\MyGame\Sample\Monster::AddPos($builder, $pos);</div>
+<div class="line">\MyGame\Sample\Monster::AddPos($builder,</div>
+<div class="line">                    \MyGame\Sample\Vec3::CreateVec3($builder, 1.0, 2.0, 3.0));</div>
 <div class="line">\MyGame\Sample\Monster::AddHp($builder, 300);</div>
 <div class="line">\MyGame\Sample\Monster::AddName($builder, $name);</div>
 <div class="line">\MyGame\Sample\Monster::AddInventory($builder, $inv);</div>
@@ -665,9 +652,12 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line"><span class="comment">// Define an equipment union. `create` calls in C has a single</span></div>
 <div class="line"><span class="comment">// argument for unions where C++ has both a type and a data argument.</span></div>
 <div class="line">ns(Equipment_union_ref_t) equipped = ns(Equipment_as_Weapon(axe));</div>
+<div class="line">ns(Vec3_t) pos = { 1.0f, 2.0f, 3.0f };</div>
 <div class="line">ns(Monster_create_as_root(B, &amp;pos, mana, hp, name, inventory, ns(Color_Red),</div>
 <div class="line">        weapons, equipped));</div>
-</div><!-- fragment --> </div><p><em>Note: Since we are passing <code>150</code> as the <code>mana</code> field, which happens to be the default value, the field will not actually be written to the buffer, since the default value will be returned on query anyway. This is a nice space savings, especially if default values are common in your data. It also means that you do not need to be worried of adding a lot of fields that are only used in a small number of instances, as it will not bloat the buffer if unused.</em></p>
+</div><!-- fragment --> </div><p>Note how we create <code>Vec3</code> struct in-line in the table. Unlike tables, structs are simple combinations of scalars that are always stored inline, just like scalars themselves.</p>
+<p><b>Important</b>: you should not nest tables or any other objects, which is why we created all the strings/vectors/tables that this monster refers to before <code>start</code>. If you try to create any of them between <code>start</code> and <code>end</code>, you will get an assert/exception/panic depending on your language.</p>
+<p><em>Note: Since we are passing <code>150</code> as the <code>mana</code> field, which happens to be the default value, the field will not actually be written to the buffer, since the default value will be returned on query anyway. This is a nice space savings, especially if default values are common in your data. It also means that you do not need to be worried of adding a lot of fields that are only used in a small number of instances, as it will not bloat the buffer if unused.</em></p>
 <div class="language-cpp"> <br />
  If you do not wish to set every field in a <code>table</code>, it may be more convenient to manually set each field of your monster, instead of calling <code>CreateMonster()</code>. The following snippet is functionally equivalent to the above code, but provides a bit more flexibility. <br />
  </p><div class="fragment"><div class="line"><span class="comment">// You can use this code instead of `CreateMonster()`, to create our orc</span></div>

@@ -367,7 +367,7 @@ Variables</h2></td></tr>
 <p>Create a FlatBufferBuilder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">{number=}</td><td>initial_size </td></tr>
+    <tr><td class="paramname">{number=}</td><td>opt_initial_size </td></tr>
   </table>
   </dd>
 </dl>
@@ -449,8 +449,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">function</span>(root_table, file_identifier) {</div>
-<div class="line">  <span class="keywordflow">if</span> (file_identifier) {</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">function</span>(root_table, opt_file_identifier) {</div>
+<div class="line">  <span class="keywordflow">if</span> (opt_file_identifier) {</div>
+<div class="line">    var file_identifier = opt_file_identifier;</div>
 <div class="line">    this.prep(this.minalign, flatbuffers.SIZEOF_INT +</div>
 <div class="line">      flatbuffers.FILE_IDENTIFIER_LENGTH);</div>
 <div class="line">    <span class="keywordflow">if</span> (file_identifier.length != flatbuffers.FILE_IDENTIFIER_LENGTH) {</div>
@@ -465,13 +466,13 @@ Variables</h2></td></tr>
 <div class="line">  this.<a class="code" href="group__flatbuffers__javascript__api.html#ga21ba7dd4c33dafd6abb89568e4d9c8b8">addOffset</a>(root_table);</div>
 <div class="line">  this.bb.setPosition(this.space);</div>
 <div class="line">}</div>
-<div class="ttc" id="group__flatbuffers__javascript__api_html_ga21ba7dd4c33dafd6abb89568e4d9c8b8"><div class="ttname"><a href="group__flatbuffers__javascript__api.html#ga21ba7dd4c33dafd6abb89568e4d9c8b8">addOffset</a></div><div class="ttdeci">flatbuffers Builder prototype addOffset</div><div class="ttdoc">Adds on offset, relative to where it will be written. </div><div class="ttdef"><b>Definition:</b> flatbuffers.js:553</div></div>
+<div class="ttc" id="group__flatbuffers__javascript__api_html_ga21ba7dd4c33dafd6abb89568e4d9c8b8"><div class="ttname"><a href="group__flatbuffers__javascript__api.html#ga21ba7dd4c33dafd6abb89568e4d9c8b8">addOffset</a></div><div class="ttdeci">flatbuffers Builder prototype addOffset</div><div class="ttdoc">Adds on offset, relative to where it will be written. </div><div class="ttdef"><b>Definition:</b> flatbuffers.js:555</div></div>
 </div><!-- fragment -->
 <p>Finalize a buffer, poiting to the given <code>root_table</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">{flatbuffers.Offset}</td><td>root_table </td></tr>
-    <tr><td class="paramname">{string=}</td><td>file_identifier </td></tr>
+    <tr><td class="paramname">{string=}</td><td>opt_file_identifier </td></tr>
   </table>
   </dd>
 </dl>
@@ -490,7 +491,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">function</span>(<a class="code" href="group__flatbuffers__javascript__api.html#ga0d1738111b83dffb2c2a7fc8bca19b33">forceDefaults</a>) {</div>
 <div class="line">  this.force_defaults = <a class="code" href="group__flatbuffers__javascript__api.html#ga0d1738111b83dffb2c2a7fc8bca19b33">forceDefaults</a>;</div>
 <div class="line">}</div>
-<div class="ttc" id="group__flatbuffers__javascript__api_html_ga0d1738111b83dffb2c2a7fc8bca19b33"><div class="ttname"><a href="group__flatbuffers__javascript__api.html#ga0d1738111b83dffb2c2a7fc8bca19b33">forceDefaults</a></div><div class="ttdeci">flatbuffers Builder prototype forceDefaults</div><div class="ttdoc">In order to save space, fields that are set to their default value don&#39;t get serialized into the buff...</div><div class="ttdef"><b>Definition:</b> flatbuffers.js:225</div></div>
+<div class="ttc" id="group__flatbuffers__javascript__api_html_ga0d1738111b83dffb2c2a7fc8bca19b33"><div class="ttname"><a href="group__flatbuffers__javascript__api.html#ga0d1738111b83dffb2c2a7fc8bca19b33">forceDefaults</a></div><div class="ttdeci">flatbuffers Builder prototype forceDefaults</div><div class="ttdoc">In order to save space, fields that are set to their default value don&#39;t get serialized into the buff...</div><div class="ttdef"><b>Definition:</b> flatbuffers.js:227</div></div>
 </div><!-- fragment -->
 <p>In order to save space, fields that are set to their default value don't get serialized into the buffer. </p>
 <p>Forcing defaults provides a way to manually disable this optimization.</p>

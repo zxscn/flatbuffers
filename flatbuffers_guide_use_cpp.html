@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <p>FlatBuffers is all about memory efficiency, which is why its base API is written around using as little as possible of it. This does make the API clumsier (requiring pre-order construction of all data, and making mutation harder).</p>
 <p>For times when efficiency is less important a more convenient object based API can be used (through <code>--gen-object-api</code>) that is able to unpack &amp; pack a FlatBuffer into objects and standard STL containers, allowing for convenient construction, access and mutation.</p>
 <p>To use:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> monsterobj = GetMonster(buffer)-&gt;UnPack();</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> monsterobj = UnpackMonster(buffer);</div>
 <div class="line">cout &lt;&lt; monsterobj-&gt;name;  <span class="comment">// This is now a std::string!</span></div>
 <div class="line">monsterobj-&gt;name = <span class="stringliteral">&quot;Bob&quot;</span>;  <span class="comment">// Change the name.</span></div>
 <div class="line">FlatBufferBuilder fbb;</div>
@@ -161,6 +161,8 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <p>To make this work have a field in the objects you want to referred to which is using the string hashing feature (see <code>hash</code> attribute in the <a class="el" href="flatbuffers_guide_writing_schema.html">schema</a> documentation). Then you have a similar hash in the field referring to it, along with a <code>cpp_type</code> attribute specifying the C++ type this will refer to (this can be any C++ type, and will get a <code>*</code> added).</p>
 <p>Then, in JSON or however you create these buffers, make sure they use the same string (or hash).</p>
 <p>When you call <code>UnPack</code> (or <code>Create</code>), you'll need a function that maps from hash to the object (see <code>resolver_function_t</code> for details).</p>
+<h1>Using different pointer types.</h1>
+<p>By default the object tree is built out of <code>std::unique_ptr</code>, but you can influence this either globally (using the <code>--cpp-ptr-type</code> argument to <code>flatc</code>) or per field (using the <code>cpp_ptr_type</code> attribute) to by any smart pointer type (<code>my_ptr&lt;T&gt;</code>), or by specifying <code>naked</code> as the type to get <code>T *</code> pointers. Unlike the smart pointers, naked pointers do not manage memory for you, so you'll have to manage their lifecycles manually.</p>
 <h2>Reflection (&amp; Resizing)</h2>
 <p>There is experimental support for reflection in FlatBuffers, allowing you to read and write data even if you don't know the exact format of a buffer, and even allows you to change sizes of strings and vectors in-place.</p>
 <p>The way this works is very elegant; there is actually a FlatBuffer schema that describes schemas (!) which you can find in <code>reflection/reflection.fbs</code>. The compiler, <code>flatc</code>, can write out any schemas it has just parsed as a binary FlatBuffer, corresponding to this meta-schema.</p>
