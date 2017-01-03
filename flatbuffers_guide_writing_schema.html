@@ -211,12 +211,12 @@ root_type Monster;
 <li><code>id: n</code> (on a table field): manually set the field identifier to <code>n</code>. If you use this attribute, you must use it on ALL fields of this table, and the numbers must be a contiguous range from 0 onwards. Additionally, since a union type effectively adds two fields, its id must be that of the second field (the first field is the type field and not explicitly declared in the schema). For example, if the last field before the union field had id 6, the union field should have id 8, and the unions type field will implicitly be 7. IDs allow the fields to be placed in any order in the schema. When a new field is added to the schema it must use the next available ID.</li>
 <li><code>deprecated</code> (on a field): do not generate accessors for this field anymore, code should stop using this data.</li>
 <li><code>required</code> (on a non-scalar table field): this field must always be set. By default, all fields are optional, i.e. may be left out. This is desirable, as it helps with forwards/backwards compatibility, and flexibility of data structures. It is also a burden on the reading code, since for non-scalar fields it requires you to check against NULL and take appropriate action. By specifying this field, you force code that constructs FlatBuffers to ensure this field is initialized, so the reading code may access it directly, without checking for NULL. If the constructing code does not initialize this field, they will get an assert, and also the verifier will fail on buffers that have missing required fields.</li>
-<li><code>original_order</code> (on a table): since elements in a table do not need to be stored in any particular order, they are often optimized for space by sorting them to size. This attribute stops that from happening.</li>
 <li><code>force_align: size</code> (on a struct): force the alignment of this struct to be something higher than what it is naturally aligned to. Causes these structs to be aligned to that amount inside a buffer, IF that buffer is allocated with that alignment (which is not necessarily the case for buffers accessed directly inside a <code>FlatBufferBuilder</code>).</li>
 <li><code>bit_flags</code> (on an enum): the values of this field indicate bits, meaning that any value N specified in the schema will end up representing 1&lt;&lt;N, or if you don't specify values at all, you'll get the sequence 1, 2, 4, 8, ...</li>
 <li><code>nested_flatbuffer: "table_name"</code> (on a field): this indicates that the field (which must be a vector of ubyte) contains flatbuffer data, for which the root type is given by <code>table_name</code>. The generated code will then produce a convenient accessor for the nested FlatBuffer.</li>
 <li><code>key</code> (on a field): this field is meant to be used as a key when sorting a vector of the type of table it sits in. Can be used for in-place binary search.</li>
 <li><code>hash</code> (on a field). This is an (un)signed 32/64 bit integer field, whose value during JSON parsing is allowed to be a string, which will then be stored as its hash. The value of attribute is the hashing algorithm to use, one of <code>fnv1_32</code> <code>fnv1_64</code> <code>fnv1a_32</code> <code>fnv1a_64</code>.</li>
+<li><code>original_order</code> (on a table): since elements in a table do not need to be stored in any particular order, they are often optimized for space by sorting them to size. This attribute stops that from happening. There should generally not be any reason to use this flag.</li>
 </ul>
 <h2>JSON Parsing</h2>
 <p>The same parser that parses the schema declarations above is also able to parse JSON objects that conform to this schema. So, unlike other JSON parsers, this parser is strongly typed, and parses directly into a FlatBuffer (see the compiler documentation on how to do this from the command line, or the C++ documentation on how to do this at runtime).</p>
@@ -242,6 +242,30 @@ root_type Monster;
 <li><code>\xXX</code> - 8-bit binary hexadecimal number XX. This is the only one that is not in the JSON spec (see <a href="http://json.org/">http://json.org/</a>), but is needed to be able to encode arbitrary binary in strings to text and back without losing information (e.g. the byte 0xFF can't be represented in standard JSON).</li>
 </ul>
 <p>It also generates these escape codes back again when generating JSON from a binary representation.</p>
+<h2>Guidelines</h2>
+<h3>Efficiency</h3>
+<p>FlatBuffers is all about efficiency, but to realize that efficiency you require an efficient schema. There are usually multiple choices on how to represent data that have vastly different size characteristics.</p>
+<p>It is very common nowadays to represent any kind of data as dictionaries (as in e.g. JSON), because of its flexibility and extensibility. While it is possible to emulate this in FlatBuffers (as a vector of tables with key and value(s)), this is a bad match for a strongly typed system like FlatBuffers, leading to relatively large binaries. FlatBuffer tables are more flexible than classes/structs in most systems, since having a large number of fields only few of which are actually used is still efficient. You should thus try to organize your data as much as possible such that you can use tables where you might be tempted to use a dictionary.</p>
+<p>Similarly, strings as values should only be used when they are truely open-ended. If you can, always use an enum instead.</p>
+<p>FlatBuffers doesn't have inheritance, so the way to represent a set of related data structures is a union. Unions do have a cost however, so an alternative to a union is to have a single table that has all the fields of all the data structures you are trying to represent, if they are relatively similar / share many fields. Again, this is efficient because optional fields are cheap.</p>
+<p>FlatBuffers supports the full range of integer sizes, so try to pick the smallest size needed, rather than defaulting to int/long.</p>
+<p>Remember that you can share data (refer to the same string/table within a buffer), so factoring out repeating data into its own data structure may be worth it.</p>
+<h3>Style guide</h3>
+<p>Identifiers in a schema are meant to translate to many different programming languages, so using the style of your "main" language is generally a bad idea.</p>
+<p>For this reason, below is a suggested style guide to adhere to, to keep schemas consistent for interoperation regardless of the target language.</p>
+<p>Where possible, the code generators for specific languages will generate identifiers that adhere to the language style, based on the schema identifiers.</p>
+<ul>
+<li>Table, struct, enum and rpc names (types): UpperCamelCase.</li>
+<li>Table and struct field names: snake_case. This is translated to lowerCamelCase automatically for some languages, e.g. Java.</li>
+<li>Enum values: UpperCamelCase.</li>
+<li>namespaces: UpperCamelCase.</li>
+</ul>
+<p>Formatting (this is less important, but still worth adhering to):</p>
+<ul>
+<li>Opening brace: on the same line as the start of the declaration.</li>
+<li>Spacing: Indent by 2 spaces. None around <code>:</code> for types, on both sides for <code>=</code>.</li>
+</ul>
+<p>For an example, see the schema at the top of this file.</p>
 <h2>Gotchas</h2>
 <h3>Schemas and version control</h3>
 <p>FlatBuffers relies on new field declarations being added at the end, and earlier declarations to not be removed, but be marked deprecated when needed. We think this is an improvement over the manual number assignment that happens in Protocol Buffers (and which is still an option using the <code>id</code> attribute mentioned above).</p>
