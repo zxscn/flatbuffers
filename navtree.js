@@ -13,7 +13,8 @@ var NAVTREE =
       [ "Use in Java/C#", "flatbuffers_guide_use_java_c-sharp.html", null ],
       [ "Use in JavaScript", "flatbuffers_guide_use_javascript.html", null ],
       [ "Use in PHP", "flatbuffers_guide_use_php.html", null ],
-      [ "Use in Python", "flatbuffers_guide_use_python.html", null ]
+      [ "Use in Python", "flatbuffers_guide_use_python.html", null ],
+      [ "Schema-less version", "flexbuffers.html", null ]
     ] ],
     [ "Platform / Language / Feature support", "flatbuffers_support.html", null ],
     [ "Benchmarks", "flatbuffers_benchmarks.html", null ],

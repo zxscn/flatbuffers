@@ -179,6 +179,7 @@ root_type Monster;
 <p>Unions share a lot of properties with enums, but instead of new names for constants, you use names of tables. You can then declare a union field, which can hold a reference to any of those types, and additionally a hidden field with the suffix <code>_type</code> is generated that holds the corresponding enum value, allowing you to know which type to cast to at runtime.</p>
 <p>Unions are a good way to be able to send multiple message types as a FlatBuffer. Note that because a union field is really two fields, it must always be part of a table, it cannot be the root of a FlatBuffer by itself.</p>
 <p>If you have a need to distinguish between different FlatBuffers in a more open-ended way, for example for use as files, see the file identification feature below.</p>
+<p>There is an experimental support only in C++ for a vector of unions (and types). In the example IDL file above, use [Any] to add a vector of Any to Monster table.</p>
 <h3>Namespaces</h3>
 <p>These will generate the corresponding namespace in C++ for all helper code, and packages in Java. You can use <code>.</code> to specify nested namespaces / packages.</p>
 <h3>Includes</h3>
@@ -217,6 +218,8 @@ root_type Monster;
 <li><code>key</code> (on a field): this field is meant to be used as a key when sorting a vector of the type of table it sits in. Can be used for in-place binary search.</li>
 <li><code>hash</code> (on a field). This is an (un)signed 32/64 bit integer field, whose value during JSON parsing is allowed to be a string, which will then be stored as its hash. The value of attribute is the hashing algorithm to use, one of <code>fnv1_32</code> <code>fnv1_64</code> <code>fnv1a_32</code> <code>fnv1a_64</code>.</li>
 <li><code>original_order</code> (on a table): since elements in a table do not need to be stored in any particular order, they are often optimized for space by sorting them to size. This attribute stops that from happening. There should generally not be any reason to use this flag.</li>
+<li>'native_*'. Several attributes have been added to support the <a class="el" href="flatbuffers_guide_use_cpp.html#flatbuffers_cpp_object_based_api">C++ object</a> Based API".  All such attributes
+    are prefixed with the term "native_".</li>
 </ul>
 <h2>JSON Parsing</h2>
 <p>The same parser that parses the schema declarations above is also able to parse JSON objects that conform to this schema. So, unlike other JSON parsers, this parser is strongly typed, and parses directly into a FlatBuffer (see the compiler documentation on how to do this from the command line, or the C++ documentation on how to do this at runtime).</p>
