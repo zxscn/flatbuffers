@@ -189,6 +189,9 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <p>When you call <code>UnPack</code> (or <code>Create</code>), you'll need a function that maps from hash to the object (see <code>resolver_function_t</code> for details).</p>
 <h1>Using different pointer types.</h1>
 <p>By default the object tree is built out of <code>std::unique_ptr</code>, but you can influence this either globally (using the <code>--cpp-ptr-type</code> argument to <code>flatc</code>) or per field (using the <code>cpp_ptr_type</code> attribute) to by any smart pointer type (<code>my_ptr&lt;T&gt;</code>), or by specifying <code>naked</code> as the type to get <code>T *</code> pointers. Unlike the smart pointers, naked pointers do not manage memory for you, so you'll have to manage their lifecycles manually.</p>
+<h1>Using different string type.</h1>
+<p>By default the object tree is built out of <code>std::string</code>, but you can influence this either globally (using the <code>--cpp-str-type</code> argument to <code>flatc</code>) or per field using the <code>cpp_str_type</code> attribute.</p>
+<p>The type must support T::c_str() and T::length() as member functions.</p>
 <h2>Reflection (&amp; Resizing)</h2>
 <p>There is experimental support for reflection in FlatBuffers, allowing you to read and write data even if you don't know the exact format of a buffer, and even allows you to change sizes of strings and vectors in-place.</p>
 <p>The way this works is very elegant; there is actually a FlatBuffer schema that describes schemas (!) which you can find in <code>reflection/reflection.fbs</code>. The compiler, <code>flatc</code>, can write out any schemas it has just parsed as a binary FlatBuffer, corresponding to this meta-schema.</p>
@@ -242,6 +245,12 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <h2>Threading</h2>
 <p>Reading a FlatBuffer does not touch any memory outside the original buffer, and is entirely read-only (all const), so is safe to access from multiple threads even without synchronisation primitives.</p>
 <p>Creating a FlatBuffer is not thread safe. All state related to building a FlatBuffer is contained in a FlatBufferBuilder instance, and no memory outside of it is touched. To make this thread safe, either do not share instances of FlatBufferBuilder between threads (recommended), or manually wrap it in synchronisation primites. There's no automatic way to accomplish this, by design, as we feel multithreaded construction of a single buffer will be rare, and synchronisation overhead would be costly.</p>
+<h2>Advanced union features</h2>
+<p>The C++ implementation currently supports vectors of unions (i.e. you can declare a field as <code>[T]</code> where <code>T</code> is a union type instead of a table type). It also supports structs and strings in unions, besides tables.</p>
+<p>For an example of these features, see <code>tests/union_vector</code>, and <code>UnionVectorTest</code> in <code>test.cpp</code>.</p>
+<p>Since these features haven't been ported to other languages yet, if you choose to use them, you won't be able to use these buffers in other languages (<code>flatc</code> will refuse to compile a schema that uses these features).</p>
+<p>These features reduce the amount of "table wrapping" that was previously needed to use unions.</p>
+<p>To use scalars, simply wrap them in a struct.</p>
 <p><br />
  </p>
 </div></div><!-- contents -->

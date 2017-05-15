@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--csharp</code>, <code>-n</code> : Generate C# code.</li>
 <li><code>--go</code>, <code>-g</code> : Generate Go code.</li>
 <li><code>--python</code>, <code>-p</code>: Generate Python code.</li>
-<li><code>--javascript</code>, <code>-s</code>: Generate JavaScript code.</li>
+<li><code>--js</code>, <code>-s</code>: Generate JavaScript code.</li>
 <li><code>--php</code>: Generate PHP code.</li>
 <li><code>--grpc</code>: Generate RPC stub code for GRPC.</li>
 </ul>
@@ -158,6 +158,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--bfbs-comments</code>: Add doc comments to the binary schema files.</li>
 <li><code>--conform FILE</code> : Specify a schema the following schemas should be an evolution of. Gives errors if not. Useful to check if schema modifications don't break schema evolution rules.</li>
 <li><code>--include-prefix PATH</code> : Prefix this path to any generated include statements.</li>
+<li><code>--keep-prefix</code> : Keep original prefix of schema include statement.</li>
 </ul>
 <p>NOTE: short-form options for generators are deprecated, use the long form whenever possible. </p>
 </div></div><!-- contents -->
