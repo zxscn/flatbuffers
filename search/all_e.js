@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sizedbytearray',['sizedByteArray',['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a81a5c2d7ab36e913cc16d9499aabe078',1,'com.google.flatbuffers.FlatBufferBuilder.sizedByteArray(int start, int length)'],['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aa636cf5190524c43212b6d96239d7672',1,'com.google.flatbuffers.FlatBufferBuilder.sizedByteArray()'],['../class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html#a967e7dc8f051d4e73b3155e3b281d7b4',1,'Google\FlatBuffers\FlatbufferBuilder\sizedByteArray()'],['../class_flat_buffers_1_1_flat_buffer_builder.html#abfd2f4e19cf51f62290a0272683f23b2',1,'FlatBuffers.FlatBufferBuilder.SizedByteArray()']]]
+  ['release',['Release',['../classflatbuffers_1_1_flat_buffer_builder.html#a5e2c3a1e47f0ab4a3a3f07a07a52fb45',1,'flatbuffers::FlatBufferBuilder']]],
+  ['releasebufferpointer',['ReleaseBufferPointer',['../classflatbuffers_1_1_flat_buffer_builder.html#a0e715d9019060b4b753c4e5228be56e8',1,'flatbuffers::FlatBufferBuilder']]]
 ];

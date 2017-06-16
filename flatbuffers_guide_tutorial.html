@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="flatbuffers_white_paper.html"><span>FlatBuffers&#160;white&#160;paper</span></a></li>
       <li><a href="flatbuffers_internals.html"><span>FlatBuffers&#160;internals</span></a></li>
       <li><a href="flatbuffers_grammar.html"><span>Grammar&#160;of&#160;the&#160;schema&#160;language</span></a></li>
-      <li><a href="usergroup1.html"><span>API&#160;Reference</span></a></li>
+      <li><a href="usergroup2.html"><span>API&#160;Reference</span></a></li>
       <li><a href="contributing.html"><span>Contributing</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -963,10 +963,10 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line"><span class="keywordtype">float</span> x = pos.x();</div>
 <div class="line"><span class="keywordtype">float</span> y = pos.y();</div>
 <div class="line"><span class="keywordtype">float</span> z = pos.z();</div>
-</div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line">var pos = monster.Pos</div>
-<div class="line">var x = pos.X</div>
-<div class="line">var y = pos.Y</div>
-<div class="line">var z = pos.Z</div>
+</div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line">var pos = monster.Pos.Value;</div>
+<div class="line">var x = pos.X;</div>
+<div class="line">var y = pos.Y;</div>
+<div class="line">var z = pos.Z;</div>
 </div><!-- fragment --> </div> <div class="language-go"> <div class="fragment"><div class="line">pos := monster.Pos(nil)</div>
 <div class="line">x := pos.X()</div>
 <div class="line">y := pos.Y()</div>
@@ -1002,7 +1002,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 </div><!-- fragment --> </div> <div class="language-java"> <div class="fragment"><div class="line"><span class="keywordtype">int</span> invLength = monster.inventoryLength();</div>
 <div class="line">byte thirdItem = monster.inventory(2);</div>
 </div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line"><span class="keywordtype">int</span> invLength = monster.InventoryLength;</div>
-<div class="line">var thirdItem = monster.GetInventory(2);</div>
+<div class="line">var thirdItem = monster.Inventory(2);</div>
 </div><!-- fragment --> </div> <div class="language-go"> <div class="fragment"><div class="line">invLength := monster.InventoryLength()</div>
 <div class="line">thirdItem := monster.Inventory(2)</div>
 </div><!-- fragment --> </div> <div class="language-python"> <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;inv_len = monster.InventoryLength()</div>
@@ -1024,8 +1024,8 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 <div class="line">String secondWeaponName = monster.weapons(1).name();</div>
 <div class="line"><span class="keywordtype">short</span> secondWeaponDamage = monster.weapons(1).damage();</div>
 </div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line"><span class="keywordtype">int</span> weaponsLength = monster.WeaponsLength;</div>
-<div class="line">var secondWeaponName = monster.GetWeapons(1).Name;</div>
-<div class="line">var secondWeaponDamage = monster.GetWeapons(1).Damage;</div>
+<div class="line">var secondWeaponName = monster.Weapons(1).Name;</div>
+<div class="line">var secondWeaponDamage = monster.Weapons(1).Damage;</div>
 </div><!-- fragment --> </div> <div class="language-go"> <div class="fragment"><div class="line">weaponLength := monster.WeaponsLength()</div>
 <div class="line">weapon := <span class="keyword">new</span>(sample.Weapon) <span class="comment">// We need a `sample.Weapon` to pass into `monster.Weapons()`</span></div>
 <div class="line">                             <span class="comment">// to capture the output of the function.</span></div>
@@ -1070,8 +1070,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_tutorial.html','');}
 </div><!-- fragment --> </div> <div class="language-csharp"> <div class="fragment"><div class="line">var unionType = monster.EquippedType;</div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">if</span> (unionType == Equipment.Weapon) {</div>
-<div class="line">  var weapon = (Weapon)monster.GetEquipped(<span class="keyword">new</span> Weapon()); <span class="comment">// Requires explicit cast</span></div>
-<div class="line">                                                          <span class="comment">// to `Weapon`.</span></div>
+<div class="line">  var weapon = monster.Equipped&lt;Weapon&gt;().Value;</div>
 <div class="line"></div>
 <div class="line">  var weaponName = weapon.Name;     <span class="comment">// &quot;Axe&quot;</span></div>
 <div class="line">  var weaponDamage = weapon.Damage; <span class="comment">// 5</span></div>

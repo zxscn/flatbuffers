@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="flatbuffers_white_paper.html"><span>FlatBuffers&#160;white&#160;paper</span></a></li>
       <li><a href="flatbuffers_internals.html"><span>FlatBuffers&#160;internals</span></a></li>
       <li><a href="flatbuffers_grammar.html"><span>Grammar&#160;of&#160;the&#160;schema&#160;language</span></a></li>
-      <li><a href="usergroup1.html"><span>API&#160;Reference</span></a></li>
+      <li><a href="usergroup2.html"><span>API&#160;Reference</span></a></li>
       <li><a href="contributing.html"><span>Contributing</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <p>FlatBuffers supports both reading and writing FlatBuffers in C++.</p>
 <p>To use FlatBuffers in your code, first generate the C++ classes from your schema with the <code>--cpp</code> option to <code>flatc</code>. Then you can include both FlatBuffers and the generated code to read or write FlatBuffers.</p>
 <p>For example, here is how you would read a FlatBuffer binary file in C++: First, include the library and generated code. Then read the file into a <code>char *</code> array, which you pass to <code>GetMonster()</code>.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="flatbuffers_8h.html">flatbuffers/flatbuffers.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;flatbuffers/flatbuffers.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;monster_test_generate.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span> <span class="comment">// For printing and file access.</span></div>
 <div class="line"></div>

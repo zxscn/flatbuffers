@@ -14,18 +14,22 @@ var NAVTREE =
       [ "Use in JavaScript", "flatbuffers_guide_use_javascript.html", null ],
       [ "Use in PHP", "flatbuffers_guide_use_php.html", null ],
       [ "Use in Python", "flatbuffers_guide_use_python.html", null ],
-      [ "Schema-less version", "flexbuffers.html", null ]
+      [ "Schema-less version", "flexbuffers.html", null ],
+      [ "gRPC", "usergroup1.html", [
+        [ "Use in C++", "flatbuffers_grpc_guide_use_cpp.html", null ]
+      ] ]
     ] ],
     [ "Platform / Language / Feature support", "flatbuffers_support.html", null ],
     [ "Benchmarks", "flatbuffers_benchmarks.html", null ],
     [ "FlatBuffers white paper", "flatbuffers_white_paper.html", null ],
     [ "FlatBuffers internals", "flatbuffers_internals.html", null ],
     [ "Grammar of the schema language", "flatbuffers_grammar.html", null ],
-    [ "API Reference", "usergroup1.html", [
+    [ "API Reference", "usergroup2.html", [
       [ "APIs", "modules.html", "modules" ],
       [ "Class List", null, [
         [ "Class List", "annotated.html", "annotated" ],
         [ "Class Index", "classes.html", null ],
+        [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
         [ "Class Members", "functions.html", [
           [ "All", "functions.html", null ],
           [ "Functions", "functions_func.html", null ],
@@ -40,7 +44,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html"
+".html",
+"group__flatbuffers__javascript__api.html#ga8c5bb4a00c46fb6665787fa9ff52089b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

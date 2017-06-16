@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="flatbuffers_white_paper.html"><span>FlatBuffers&#160;white&#160;paper</span></a></li>
       <li><a href="flatbuffers_internals.html"><span>FlatBuffers&#160;internals</span></a></li>
       <li><a href="flatbuffers_grammar.html"><span>Grammar&#160;of&#160;the&#160;schema&#160;language</span></a></li>
-      <li><a href="usergroup1.html"><span>API&#160;Reference</span></a></li>
+      <li><a href="usergroup2.html"><span>API&#160;Reference</span></a></li>
       <li><a href="contributing.html"><span>Contributing</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -161,6 +161,9 @@ $(document).ready(function(){initNavTree('flexbuffers.html','');});
 <div class="line">map[<span class="stringliteral">&quot;unknown&quot;</span>].IsNull();  <span class="comment">// true</span></div>
 </div><!-- fragment --><h1>Binary encoding</h1>
 <p>A description of how FlexBuffers are encoded is in the <a href="Internals.md#flexbuffers">internals</a> document.</p>
+<h1>Nesting inside a FlatBuffer</h1>
+<p>You can mark a field as containing a FlexBuffer, e.g. </p><pre class="fragment">a:[ubyte] (flexbuffer);
+</pre><p>A special accessor will be generated that allows you to access the root value directly, e.g. <code>a_flexbuffer_root().AsInt64()</code>.</p>
 <h1>Efficiency tips</h1>
 <ul>
 <li>Vectors generally are a lot more efficient than maps, so prefer them over maps when possible for small objects. Instead of a map with keys <code>x</code>, <code>y</code> and <code>z</code>, use a vector. Better yet, use a typed vector. Or even better, use a fixed size typed vector.</li>

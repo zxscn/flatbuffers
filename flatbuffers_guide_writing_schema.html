@@ -59,7 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="flatbuffers_white_paper.html"><span>FlatBuffers&#160;white&#160;paper</span></a></li>
       <li><a href="flatbuffers_internals.html"><span>FlatBuffers&#160;internals</span></a></li>
       <li><a href="flatbuffers_grammar.html"><span>Grammar&#160;of&#160;the&#160;schema&#160;language</span></a></li>
-      <li><a href="usergroup1.html"><span>API&#160;Reference</span></a></li>
+      <li><a href="usergroup2.html"><span>API&#160;Reference</span></a></li>
       <li><a href="contributing.html"><span>Contributing</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -215,6 +215,7 @@ root_type Monster;
 <li><code>force_align: size</code> (on a struct): force the alignment of this struct to be something higher than what it is naturally aligned to. Causes these structs to be aligned to that amount inside a buffer, IF that buffer is allocated with that alignment (which is not necessarily the case for buffers accessed directly inside a <code>FlatBufferBuilder</code>).</li>
 <li><code>bit_flags</code> (on an enum): the values of this field indicate bits, meaning that any value N specified in the schema will end up representing 1&lt;&lt;N, or if you don't specify values at all, you'll get the sequence 1, 2, 4, 8, ...</li>
 <li><code>nested_flatbuffer: "table_name"</code> (on a field): this indicates that the field (which must be a vector of ubyte) contains flatbuffer data, for which the root type is given by <code>table_name</code>. The generated code will then produce a convenient accessor for the nested FlatBuffer.</li>
+<li><code>flexbuffer</code> (on a field): this indicates that the field (which must be a vector of ubyte) contains flexbuffer data. The generated code will then produce a convenient accessor for the FlexBuffer root.</li>
 <li><code>key</code> (on a field): this field is meant to be used as a key when sorting a vector of the type of table it sits in. Can be used for in-place binary search.</li>
 <li><code>hash</code> (on a field). This is an (un)signed 32/64 bit integer field, whose value during JSON parsing is allowed to be a string, which will then be stored as its hash. The value of attribute is the hashing algorithm to use, one of <code>fnv1_32</code> <code>fnv1_64</code> <code>fnv1a_32</code> <code>fnv1a_64</code>.</li>
 <li><code>original_order</code> (on a table): since elements in a table do not need to be stored in any particular order, they are often optimized for space by sorting them to size. This attribute stops that from happening. There should generally not be any reason to use this flag.</li>

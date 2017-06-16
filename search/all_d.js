@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['releasebufferpointer',['ReleaseBufferPointer',['../classflatbuffers_1_1_flat_buffer_builder.html#a21c7f933d7ff1212f2090763ef9f0c44',1,'flatbuffers::FlatBufferBuilder']]]
+  ['php_20api',['PHP API',['../group__flatbuffers__php__api.html',1,'']]],
+  ['python_20api',['Python API',['../group__flatbuffers__python__api.html',1,'']]],
+  ['platform_20_2f_20language_20_2f_20feature_20support',['Platform / Language / Feature support',['../flatbuffers_support.html',1,'']]]
 ];
