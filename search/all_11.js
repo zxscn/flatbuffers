@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['use_20in_20c_2b_2b',['Use in C++',['../flatbuffers_grpc_guide_use_cpp.html',1,'']]],
-  ['use_20in_20c',['Use in C',['../flatbuffers_guide_use_c.html',1,'']]],
-  ['use_20in_20c_2b_2b',['Use in C++',['../flatbuffers_guide_use_cpp.html',1,'']]],
-  ['use_20in_20go',['Use in Go',['../flatbuffers_guide_use_go.html',1,'']]],
-  ['use_20in_20java_2fc_23',['Use in Java/C#',['../flatbuffers_guide_use_java_c-sharp.html',1,'']]],
-  ['use_20in_20javascript',['Use in JavaScript',['../flatbuffers_guide_use_javascript.html',1,'']]],
-  ['use_20in_20php',['Use in PHP',['../flatbuffers_guide_use_php.html',1,'']]],
-  ['use_20in_20python',['Use in Python',['../flatbuffers_guide_use_python.html',1,'']]],
-  ['using_20the_20schema_20compiler',['Using the schema compiler',['../flatbuffers_guide_using_schema_compiler.html',1,'']]]
+  ['sizedbytearray',['sizedByteArray',['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a81a5c2d7ab36e913cc16d9499aabe078',1,'com.google.flatbuffers.FlatBufferBuilder.sizedByteArray(int start, int length)'],['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aa636cf5190524c43212b6d96239d7672',1,'com.google.flatbuffers.FlatBufferBuilder.sizedByteArray()'],['../class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html#a967e7dc8f051d4e73b3155e3b281d7b4',1,'Google\FlatBuffers\FlatbufferBuilder\sizedByteArray()'],['../class_flat_buffers_1_1_flat_buffer_builder.html#abfd2f4e19cf51f62290a0272683f23b2',1,'FlatBuffers.FlatBufferBuilder.SizedByteArray()']]],
+  ['sizedinputstream',['sizedInputStream',['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ab8fc86fe501b182b4a1a50fcdbcb3e6b',1,'com::google::flatbuffers::FlatBufferBuilder']]],
+  ['string',['String',['../structflatbuffers_1_1_string.html',1,'flatbuffers']]],
+  ['stringoffsetcompare',['StringOffsetCompare',['../structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html',1,'flatbuffers::FlatBufferBuilder']]]
 ];

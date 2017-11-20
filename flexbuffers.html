@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('flexbuffers.html','');});
 <div class="line">map[<span class="stringliteral">&quot;foo&quot;</span>].AsUInt8();  <span class="comment">// 100</span></div>
 <div class="line">map[<span class="stringliteral">&quot;unknown&quot;</span>].IsNull();  <span class="comment">// true</span></div>
 </div><!-- fragment --><h1>Binary encoding</h1>
-<p>A description of how FlexBuffers are encoded is in the <a href="Internals.md#flexbuffers">internals</a> document.</p>
+<p>A description of how FlexBuffers are encoded is in the <a class="el" href="flatbuffers_internals.html">internals</a> document.</p>
 <h1>Nesting inside a FlatBuffer</h1>
 <p>You can mark a field as containing a FlexBuffer, e.g. </p><pre class="fragment">a:[ubyte] (flexbuffer);
 </pre><p>A special accessor will be generated that allows you to access the root value directly, e.g. <code>a_flexbuffer_root().AsInt64()</code>.</p>

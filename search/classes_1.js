@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['defaultallocator',['DefaultAllocator',['../classflatbuffers_1_1_default_allocator.html',1,'flatbuffers']]],
-  ['detachedbuffer',['DetachedBuffer',['../classflatbuffers_1_1_detached_buffer.html',1,'flatbuffers']]]
+  ['bytebufferfactory',['ByteBufferFactory',['../interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html',1,'com::google::flatbuffers::FlatBufferBuilder']]]
 ];

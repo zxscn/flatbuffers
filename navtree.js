@@ -45,7 +45,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"group__flatbuffers__javascript__api.html#ga8c5bb4a00c46fb6665787fa9ff52089b"
+"flatbuffers_white_paper.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

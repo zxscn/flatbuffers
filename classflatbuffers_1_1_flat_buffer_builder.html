@@ -215,6 +215,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1080c9e370e2d9d9d872dadd1131436b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a1080c9e370e2d9d9d872dadd1131436b">CreateVector</a> (size_t vector_size, const std::function&lt; T(size_t i)&gt; &amp;f)</td></tr>
 <tr class="memdesc:a1080c9e370e2d9d9d872dadd1131436b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize values returned by a function into a FlatBuffer <code>vector</code>.  <a href="#a1080c9e370e2d9d9d872dadd1131436b">More...</a><br /></td></tr>
 <tr class="separator:a1080c9e370e2d9d9d872dadd1131436b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53504fc2cab681a7980b03260f8b2f7a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F , typename S &gt; </td></tr>
+<tr class="memitem:a53504fc2cab681a7980b03260f8b2f7a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a53504fc2cab681a7980b03260f8b2f7a">CreateVector</a> (size_t vector_size, F f, S *state)</td></tr>
+<tr class="memdesc:a53504fc2cab681a7980b03260f8b2f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize values returned by a function into a FlatBuffer <code>vector</code>.  <a href="#a53504fc2cab681a7980b03260f8b2f7a">More...</a><br /></td></tr>
+<tr class="separator:a53504fc2cab681a7980b03260f8b2f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d57074082aaab8cdeb8474ff9df0b53"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
 <tr class="memitem:a3d57074082aaab8cdeb8474ff9df0b53"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a3d57074082aaab8cdeb8474ff9df0b53">CreateVectorOfNativeStructs</a> (const S *v, size_t len)</td></tr>
 <tr class="memdesc:a3d57074082aaab8cdeb8474ff9df0b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize an array of native structs into a FlatBuffer <code>vector</code>.  <a href="#a3d57074082aaab8cdeb8474ff9df0b53">More...</a><br /></td></tr>
@@ -258,6 +262,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6e90ada59d9553636f72ce8e4a892f72"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a6e90ada59d9553636f72ce8e4a892f72">CreateVectorOfStructs</a> (size_t vector_size, const std::function&lt; void(size_t i, T *)&gt; &amp;filler)</td></tr>
 <tr class="memdesc:a6e90ada59d9553636f72ce8e4a892f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize an array of structs into a FlatBuffer <code>vector</code>.  <a href="#a6e90ada59d9553636f72ce8e4a892f72">More...</a><br /></td></tr>
 <tr class="separator:a6e90ada59d9553636f72ce8e4a892f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc09fa59ff9732e972877cfe911c8a5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F , typename S &gt; </td></tr>
+<tr class="memitem:a9cc09fa59ff9732e972877cfe911c8a5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a9cc09fa59ff9732e972877cfe911c8a5">CreateVectorOfStructs</a> (size_t vector_size, F f, S *state)</td></tr>
+<tr class="memdesc:a9cc09fa59ff9732e972877cfe911c8a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize an array of structs into a FlatBuffer <code>vector</code>.  <a href="#a9cc09fa59ff9732e972877cfe911c8a5">More...</a><br /></td></tr>
+<tr class="separator:a9cc09fa59ff9732e972877cfe911c8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8704709a2e25ad04679212ee4126b1a1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8704709a2e25ad04679212ee4126b1a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a8704709a2e25ad04679212ee4126b1a1">CreateVectorOfStructs</a> (const std::vector&lt; T &gt; &amp;v)</td></tr>
 <tr class="memdesc:a8704709a2e25ad04679212ee4126b1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a <code>std::vector</code> of structs into a FlatBuffer <code>vector</code>.  <a href="#a8704709a2e25ad04679212ee4126b1a1">More...</a><br /></td></tr>
@@ -342,6 +350,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b></td></tr
 <tr class="memitem:a89c2d7c686a2df8014cb453ec70fdccd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89c2d7c686a2df8014cb453ec70fdccd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>force_defaults_</b></td></tr>
 <tr class="separator:a89c2d7c686a2df8014cb453ec70fdccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e604e3caf95fd0f0e74545af5a8420a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e604e3caf95fd0f0e74545af5a8420a"></a>
+voffset_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_voffset_</b></td></tr>
+<tr class="separator:a5e604e3caf95fd0f0e74545af5a8420a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9942e76ff29eefc702b006b19ce02ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9942e76ff29eefc702b006b19ce02ba"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>minalign_</b></td></tr>
 <tr class="separator:ab9942e76ff29eefc702b006b19ce02ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1001,6 +1012,64 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a53504fc2cab681a7980b03260f8b2f7a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename F , typename S &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt;<a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt;T&gt; &gt; flatbuffers::FlatBufferBuilder::CreateVector </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>vector_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">S *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serialize values returned by a function into a FlatBuffer <code>vector</code>. </p>
+<p>This is a convenience function that takes care of iteration for you. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the <code>std::vector</code> elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>A function that takes the current iteration 0..vector_size-1, and the state parameter returning any type that you can construct a FlatBuffers vector out of. </td></tr>
+    <tr><td class="paramname">state</td><td>State passed to f. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a typed <code>Offset</code> into the serialized data indicating where the vector is stored. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3d57074082aaab8cdeb8474ff9df0b53"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1506,6 +1575,64 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>A function that takes the current iteration 0..vector_size-1 and a pointer to the struct that must be filled. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a typed <code>Offset</code> into the serialized data indicating where the vector is stored. This is mostly useful when flatbuffers are generated with mutation accessors. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9cc09fa59ff9732e972877cfe911c8a5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename F , typename S &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt;<a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt;const T *&gt; &gt; flatbuffers::FlatBufferBuilder::CreateVectorOfStructs </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>vector_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">S *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serialize an array of structs into a FlatBuffer <code>vector</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the struct array elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>A function that takes the current iteration 0..vector_size-1, a pointer to the struct that must be filled and the state argument. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Arbitrary state to pass to f. </td></tr>
   </table>
   </dd>
 </dl>

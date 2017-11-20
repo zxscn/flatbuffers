@@ -139,7 +139,16 @@ blob/master/tests/PythonTest.sh">PythonTest.sh</a> shell script.</p>
 </div><!-- fragment --><p>Now you can access values like this:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;hp = monster.Hp()</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pos = monster.Pos()</div>
-</div><!-- fragment --><h2>Text Parsing</h2>
+</div><!-- fragment --><h2>Support for Numpy arrays</h2>
+<p>The Flatbuffers python library also has support for accessing scalar vectors as numpy arrays. This can be orders of magnitude faster than iterating over the vector one element at a time, and is particularly useful when unpacking large nested flatbuffers. The generated code for a scalar vector will have a method <code>&lt;vector name&gt;AsNumpy()</code>. In the case of the Monster example, you could access the inventory vector like this:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;inventory = monster.InventoryAsNumpy()</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># inventory is a numpy array of type np.dtype(&#39;uint8&#39;)</span></div>
+</div><!-- fragment --><p>instead of</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;inventory = []</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(monster.InventoryLength()):</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    inventory.append(int(monster.Inventory(i)))</div>
+</div><!-- fragment --><p>Numpy is not a requirement. If numpy is not installed on your system, then attempting to access one of the <code>*asNumpy()</code> methods will result in a <code>NumpyRequiredForThisFeature</code> exception.</p>
+<h2>Text Parsing</h2>
 <p>There currently is no support for parsing text (Schema's and JSON) directly from Python, though you could use the C++ parser through SWIG or ctypes. Please see the C++ documentation for more on text parsing.</p>
 <p><br />
  </p>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['release',['Release',['../classflatbuffers_1_1_flat_buffer_builder.html#a5e2c3a1e47f0ab4a3a3f07a07a52fb45',1,'flatbuffers::FlatBufferBuilder']]],
-  ['releasebufferpointer',['ReleaseBufferPointer',['../classflatbuffers_1_1_flat_buffer_builder.html#a0e715d9019060b4b753c4e5228be56e8',1,'flatbuffers::FlatBufferBuilder']]]
+  ['newbytebuffer',['newByteBuffer',['../interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a0db9a9033d232d584443a433d7576f4a',1,'com.google.flatbuffers.FlatBufferBuilder.ByteBufferFactory.newByteBuffer()'],['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html#aac26ff51a8162b37a072792ec9068644',1,'com.google.flatbuffers.FlatBufferBuilder.HeapByteBufferFactory.newByteBuffer()']]]
 ];

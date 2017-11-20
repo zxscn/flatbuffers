@@ -154,13 +154,14 @@ root_type Monster;
 <h3>Structs</h3>
 <p>Similar to a table, only now none of the fields are optional (so no defaults either), and fields may not be added or be deprecated. Structs may only contain scalars or other structs. Use this for simple objects where you are very sure no changes will ever be made (as quite clear in the example <code>Vec3</code>). Structs use less memory than tables and are even faster to access (they are always stored in-line in their parent object, and use no virtual table).</p>
 <h3>Types</h3>
-<p>Built-in scalar types are:</p>
+<p>Built-in scalar types are</p>
 <ul>
-<li>8 bit: <code>byte</code>, <code>ubyte</code>, <code>bool</code></li>
-<li>16 bit: <code>short</code>, <code>ushort</code></li>
-<li>32 bit: <code>int</code>, <code>uint</code>, <code>float</code></li>
-<li>64 bit: <code>long</code>, <code>ulong</code>, <code>double</code></li>
+<li>8 bit: <code>byte</code> (<code>int8</code>), <code>ubyte</code> (<code>uint8</code>), <code>bool</code></li>
+<li>16 bit: <code>short</code> (<code>int16</code>), <code>ushort</code> (<code>uint16</code>)</li>
+<li>32 bit: <code>int</code> (<code>int32</code>), <code>uint</code> (<code>uint32</code>), <code>float</code> (<code>float32</code>)</li>
+<li>64 bit: <code>long</code> (<code>int64</code>), <code>ulong</code> (<code>uint64</code>), <code>double</code> (<code>float64</code>)</li>
 </ul>
+<p>The type names in parentheses are alias names such that for example <code>uint8</code> can be used in place of <code>ubyte</code>, and <code>int32</code> can be used in place of <code>int</code> without affecting code generation.</p>
 <p>Built-in non-scalar types:</p>
 <ul>
 <li>Vector of any other type (denoted with <code>[type]</code>). Nesting vectors is not supported, instead you can wrap the inner vector in a table.</li>
@@ -210,8 +211,8 @@ root_type Monster;
 <p>Current understood attributes:</p>
 <ul>
 <li><code>id: n</code> (on a table field): manually set the field identifier to <code>n</code>. If you use this attribute, you must use it on ALL fields of this table, and the numbers must be a contiguous range from 0 onwards. Additionally, since a union type effectively adds two fields, its id must be that of the second field (the first field is the type field and not explicitly declared in the schema). For example, if the last field before the union field had id 6, the union field should have id 8, and the unions type field will implicitly be 7. IDs allow the fields to be placed in any order in the schema. When a new field is added to the schema it must use the next available ID.</li>
-<li><code>deprecated</code> (on a field): do not generate accessors for this field anymore, code should stop using this data.</li>
-<li><code>required</code> (on a non-scalar table field): this field must always be set. By default, all fields are optional, i.e. may be left out. This is desirable, as it helps with forwards/backwards compatibility, and flexibility of data structures. It is also a burden on the reading code, since for non-scalar fields it requires you to check against NULL and take appropriate action. By specifying this field, you force code that constructs FlatBuffers to ensure this field is initialized, so the reading code may access it directly, without checking for NULL. If the constructing code does not initialize this field, they will get an assert, and also the verifier will fail on buffers that have missing required fields.</li>
+<li><code>deprecated</code> (on a field): do not generate accessors for this field anymore, code should stop using this data. Old data may still contain this field, but it won't be accessible anymore by newer code. Note that if you deprecate a field that was previous required, old code may fail to validate new data (when using the optional verifier).</li>
+<li><code>required</code> (on a non-scalar table field): this field must always be set. By default, all fields are optional, i.e. may be left out. This is desirable, as it helps with forwards/backwards compatibility, and flexibility of data structures. It is also a burden on the reading code, since for non-scalar fields it requires you to check against NULL and take appropriate action. By specifying this field, you force code that constructs FlatBuffers to ensure this field is initialized, so the reading code may access it directly, without checking for NULL. If the constructing code does not initialize this field, they will get an assert, and also the verifier will fail on buffers that have missing required fields. Note that if you add this attribute to an existing field, this will only be valid if existing data always contains this field / existing code always writes this field.</li>
 <li><code>force_align: size</code> (on a struct): force the alignment of this struct to be something higher than what it is naturally aligned to. Causes these structs to be aligned to that amount inside a buffer, IF that buffer is allocated with that alignment (which is not necessarily the case for buffers accessed directly inside a <code>FlatBufferBuilder</code>).</li>
 <li><code>bit_flags</code> (on an enum): the values of this field indicate bits, meaning that any value N specified in the schema will end up representing 1&lt;&lt;N, or if you don't specify values at all, you'll get the sequence 1, 2, 4, 8, ...</li>
 <li><code>nested_flatbuffer: "table_name"</code> (on a field): this indicates that the field (which must be a vector of ubyte) contains flatbuffer data, for which the root type is given by <code>table_name</code>. The generated code will then produce a convenient accessor for the nested FlatBuffer.</li>

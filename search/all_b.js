@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kfileidentifierlength',['kFileIdentifierLength',['../classflatbuffers_1_1_flat_buffer_builder.html#af8c7583c92e1d1d6f438977da5158d19',1,'flatbuffers::FlatBufferBuilder']]]
+  ['java_20api',['Java API',['../group__flatbuffers__java__api.html',1,'']]],
+  ['javascript_20api',['JavaScript API',['../group__flatbuffers__javascript__api.html',1,'']]]
 ];

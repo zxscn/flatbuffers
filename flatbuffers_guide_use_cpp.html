@@ -198,6 +198,12 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_use_cpp.html','');})
 <p>Loading in one of these binary schemas at runtime allows you traverse any FlatBuffer data that corresponds to it without knowing the exact format. You can query what fields are present, and then read/write them after.</p>
 <p>For convenient field manipulation, you can include the header <code>flatbuffers/reflection.h</code> which includes both the generated code from the meta schema, as well as a lot of helper functions.</p>
 <p>And example of usage, for the time being, can be found in <code>test.cpp/ReflectionTest()</code>.</p>
+<h2>Mini Reflection</h2>
+<p>A more limited form of reflection is available for direct inclusion in generated code, which doesn't any (binary) schema access at all. It was designed to keep the overhead of reflection as low as possible (on the order of 2-6 bytes per field added to your executable), but doesn't contain all the information the (binary) schema contains.</p>
+<p>You add this information to your generated code by specifying <code>--reflect-types</code> (or instead <code>--reflect-names</code> if you also want field / enum names).</p>
+<p>You can now use this information, for example to print a FlatBuffer to text: </p><pre class="fragment">auto s = flatbuffers::FlatBufferToString(flatbuf, MonsterTypeTable());
+</pre><p><code>MonsterTypeTable()</code> is declared in the generated code for each type. The string produced is very similar to the JSON produced by the <code>Parser</code> based text generator.</p>
+<p>You'll need <code>flatbuffers/minireflect.h</code> for this functionality. In there is also a convenient visitor/iterator so you can write your own output / functionality based on the mini reflection tables without having to know the FlatBuffers or reflection encoding.</p>
 <h2>Storing maps / dictionaries in a FlatBuffer</h2>
 <p>FlatBuffers doesn't support maps natively, but there is support to emulate their behavior with vectors and binary search, which means you can have fast lookups directly from a FlatBuffer without having to unpack your data into a <code>std::map</code> or similar.</p>
 <p>To use it:</p><ul>
