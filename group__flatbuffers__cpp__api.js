@@ -7,11 +7,11 @@ var group__flatbuffers__cpp__api =
       ] ],
       [ "StringOffsetCompare", "structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html", [
         [ "StringOffsetCompare", "structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html#a014debbfd9bde2a99f960a2123e54d33", null ],
-        [ "operator()", "structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html#a615f77ed71ea836aa9dc42d0b8722389", null ],
+        [ "operator()", "structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html#a7aa28a410c7eb4c1154702af8b773080", null ],
         [ "buf_", "structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html#ada9a5bf2a061d414f73b1c176168877b", null ]
       ] ],
       [ "StringOffsetMap", "classflatbuffers_1_1_flat_buffer_builder.html#a9190cb2d5a4324ab0c52263b834fff09", null ],
-      [ "FlatBufferBuilder", "classflatbuffers_1_1_flat_buffer_builder.html#ae4ab74f53187e6c3e6041d34e01904c4", null ],
+      [ "FlatBufferBuilder", "classflatbuffers_1_1_flat_buffer_builder.html#ab0173786ea4ec3e4ae10555639b2996c", null ],
       [ "~FlatBufferBuilder", "classflatbuffers_1_1_flat_buffer_builder.html#a01dabf5cdd6b1b2881337e1e84aa1683", null ],
       [ "FlatBufferBuilder", "classflatbuffers_1_1_flat_buffer_builder.html#ace4606286a25d3fedfb1532934d4cea1", null ],
       [ "Clear", "classflatbuffers_1_1_flat_buffer_builder.html#ae94b94ba71ea0aeb2d9a98c43b713412", null ],
@@ -21,6 +21,7 @@ var group__flatbuffers__cpp__api =
       [ "CreateSharedString", "classflatbuffers_1_1_flat_buffer_builder.html#a840b769fbb4148f97d3eed266e4690c3", null ],
       [ "CreateString", "classflatbuffers_1_1_flat_buffer_builder.html#aec6f9df2a0366b540b24822414d92cbe", null ],
       [ "CreateString", "classflatbuffers_1_1_flat_buffer_builder.html#aad93d113ac24e86ed04b5236b3f4c0c5", null ],
+      [ "CreateString", "classflatbuffers_1_1_flat_buffer_builder.html#ac51db9083ac815eb81420b6d51f42154", null ],
       [ "CreateString", "classflatbuffers_1_1_flat_buffer_builder.html#a8c3af55e64f5cda9aefa38ac5287ef9f", null ],
       [ "CreateString", "classflatbuffers_1_1_flat_buffer_builder.html#ac0b6a1c5d949f20ad84367fc0f9e1506", null ],
       [ "CreateString", "classflatbuffers_1_1_flat_buffer_builder.html#ab77d800e77fa76bc758a6c399fd37685", null ],
@@ -45,16 +46,16 @@ var group__flatbuffers__cpp__api =
       [ "CreateVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#afede51fd9c32d146cbb1832f57c5e1b7", null ],
       [ "CreateVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#a6e90ada59d9553636f72ce8e4a892f72", null ],
       [ "CreateVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#a9cc09fa59ff9732e972877cfe911c8a5", null ],
-      [ "CreateVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#a8704709a2e25ad04679212ee4126b1a1", null ],
+      [ "CreateVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#a110c2a3298aebef1a9dfa3c44ee84f42", null ],
       [ "DedupVtables", "classflatbuffers_1_1_flat_buffer_builder.html#aa905b29dce19a1795c7bce375cf29961", null ],
       [ "Finish", "classflatbuffers_1_1_flat_buffer_builder.html#a0c9e507b373d598b51052fab4fa34912", null ],
       [ "Finish", "classflatbuffers_1_1_flat_buffer_builder.html#a2e4de5642bad6dcd01eb7e7eaf719c89", null ],
       [ "FinishSizePrefixed", "classflatbuffers_1_1_flat_buffer_builder.html#a7ba8462e408431054c99d25120326220", null ],
       [ "ForceDefaults", "classflatbuffers_1_1_flat_buffer_builder.html#a16a8fd46b34ad7727406c37b65b6b27a", null ],
       [ "GetBufferMinAlignment", "classflatbuffers_1_1_flat_buffer_builder.html#aa1ebce1f3f46832946a95952af1e9c2b", null ],
-      [ "GetBufferPointer", "classflatbuffers_1_1_flat_buffer_builder.html#a8dc35f792179df4ca850492c1796d8b8", null ],
-      [ "GetCurrentBufferPointer", "classflatbuffers_1_1_flat_buffer_builder.html#a3f4252e9bc005ba6c700469544fdccc9", null ],
-      [ "GetSize", "classflatbuffers_1_1_flat_buffer_builder.html#ac1bfd609f7f736e9a37cedae77448b63", null ],
+      [ "GetBufferPointer", "classflatbuffers_1_1_flat_buffer_builder.html#ab81ab8aa273c270b0942fd81489cad83", null ],
+      [ "GetCurrentBufferPointer", "classflatbuffers_1_1_flat_buffer_builder.html#a099810f03046139d1854d20a1c2a2e41", null ],
+      [ "GetSize", "classflatbuffers_1_1_flat_buffer_builder.html#a66c8fd33ab9b3b237954c9ea38648f7f", null ],
       [ "operator=", "classflatbuffers_1_1_flat_buffer_builder.html#a376bb6858e8b1baab9a437f3f9f0b334", null ],
       [ "Release", "classflatbuffers_1_1_flat_buffer_builder.html#a5e2c3a1e47f0ab4a3a3f07a07a52fb45", null ],
       [ "ReleaseBufferPointer", "classflatbuffers_1_1_flat_buffer_builder.html#a0e715d9019060b4b753c4e5228be56e8", null ],
@@ -67,8 +68,7 @@ var group__flatbuffers__cpp__api =
       [ "max_voffset_", "classflatbuffers_1_1_flat_buffer_builder.html#a5e604e3caf95fd0f0e74545af5a8420a", null ],
       [ "minalign_", "classflatbuffers_1_1_flat_buffer_builder.html#ab9942e76ff29eefc702b006b19ce02ba", null ],
       [ "nested", "classflatbuffers_1_1_flat_buffer_builder.html#add6d502accf426e35f91f2539baff6b2", null ],
-      [ "offsetbuf_", "classflatbuffers_1_1_flat_buffer_builder.html#adda5db5eceb1465e9a71ddc012d70839", null ],
-      [ "string_pool", "classflatbuffers_1_1_flat_buffer_builder.html#aa7e64b654cef62869c3dfd27def92e5d", null ],
-      [ "vtables_", "classflatbuffers_1_1_flat_buffer_builder.html#a17c05ea503f311eaf6e56a1be3ac1c49", null ]
+      [ "num_field_loc", "classflatbuffers_1_1_flat_buffer_builder.html#adb473c5fd1305213b91eecaa779ecafa", null ],
+      [ "string_pool", "classflatbuffers_1_1_flat_buffer_builder.html#aa7e64b654cef62869c3dfd27def92e5d", null ]
     ] ]
 ];

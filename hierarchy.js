@@ -6,6 +6,7 @@ var hierarchy =
     [ "com.google.flatbuffers.FlatBufferBuilder.ByteBufferFactory", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html", [
       [ "com.google.flatbuffers.FlatBufferBuilder.HeapByteBufferFactory", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html", null ]
     ] ],
+    [ "com.google.flatbuffers.ByteBufferUtil", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util.html", null ],
     [ "flatbuffers::DetachedBuffer", "classflatbuffers_1_1_detached_buffer.html", null ],
     [ "flatbuffers::FlatBufferBuilder::FieldLoc", "structflatbuffers_1_1_flat_buffer_builder_1_1_field_loc.html", null ],
     [ "com.google.flatbuffers.FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html", null ],

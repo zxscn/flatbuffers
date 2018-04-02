@@ -1,5 +1,9 @@
 var group__flatbuffers__java__api =
 [
+    [ "ByteBufferUtil", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util.html", [
+      [ "getSizePrefix", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util.html#a4c87c63fa8d31e039b344bbaef00a3be", null ],
+      [ "removeSizePrefix", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util.html#a58d6c39c53a0c981a2f72a5eca7d992c", null ]
+    ] ],
     [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html", [
       [ "ByteBufferFactory", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html", [
         [ "newByteBuffer", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a0db9a9033d232d584443a433d7576f4a", null ]
@@ -27,8 +31,12 @@ var group__flatbuffers__java__api =
       [ "createUnintializedVector", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#acc889115f91460ca89ce981cb02c2039", null ],
       [ "createVectorOfTables", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a24ea4649f508a7843e429737a4a9fad1", null ],
       [ "dataBuffer", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#abf0fd34f0d93a9d89f595fddf752feb7", null ],
+      [ "finish", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#af344604d66e9e8524fef826fc516d5b2", null ],
       [ "finish", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aee9ed3214a7b35075773c506e3d95a14", null ],
+      [ "finish", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#afc31aba1a9523fde4be3558f8f19f49b", null ],
       [ "finish", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a189de474e0c39d663cc65fa21a63f071", null ],
+      [ "finishSizePrefixed", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aa00c035b0f60abe32a5f1467ebd4ec54", null ],
+      [ "finishSizePrefixed", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ab179d8aa4c4b782d83b3817a6b08ee35", null ],
       [ "forceDefaults", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aaadff3772bfdff756b4f269afae5ac69", null ],
       [ "init", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#adf671e70a4d30c85f37393c47a7a7dd1", null ],
       [ "offset", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ae3a3fbf645e64ce784a524f935a6e6f2", null ],

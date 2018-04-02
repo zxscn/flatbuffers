@@ -17,8 +17,12 @@ var class_flat_buffers_1_1_flat_buffer_builder =
     [ "CreateString", "class_flat_buffers_1_1_flat_buffer_builder.html#a3b6e42519f278e4a060895633d048070", null ],
     [ "CreateVectorOfTables< T >", "class_flat_buffers_1_1_flat_buffer_builder.html#a82219d659221dfc4c271399d9e56c47a", null ],
     [ "EndVector", "class_flat_buffers_1_1_flat_buffer_builder.html#a7cacff748cbf996b52de2e31e731af41", null ],
+    [ "Finish", "class_flat_buffers_1_1_flat_buffer_builder.html#a709d1ded4ffd922b61bc6f7f4a12fb97", null ],
     [ "Finish", "class_flat_buffers_1_1_flat_buffer_builder.html#a1afc6853539aaff7ac6937ed03ff5c7b", null ],
+    [ "Finish", "class_flat_buffers_1_1_flat_buffer_builder.html#a703062d740b32a77d26c5f6d1928c75f", null ],
     [ "Finish", "class_flat_buffers_1_1_flat_buffer_builder.html#ac7a48fd125d3f65f1bc1bc67d74eae73", null ],
+    [ "FinishSizePrefixed", "class_flat_buffers_1_1_flat_buffer_builder.html#a425ab2bd13a0e4331a7190ec2d17c3b2", null ],
+    [ "FinishSizePrefixed", "class_flat_buffers_1_1_flat_buffer_builder.html#a92de6a8a35e1ae5a07f5578bb0fda16c", null ],
     [ "SizedByteArray", "class_flat_buffers_1_1_flat_buffer_builder.html#abfd2f4e19cf51f62290a0272683f23b2", null ],
     [ "DataBuffer", "class_flat_buffers_1_1_flat_buffer_builder.html#a6f0cbd075878e2c0f021c0947cc8a211", null ],
     [ "ForceDefaults", "class_flat_buffers_1_1_flat_buffer_builder.html#a40d549b2db96b91b2345d1a44ff3fe13", null ]
