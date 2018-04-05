@@ -6,6 +6,7 @@ var NAVTREEINDEX0 =
 ".html":[7,1,0,1],
 ".html":[7,1,0,3],
 ".html":[7,1,0,3,0],
+"@ref flatbuffers_guide_use_typescript":[1,9],
 "annotated.html":[7,1,0],
 "class_flat_buffers_1_1_flat_buffer_builder.html":[7,1,0,2,0],
 "class_flat_buffers_1_1_flat_buffer_builder.html#a0b2addc87bde29213424a187b7b08707":[7,1,0,2,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classflatbuffers_1_1vector__downward.html#ad99943ac8c66263f3587e18539e9f176":[7,1,0,1,10,1],
 "classflatbuffers_1_1vector__downward.html#ae701e8e1cc468d1a3141e0fa22dc3a70":[7,1,0,1,10,3],
 "classflatbuffers_1_1vector__downward.html#ae965771454bef2a2f7ad306bfda275f7":[7,1,0,1,10,6],
-"classflatbuffers_1_1vector__downward.html#aec8308b5b544432362049b94c3802800":[7,1,0,1,10,2],
-"classflatbuffers_1_1vector__downward.html#aefa75049c70c00591f7786aeb9def1fe":[7,1,0,1,10,15]
+"classflatbuffers_1_1vector__downward.html#aec8308b5b544432362049b94c3802800":[7,1,0,1,10,2]
 };

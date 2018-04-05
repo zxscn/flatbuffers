@@ -9,6 +9,7 @@ var menudata={children:[
 {text:"Use in Go",url:"flatbuffers_guide_use_go.html"},
 {text:"Use in Java/C#",url:"flatbuffers_guide_use_java_c-sharp.html"},
 {text:"Use in JavaScript",url:"flatbuffers_guide_use_javascript.html"},
+{text:"Use in TypeScript",url:"@ref flatbuffers_guide_use_typescript"},
 {text:"Use in PHP",url:"flatbuffers_guide_use_php.html"},
 {text:"Use in Python",url:"flatbuffers_guide_use_python.html"},
 {text:"Schema-less version",url:"flexbuffers.html"},
