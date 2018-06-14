@@ -144,6 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c3af55e64f5cda9aefa38ac5287ef9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="structflatbuffers_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a8c3af55e64f5cda9aefa38ac5287ef9f">CreateString</a> (const std::string &amp;str)</td></tr>
 <tr class="memdesc:a8c3af55e64f5cda9aefa38ac5287ef9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a string in the buffer, which can contain any binary data.  <a href="#a8c3af55e64f5cda9aefa38ac5287ef9f">More...</a><br /></td></tr>
 <tr class="separator:a8c3af55e64f5cda9aefa38ac5287ef9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3a955fbff1c69e944c3560460dd7a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="structflatbuffers_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a9a3a955fbff1c69e944c3560460dd7a6">CreateString</a> (flatbuffers::string_view str)</td></tr>
+<tr class="memdesc:a9a3a955fbff1c69e944c3560460dd7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a string in the buffer, which can contain any binary data.  <a href="#a9a3a955fbff1c69e944c3560460dd7a6">More...</a><br /></td></tr>
+<tr class="separator:a9a3a955fbff1c69e944c3560460dd7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b6a1c5d949f20ad84367fc0f9e1506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="structflatbuffers_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#ac0b6a1c5d949f20ad84367fc0f9e1506">CreateString</a> (const <a class="el" href="structflatbuffers_1_1_string.html">String</a> *str)</td></tr>
 <tr class="memdesc:ac0b6a1c5d949f20ad84367fc0f9e1506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a string in the buffer, which can contain any binary data.  <a href="#ac0b6a1c5d949f20ad84367fc0f9e1506">More...</a><br /></td></tr>
 <tr class="separator:ac0b6a1c5d949f20ad84367fc0f9e1506"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -382,7 +385,7 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">initial_size</td><td>The initial size of the buffer, in bytes. Defaults to <code>1024</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">allocator</td><td>An <code>Allocator</code> to use. Defaults to a new instance of a <code>DefaultAllocator</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allocator</td><td>An <code>Allocator</code> to use. If null will use <code>DefaultAllocator</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">own_allocator</td><td>Whether the builder/vector should own the allocator. Defaults to / <code>false</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">buffer_minalign</td><td>Force the buffer to be aligned to the given minimum alignment upon reallocation. Only needed if you intend to store types with custom alignment AND you wish to read the buffer in-place directly after creation. </td></tr>
   </table>
@@ -571,7 +574,7 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 </div>
 </div>
 <a id="aec6f9df2a0366b540b24822414d92cbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec6f9df2a0366b540b24822414d92cbe">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6f9df2a0366b540b24822414d92cbe">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -617,7 +620,7 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 </div>
 </div>
 <a id="aad93d113ac24e86ed04b5236b3f4c0c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad93d113ac24e86ed04b5236b3f4c0c5">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aad93d113ac24e86ed04b5236b3f4c0c5">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,7 +655,7 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 </div>
 </div>
 <a id="ac51db9083ac815eb81420b6d51f42154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac51db9083ac815eb81420b6d51f42154">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51db9083ac815eb81420b6d51f42154">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -687,7 +690,7 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 </div>
 </div>
 <a id="a8c3af55e64f5cda9aefa38ac5287ef9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c3af55e64f5cda9aefa38ac5287ef9f">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3af55e64f5cda9aefa38ac5287ef9f">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -721,8 +724,43 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 
 </div>
 </div>
+<a id="a9a3a955fbff1c69e944c3560460dd7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3a955fbff1c69e944c3560460dd7a6">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt;<a class="el" href="structflatbuffers_1_1_string.html">String</a>&gt; flatbuffers::FlatBufferBuilder::CreateString </td>
+          <td>(</td>
+          <td class="paramtype">flatbuffers::string_view&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Store a string in the buffer, which can contain any binary data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>A const string_view to copy in to the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the offset in the buffer where the string starts. </dd></dl>
+
+</div>
+</div>
 <a id="ac0b6a1c5d949f20ad84367fc0f9e1506"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0b6a1c5d949f20ad84367fc0f9e1506">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b6a1c5d949f20ad84367fc0f9e1506">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -757,7 +795,7 @@ StringOffsetMap *&#160;</td><td class="memItemRight" valign="bottom"><b>string_p
 </div>
 </div>
 <a id="ab77d800e77fa76bc758a6c399fd37685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77d800e77fa76bc758a6c399fd37685">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77d800e77fa76bc758a6c399fd37685">&#9670;&nbsp;</a></span>CreateString() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

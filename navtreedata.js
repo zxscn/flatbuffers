@@ -12,9 +12,10 @@ var NAVTREE =
       [ "Use in Go", "flatbuffers_guide_use_go.html", null ],
       [ "Use in Java/C#", "flatbuffers_guide_use_java_c-sharp.html", null ],
       [ "Use in JavaScript", "flatbuffers_guide_use_javascript.html", null ],
-      [ "Use in TypeScript", "@ref flatbuffers_guide_use_typescript", null ],
+      [ "Use in TypeScript", "flatbuffers_guide_use_typescript.html", null ],
       [ "Use in PHP", "flatbuffers_guide_use_php.html", null ],
       [ "Use in Python", "flatbuffers_guide_use_python.html", null ],
+      [ "Use in Dart", "flatbuffers_guide_use_dart.html", null ],
       [ "Schema-less version", "flexbuffers.html", null ],
       [ "gRPC", "usergroup1.html", [
         [ "Use in C++", "flatbuffers_grpc_guide_use_cpp.html", null ]
@@ -46,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classflatbuffers_1_1vector__downward.html#aefa75049c70c00591f7786aeb9def1fe"
+"contributing.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

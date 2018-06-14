@@ -10,7 +10,7 @@ var classflatbuffers_1_1vector__downward =
     [ "ensure_space", "classflatbuffers_1_1vector__downward.html#a46e8f7f5035f87fe202419d6c5446eb3", null ],
     [ "fill", "classflatbuffers_1_1vector__downward.html#a692f950a105db47f983ff80d4e5c3772", null ],
     [ "fill_big", "classflatbuffers_1_1vector__downward.html#a99e13c5b83569b07df357c76feb1e614", null ],
-    [ "get_allocator", "classflatbuffers_1_1vector__downward.html#abc8846756ed814d1722913105e0da7a3", null ],
+    [ "get_custom_allocator", "classflatbuffers_1_1vector__downward.html#a45866c629916716dd618c55a662b7d99", null ],
     [ "make_space", "classflatbuffers_1_1vector__downward.html#a4a0686bb0afe2feefec0502f527a11bf", null ],
     [ "pop", "classflatbuffers_1_1vector__downward.html#a23cd3d0692fe86eacc6324ea4b58a599", null ],
     [ "push", "classflatbuffers_1_1vector__downward.html#a8cfd1b66f93043acb9905519e9998ced", null ],

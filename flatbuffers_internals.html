@@ -146,7 +146,7 @@ inline const char **EnumNamesAny() {
 inline const char *EnumNameAny(int e) { return EnumNamesAny()[e]; }
 </pre><p>Unions share a lot with enums. </p><pre class="fragment">struct Vec3;
 struct Monster;
-</pre><p>Predeclare all data types since circular references between types are allowed (circular references between object are not, though). </p><pre class="fragment">MANUALLY_ALIGNED_STRUCT(4) Vec3 {
+</pre><p>Predeclare all data types since circular references between types are allowed (circular references between object are not, though). </p><pre class="fragment">FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) Vec3 {
  private:
   float x_;
   float y_;
@@ -160,7 +160,7 @@ struct Monster;
   float y() const { return flatbuffers::EndianScalar(y_); }
   float z() const { return flatbuffers::EndianScalar(z_); }
 };
-STRUCT_END(Vec3, 12);
+FLATBUFFERS_STRUCT_END(Vec3, 12);
 </pre><p>These ugly macros do a couple of things: they turn off any padding the compiler might normally do, since we add padding manually (though none in this example), and they enforce alignment chosen by FlatBuffers. This ensures the layout of this struct will look the same regardless of compiler and platform. Note that the fields are private: this is because these store little endian scalars regardless of platform (since this is part of the serialized data). <code>EndianScalar</code> then converts back and forth, which is a no-op on all current mobile and desktop platforms, and a single machine instruction on the few remaining big endian platforms. </p><pre class="fragment">struct Monster : private flatbuffers::Table {
   const Vec3 *pos() const { return GetStruct&lt;const Vec3 *&gt;(4); }
   int16_t mana() const { return GetField&lt;int16_t&gt;(6, 150); }

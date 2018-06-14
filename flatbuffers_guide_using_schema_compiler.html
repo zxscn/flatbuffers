@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--js</code>, <code>-s</code>: Generate JavaScript code.</li>
 <li><code>--php</code>: Generate PHP code.</li>
 <li><code>--grpc</code>: Generate RPC stub code for GRPC.</li>
+<li><code>--dart</code>: Generate Dart code.</li>
 </ul>
 <p>For any data input files:</p>
 <ul>
@@ -130,6 +131,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--gen-all</code>: Generate not just code for the current schema files, but for all files it includes as well. If the language uses a single file for output (by default the case for C++ and JS), all code will end up in this one file.</li>
 <li><code>--no-js-exports</code> : Removes Node.js style export lines (useful for JS)</li>
 <li><code>--goog-js-export</code> : Uses goog.exportsSymbol and goog.exportsProperty instead of Node.js style exporting. Needed for compatibility with the Google closure compiler (useful for JS).</li>
+<li><code>--es6-js-export</code> : Generates ECMAScript v6 style export definitions instead of Node.js style exporting. Useful when integrating flatbuffers with modern Javascript projects.</li>
 <li><code>--raw-binary</code> : Allow binaries without a file_indentifier to be read. This may crash flatc given a mismatched schema.</li>
 <li><code>--proto</code>: Expect input files to be .proto files (protocol buffers). Output the corresponding .fbs file. Currently supports: <code>package</code>, <code>message</code>, <code>enum</code>, nested declarations, <code>import</code> (use <code>-I</code> for paths), <code>extend</code>, <code>oneof</code>, <code>group</code>. Does not support, but will skip without error: <code>option</code>, <code>service</code>, <code>extensions</code>, and most everything else.</li>
 <li><code>--schema</code>: Serialize schemas instead of JSON (use with -b). This will output a binary version of the specified schema that itself corresponds to the reflection/reflection.fbs schema. Loading this binary file is the basis for reflection functionality.</li>
@@ -139,6 +141,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--keep-prefix</code> : Keep original prefix of schema include statement.</li>
 <li><code>--reflect-types</code> : Add minimal type reflection to code generation.</li>
 <li><code>--reflect-names</code> : Add minimal type/name reflection.</li>
+<li><code>--root-type T</code> : Select or override the default root_type.</li>
 </ul>
 <p>NOTE: short-form options for generators are deprecated, use the long form whenever possible. </p>
 </div></div><!-- contents -->
