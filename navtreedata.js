@@ -16,6 +16,8 @@ var NAVTREE =
       [ "Use in PHP", "flatbuffers_guide_use_php.html", null ],
       [ "Use in Python", "flatbuffers_guide_use_python.html", null ],
       [ "Use in Dart", "flatbuffers_guide_use_dart.html", null ],
+      [ "Use in Lua", "flatbuffers_guide_use_lua.html", null ],
+      [ "Use in Lobster", "flatbuffers_guide_use_lobster.html", null ],
       [ "Schema-less version", "flexbuffers.html", null ],
       [ "gRPC", "usergroup1.html", [
         [ "Use in C++", "flatbuffers_grpc_guide_use_cpp.html", null ]
@@ -47,7 +49,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"contributing.html"
+"classflatbuffers_1_1vector__downward.html#aec8308b5b544432362049b94c3802800"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

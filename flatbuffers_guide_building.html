@@ -92,9 +92,9 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_building.html','');}
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>Building with CMake</h2>
-<p>The distribution comes with a <code>cmake</code> file that should allow you to build project/make files for any platform. For details on <code>cmake</code>, see <a href="https://www.cmake.org">https://www.cmake.org</a>. In brief, depending on your platform, use one of e.g.: </p><pre class="fragment">cmake -G "Unix Makefiles"
-cmake -G "Visual Studio 10"
-cmake -G "Xcode"
+<p>The distribution comes with a <code>cmake</code> file that should allow you to build project/make files for any platform. For details on <code>cmake</code>, see <a href="https://www.cmake.org">https://www.cmake.org</a>. In brief, depending on your platform, use one of e.g.: </p><pre class="fragment">cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+cmake -G "Visual Studio 10" -DCMAKE_BUILD_TYPE=Release
+cmake -G "Xcode" -DCMAKE_BUILD_TYPE=Release
 </pre><p>Then, build as normal for your platform. This should result in a <code>flatc</code> executable, essential for the next steps. Note that to use clang instead of gcc, you may need to set up your environment variables, e.g. <code>CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -G "Unix Makefiles"</code>.</p>
 <p>Optionally, run the <code>flattests</code> executable from the root <code>flatbuffers/</code> directory to ensure everything is working correctly on your system. If this fails, please contact us!</p>
 <p>Building should also produce two sample executables, <code>flatsamplebinary</code> and <code>flatsampletext</code>, see the corresponding <code>.cpp</code> files in the <code>flatbuffers/samples</code> directory.</p>

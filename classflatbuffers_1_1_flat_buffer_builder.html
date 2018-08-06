@@ -166,6 +166,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2305b63d367845972b51669dd995cc50"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a2305b63d367845972b51669dd995cc50">CreateUninitializedVector</a> (size_t len, T **buf)</td></tr>
 <tr class="memdesc:a2305b63d367845972b51669dd995cc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized version of <code>CreateVector</code> for non-copying use cases.  <a href="#a2305b63d367845972b51669dd995cc50">More...</a><br /></td></tr>
 <tr class="separator:a2305b63d367845972b51669dd995cc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9032692fea71e6b61e3f3de499f130"><td class="memTemplParams" colspan="2"><a id="a7f9032692fea71e6b61e3f3de499f130"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7f9032692fea71e6b61e3f3de499f130"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreateUninitializedVectorOfStructs</b> (size_t len, T **buf)</td></tr>
+<tr class="separator:a7f9032692fea71e6b61e3f3de499f130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cca5c89246a53e80e6ad9487f4c36f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2cca5c89246a53e80e6ad9487f4c36f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a2cca5c89246a53e80e6ad9487f4c36f3">CreateVector</a> (const T *v, size_t len)</td></tr>
 <tr class="memdesc:a2cca5c89246a53e80e6ad9487f4c36f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize an array into a FlatBuffer <code>vector</code>.  <a href="#a2cca5c89246a53e80e6ad9487f4c36f3">More...</a><br /></td></tr>
@@ -1927,7 +1931,7 @@ template&lt;typename T &gt; </div>
 <p>In order to save space, fields that are set to their default value don't get serialized into the buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bool</td><td>fd When set to <code>true</code>, always serializes default values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bool</td><td>fd When set to <code>true</code>, always serializes default values that are set. Optional fields which are not set explicitly, will still not be serialized. </td></tr>
   </table>
   </dd>
 </dl>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
-<title>FlatBuffers: Programmer&#39;s Guide</title>
+<title>FlatBuffers: Use in Lua</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('usergroup0.html','');});
+$(document).ready(function(){initNavTree('flatbuffers_guide_use_lua.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -88,29 +88,31 @@ $(document).ready(function(){initNavTree('usergroup0.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Programmer's Guide</div>  </div>
+<div class="title">Use in Lua </div>  </div>
 </div><!--header-->
 <div class="contents">
-<ul>
-<li><a href="flatbuffers_guide_building.html"><span>Building</span></a></li>
-<li><a href="flatbuffers_guide_tutorial.html"><span>Tutorial</span></a></li>
-<li><a href="flatbuffers_guide_using_schema_compiler.html"><span>Using&#160;the&#160;schema&#160;compiler</span></a></li>
-<li><a href="flatbuffers_guide_writing_schema.html"><span>Writing&#160;a&#160;schema</span></a></li>
-<li><a href="flatbuffers_guide_use_cpp.html"><span>Use&#160;in&#160;C++</span></a></li>
-<li><a href="flatbuffers_guide_use_c.html"><span>Use&#160;in&#160;C</span></a></li>
-<li><a href="flatbuffers_guide_use_go.html"><span>Use&#160;in&#160;Go</span></a></li>
-<li><a href="flatbuffers_guide_use_java_c-sharp.html"><span>Use&#160;in&#160;Java/C#</span></a></li>
-<li><a href="flatbuffers_guide_use_javascript.html"><span>Use&#160;in&#160;JavaScript</span></a></li>
-<li><a href="flatbuffers_guide_use_typescript.html"><span>Use&#160;in&#160;TypeScript</span></a></li>
-<li><a href="flatbuffers_guide_use_php.html"><span>Use&#160;in&#160;PHP</span></a></li>
-<li><a href="flatbuffers_guide_use_python.html"><span>Use&#160;in&#160;Python</span></a></li>
-<li><a href="flatbuffers_guide_use_dart.html"><span>Use&#160;in&#160;Dart</span></a></li>
-<li><a href="flatbuffers_guide_use_lua.html"><span>Use&#160;in&#160;Lua</span></a></li>
-<li><a href="flatbuffers_guide_use_lobster.html"><span>Use&#160;in&#160;Lobster</span></a></li>
-<li><a href="flexbuffers.html"><span>Schema-less&#160;version</span></a></li>
-<li><a href="usergroup1.html"><span>gRPC</span></a></li>
-</ul>
-</div><!-- contents -->
+<div class="textblock"><h2>Before you get started</h2>
+<p>Before diving into the FlatBuffers usage in Lua, it should be noted that the <a class="el" href="flatbuffers_guide_tutorial.html">Tutorial</a> page has a complete guide to general FlatBuffers usage in all of the supported languages (including Lua). This page is designed to cover the nuances of FlatBuffers usage, specific to Lua.</p>
+<p>You should also have read the <a class="el" href="flatbuffers_guide_building.html">Building</a> documentation to build <code>flatc</code> and should be familiar with <a class="el" href="flatbuffers_guide_using_schema_compiler.html">Using the schema compiler</a> and <a class="el" href="flatbuffers_guide_writing_schema.html">Writing a schema</a>.</p>
+<h2>FlatBuffers Lua library code location</h2>
+<p>The code for the FlatBuffers Lua library can be found at <code>flatbuffers/lua</code>. You can browse the library code on the <a href="https://github.com/google/flatbuffers/tree/master/lua">FlatBuffers GitHub page</a>.</p>
+<h2>Testing the FlatBuffers Lua library</h2>
+<p>The code to test the Lua library can be found at <code>flatbuffers/tests</code>. The test code itself is located in <a href="https://github.com/google/
+flatbuffers/blob/master/tests/luatest.lua">luatest.lua</a>.</p>
+<p>To run the tests, use the <a href="https://github.com/google/flatbuffers/
+blob/master/tests/LuaTest.sh">LuaTest.sh</a> shell script.</p>
+<p><em>Note: This script requires <a href="https://www.lua.org/">Lua 5.3</a> to be installed.</em></p>
+<h2>Using the FlatBuffers Lua library</h2>
+<p><em>Note: See <a class="el" href="flatbuffers_guide_tutorial.html">Tutorial</a> for a more in-depth example of how to use FlatBuffers in Lua.</em></p>
+<p>There is support for both reading and writing FlatBuffers in Lua.</p>
+<p>To use FlatBuffers in your own code, first generate Lua classes from your schema with the <code>--lua</code> option to <code>flatc</code>. Then you can include both FlatBuffers and the generated code to read or write a FlatBuffer.</p>
+<p>For example, here is how you would read a FlatBuffer binary file in Lua: First, require the module and the generated code. Then read a FlatBuffer binary file into a <code>string</code>, which you pass to the <code>GetRootAsMonster</code> function:</p>
+<div class="fragment"><div class="line">-- require the library</div><div class="line">local flatbuffers = require(&quot;flatbuffers&quot;)</div><div class="line"></div><div class="line">-- require the generated code</div><div class="line">local monster = require(&quot;MyGame.Sample.Monster&quot;)</div><div class="line"></div><div class="line">-- read the flatbuffer from a file into a string</div><div class="line">local f = io.open(&#39;monster.dat&#39;, &#39;rb&#39;)</div><div class="line">local buf = f:read(&#39;*a&#39;)</div><div class="line">f:close()</div><div class="line"></div><div class="line">-- parse the flatbuffer to get an instance to the root monster</div><div class="line">local monster1 = monster.GetRootAsMonster(buf, 0)</div></div><!-- fragment --><p>Now you can access values like this:</p>
+<div class="fragment"><div class="line">-- use the : notation to access member data</div><div class="line">local hp = monster1:Hp()</div><div class="line">local pos = monster1:Pos()</div></div><!-- fragment --><h2>Text Parsing</h2>
+<p>There currently is no support for parsing text (Schema's and JSON) directly from Lua, though you could use the C++ parser through SWIG or ctypes. Please see the C++ documentation for more on text parsing.</p>
+<p><br />
+ </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Google Analytics -->
 <script>

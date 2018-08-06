@@ -104,9 +104,12 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--go</code>, <code>-g</code> : Generate Go code.</li>
 <li><code>--python</code>, <code>-p</code>: Generate Python code.</li>
 <li><code>--js</code>, <code>-s</code>: Generate JavaScript code.</li>
+<li><code>--ts</code>: Generate TypeScript code.</li>
 <li><code>--php</code>: Generate PHP code.</li>
 <li><code>--grpc</code>: Generate RPC stub code for GRPC.</li>
 <li><code>--dart</code>: Generate Dart code.</li>
+<li><code>--lua</code>: Generate Lua code.</li>
+<li><code>--lobster</code>: Generate Lobster code.</li>
 </ul>
 <p>For any data input files:</p>
 <ul>
@@ -142,6 +145,8 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--reflect-types</code> : Add minimal type reflection to code generation.</li>
 <li><code>--reflect-names</code> : Add minimal type/name reflection.</li>
 <li><code>--root-type T</code> : Select or override the default root_type.</li>
+<li><code>--force-defaults</code> : Emit default values in binary output from JSON.</li>
+<li><code>--force-empty</code> : When serializing from object API representation, force strings and vectors to empty rather than null.</li>
 </ul>
 <p>NOTE: short-form options for generators are deprecated, use the long form whenever possible. </p>
 </div></div><!-- contents -->

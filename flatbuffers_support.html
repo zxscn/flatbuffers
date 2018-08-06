@@ -101,11 +101,11 @@ $(document).ready(function(){initNavTree('flatbuffers_support.html','');});
 <p>NOTE: this table is a start, it needs to be extended.</p>
 <table class="doxtable">
 <tr>
-<th>Feature </th><th>C++ </th><th>Java </th><th>C# </th><th>Go </th><th>Python </th><th>JS </th><th>TS </th><th>C </th><th>PHP </th><th>Ruby </th><th>Dart  </th></tr>
+<th>Feature </th><th>C++ </th><th>Java </th><th>C# </th><th>Go </th><th>Python </th><th>JS </th><th>TS </th><th>C </th><th>PHP </th><th>Dart </th><th>Lobster  </th></tr>
 <tr>
-<td>Codegen for all basic features </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>WiP </td><td>WiP </td><td>Yes </td></tr>
+<td>Codegen for all basic features </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>WiP </td><td>Yes </td><td>Yes </td></tr>
 <tr>
-<td>JSON parsing </td><td>Yes </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>Yes </td><td>No </td><td>No </td><td>No </td></tr>
+<td>JSON parsing </td><td>Yes </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>Yes </td><td>No </td><td>No </td><td>Yes </td></tr>
 <tr>
 <td>Simple mutation </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td></tr>
 <tr>
@@ -113,27 +113,28 @@ $(document).ready(function(){initNavTree('flatbuffers_support.html','');});
 <tr>
 <td>Buffer verifier </td><td>Yes </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>No </td><td>Yes </td><td>No </td><td>No </td><td>No </td></tr>
 <tr>
-<td>Testing: basic </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>? </td><td>? </td><td>Yes </td></tr>
+<td>Testing: basic </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td></tr>
 <tr>
-<td>Testing: fuzz </td><td>Yes </td><td>No </td><td>No </td><td>Yes </td><td>Yes </td><td>No </td><td>No </td><td>No </td><td>? </td><td>? </td><td>No </td></tr>
+<td>Testing: fuzz </td><td>Yes </td><td>No </td><td>No </td><td>Yes </td><td>Yes </td><td>No </td><td>No </td><td>No </td><td>? </td><td>No </td><td>No </td></tr>
 <tr>
-<td>Performance: </td><td>Superb </td><td>Great </td><td>Great </td><td>Great </td><td>Ok </td><td>? </td><td>? </td><td>Superb </td><td>? </td><td>? </td><td>? </td></tr>
+<td>Performance: </td><td>Superb </td><td>Great </td><td>Great </td><td>Great </td><td>Ok </td><td>? </td><td>? </td><td>Superb </td><td>? </td><td>? </td><td>Great </td></tr>
 <tr>
-<td>Platform: Windows </td><td>VS2010 </td><td>Yes </td><td>Yes </td><td>? </td><td>? </td><td>? </td><td>Yes </td><td>VS2010 </td><td>? </td><td>? </td><td>Yes </td></tr>
+<td>Platform: Windows </td><td>VS2010 </td><td>Yes </td><td>Yes </td><td>? </td><td>? </td><td>? </td><td>Yes </td><td>VS2010 </td><td>? </td><td>Yes </td><td>Yes </td></tr>
 <tr>
-<td>Platform: Linux </td><td>GCC282 </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td><td>? </td><td>? </td><td>Yes </td></tr>
+<td>Platform: Linux </td><td>GCC282 </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td></tr>
 <tr>
-<td>Platform: OS X </td><td>Xcode4 </td><td>? </td><td>? </td><td>? </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td><td>? </td><td>? </td><td>Yes </td></tr>
+<td>Platform: OS X </td><td>Xcode4 </td><td>? </td><td>? </td><td>? </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td><td>? </td><td>Yes </td><td>Yes </td></tr>
 <tr>
-<td>Platform: Android </td><td>NDK10d </td><td>Yes </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>Flutter </td></tr>
+<td>Platform: Android </td><td>NDK10d </td><td>Yes </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>Flutter </td><td>Yes </td></tr>
 <tr>
-<td>Platform: iOS </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>Flutter </td></tr>
+<td>Platform: iOS </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>Flutter </td><td>Yes </td></tr>
 <tr>
-<td>Engine: Unity </td><td>? </td><td>? </td><td>Yes </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td></tr>
+<td>Engine: Unity </td><td>? </td><td>? </td><td>Yes </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>? </td><td>No </td></tr>
 <tr>
-<td>Primary authors (github) </td><td>gwvo </td><td>gwvo </td><td>ev*/js*</td><td>rw </td><td>rw </td><td>evanw/ev* </td><td>kr </td><td>mik* </td><td>ch* </td><td>rw </td><td>dnfield </td></tr>
+<td>Primary authors (github) </td><td>aard* </td><td>aard* </td><td>ev*/js*</td><td>rw </td><td>rw </td><td>evanw/ev* </td><td>kr* </td><td>mik* </td><td>ch* </td><td>dnfield </td><td>aard* </td></tr>
 </table>
 <ul>
+<li>aard = aardappel (previously: gwvo)</li>
 <li>ev = evolutional</li>
 <li>js = jonsimantov</li>
 <li>mik = mikkelfj</li>

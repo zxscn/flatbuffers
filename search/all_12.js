@@ -7,6 +7,8 @@ var searchData=
   ['use_20in_20go',['Use in Go',['../flatbuffers_guide_use_go.html',1,'']]],
   ['use_20in_20java_2fc_23',['Use in Java/C#',['../flatbuffers_guide_use_java_c-sharp.html',1,'']]],
   ['use_20in_20javascript',['Use in JavaScript',['../flatbuffers_guide_use_javascript.html',1,'']]],
+  ['use_20in_20lobster',['Use in Lobster',['../flatbuffers_guide_use_lobster.html',1,'']]],
+  ['use_20in_20lua',['Use in Lua',['../flatbuffers_guide_use_lua.html',1,'']]],
   ['use_20in_20php',['Use in PHP',['../flatbuffers_guide_use_php.html',1,'']]],
   ['use_20in_20python',['Use in Python',['../flatbuffers_guide_use_python.html',1,'']]],
   ['use_20in_20typescript',['Use in TypeScript',['../flatbuffers_guide_use_typescript.html',1,'']]],

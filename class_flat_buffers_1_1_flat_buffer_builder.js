@@ -1,6 +1,7 @@
 var class_flat_buffers_1_1_flat_buffer_builder =
 [
     [ "FlatBufferBuilder", "class_flat_buffers_1_1_flat_buffer_builder.html#ae24f93e3f9672846dd241d585d62c63d", null ],
+    [ "Add< T >", "class_flat_buffers_1_1_flat_buffer_builder.html#a4cfc5582e28916e2faecf3357a6a07fd", null ],
     [ "AddBool", "class_flat_buffers_1_1_flat_buffer_builder.html#a6b66d785555d19cd0f141978eff78e2e", null ],
     [ "AddByte", "class_flat_buffers_1_1_flat_buffer_builder.html#ac11b10888152d4f687e8ce4d60022254", null ],
     [ "AddDouble", "class_flat_buffers_1_1_flat_buffer_builder.html#aef6feaf282148043e6a1c9c1ba9e2094", null ],
