@@ -103,6 +103,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () con
 <tr class="memitem:ae701e8e1cc468d1a3141e0fa22dc3a70"><td class="memItemLeft" align="right" valign="top"><a id="ae701e8e1cc468d1a3141e0fa22dc3a70"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="separator:ae701e8e1cc468d1a3141e0fa22dc3a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8bd2fb014fc144ab3a2d44ce91d836"><td class="memItemLeft" align="right" valign="top"><a id="a8b8bd2fb014fc144ab3a2d44ce91d836"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_allocator</b> ()</td></tr>
+<tr class="separator:a8b8bd2fb014fc144ab3a2d44ce91d836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5de3bbe8388a4130b843a5e94f65bb"><td class="memItemLeft" align="right" valign="top"><a id="a7b5de3bbe8388a4130b843a5e94f65bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_buffer</b> ()</td></tr>
+<tr class="separator:a7b5de3bbe8388a4130b843a5e94f65bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05dca3cd52b334b0643e2ae9e88b8b87"><td class="memItemLeft" align="right" valign="top"><a id="a05dca3cd52b334b0643e2ae9e88b8b87"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_scratch</b> ()</td></tr>
 <tr class="separator:a05dca3cd52b334b0643e2ae9e88b8b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +133,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>fill_big</b> (size_t 
 <tr class="memitem:a4a0686bb0afe2feefec0502f527a11bf"><td class="memItemLeft" align="right" valign="top"><a id="a4a0686bb0afe2feefec0502f527a11bf"></a>
 uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>make_space</b> (size_t len)</td></tr>
 <tr class="separator:a4a0686bb0afe2feefec0502f527a11bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4ffad30c033d22e613d58a4103b78b"><td class="memItemLeft" align="right" valign="top"><a id="adf4ffad30c033d22e613d58a4103b78b"></a>
+<a class="el" href="classflatbuffers_1_1vector__downward.html">vector_downward</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classflatbuffers_1_1vector__downward.html">vector_downward</a> &amp;&amp;other)</td></tr>
+<tr class="separator:adf4ffad30c033d22e613d58a4103b78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23cd3d0692fe86eacc6324ea4b58a599"><td class="memItemLeft" align="right" valign="top"><a id="a23cd3d0692fe86eacc6324ea4b58a599"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> (size_t bytes_to_remove)</td></tr>
 <tr class="separator:a23cd3d0692fe86eacc6324ea4b58a599"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +149,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aefa75049c70c00591f7786aeb9def1fe"><td class="memItemLeft" align="right" valign="top"><a id="aefa75049c70c00591f7786aeb9def1fe"></a>
 <a class="el" href="classflatbuffers_1_1_detached_buffer.html">DetachedBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> ()</td></tr>
 <tr class="separator:aefa75049c70c00591f7786aeb9def1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa80edf649eed1849921c1fd6f09a6b2"><td class="memItemLeft" align="right" valign="top"><a id="aaa80edf649eed1849921c1fd6f09a6b2"></a>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>release_raw</b> (size_t &amp;allocated_bytes, size_t &amp;offset)</td></tr>
+<tr class="separator:aaa80edf649eed1849921c1fd6f09a6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a5203e2960492f54ac4428d4caee0fc"><td class="memItemLeft" align="right" valign="top"><a id="a4a5203e2960492f54ac4428d4caee0fc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="separator:a4a5203e2960492f54ac4428d4caee0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +174,18 @@ uoffset_t&#160;</td><td class="memItemRight" valign="bottom"><b>scratch_size</b>
 <tr class="memitem:a70c8de02d393caddcedde603a5a45ae7"><td class="memItemLeft" align="right" valign="top"><a id="a70c8de02d393caddcedde603a5a45ae7"></a>
 uoffset_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
 <tr class="separator:a70c8de02d393caddcedde603a5a45ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f613cf5b0523cc6bf5224e5f1c7411e"><td class="memItemLeft" align="right" valign="top"><a id="a0f613cf5b0523cc6bf5224e5f1c7411e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classflatbuffers_1_1vector__downward.html">vector_downward</a> &amp;other)</td></tr>
+<tr class="separator:a0f613cf5b0523cc6bf5224e5f1c7411e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0591728ad3c54a3a1cc3479765f1f271"><td class="memItemLeft" align="right" valign="top"><a id="a0591728ad3c54a3a1cc3479765f1f271"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap_allocator</b> (<a class="el" href="classflatbuffers_1_1vector__downward.html">vector_downward</a> &amp;other)</td></tr>
+<tr class="separator:a0591728ad3c54a3a1cc3479765f1f271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91d7ec62e1b729276605355d12f3456c"><td class="memItemLeft" align="right" valign="top"><a id="a91d7ec62e1b729276605355d12f3456c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>vector_downward</b> (size_t initial_size, <a class="el" href="classflatbuffers_1_1_allocator.html">Allocator</a> *allocator, bool own_allocator, size_t buffer_minalign)</td></tr>
 <tr class="separator:a91d7ec62e1b729276605355d12f3456c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e25d90a4bd4e1f11ff0abb49015538"><td class="memItemLeft" align="right" valign="top"><a id="a45e25d90a4bd4e1f11ff0abb49015538"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>vector_downward</b> (<a class="el" href="classflatbuffers_1_1vector__downward.html">vector_downward</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a45e25d90a4bd4e1f11ff0abb49015538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="flatbuffers_8h_source.html">flatbuffers.h</a></li>

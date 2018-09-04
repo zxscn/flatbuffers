@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add_3c_20t_20_3e',['Add&lt; T &gt;',['../class_flat_buffers_1_1_flat_buffer_builder.html#a4cfc5582e28916e2faecf3357a6a07fd',1,'FlatBuffers::FlatBufferBuilder']]],
+  ['add_3c_20t_20_3e',['Add&lt; T &gt;',['../class_flat_buffers_1_1_flat_buffer_builder.html#a4cfc5582e28916e2faecf3357a6a07fd',1,'FlatBuffers.FlatBufferBuilder.Add&lt; T &gt;(T[] x)'],['../class_flat_buffers_1_1_flat_buffer_builder.html#a6295f2b29654bc5c77b57839a5fb7fd6',1,'FlatBuffers.FlatBufferBuilder.Add&lt; T &gt;(Span&lt; T &gt; x)']]],
   ['addbool',['addBool',['../class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html#a723a1053d3a17d5433c37bdbd015844e',1,'Google\FlatBuffers\FlatbufferBuilder\addBool()'],['../class_flat_buffers_1_1_flat_buffer_builder.html#a6b66d785555d19cd0f141978eff78e2e',1,'FlatBuffers.FlatBufferBuilder.AddBool()']]],
   ['addboolean',['addBoolean',['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a53e6356cfef3d6be298efb9a0d67be06',1,'com::google::flatbuffers::FlatBufferBuilder']]],
   ['addbyte',['addByte',['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ae019d7ee089c95a37421365d5fb9533b',1,'com.google.flatbuffers.FlatBufferBuilder.addByte()'],['../class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html#a7b78098530190cb90d315419fb1d21fc',1,'Google\FlatBuffers\FlatbufferBuilder\addByte()'],['../class_flat_buffers_1_1_flat_buffer_builder.html#ac11b10888152d4f687e8ce4d60022254',1,'FlatBuffers.FlatBufferBuilder.AddByte()']]],

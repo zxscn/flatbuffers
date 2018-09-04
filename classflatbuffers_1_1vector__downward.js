@@ -1,9 +1,12 @@
 var classflatbuffers_1_1vector__downward =
 [
     [ "vector_downward", "classflatbuffers_1_1vector__downward.html#a91d7ec62e1b729276605355d12f3456c", null ],
+    [ "vector_downward", "classflatbuffers_1_1vector__downward.html#a45e25d90a4bd4e1f11ff0abb49015538", null ],
     [ "~vector_downward", "classflatbuffers_1_1vector__downward.html#ad99943ac8c66263f3587e18539e9f176", null ],
     [ "capacity", "classflatbuffers_1_1vector__downward.html#aec8308b5b544432362049b94c3802800", null ],
     [ "clear", "classflatbuffers_1_1vector__downward.html#ae701e8e1cc468d1a3141e0fa22dc3a70", null ],
+    [ "clear_allocator", "classflatbuffers_1_1vector__downward.html#a8b8bd2fb014fc144ab3a2d44ce91d836", null ],
+    [ "clear_buffer", "classflatbuffers_1_1vector__downward.html#a7b5de3bbe8388a4130b843a5e94f65bb", null ],
     [ "clear_scratch", "classflatbuffers_1_1vector__downward.html#a05dca3cd52b334b0643e2ae9e88b8b87", null ],
     [ "data", "classflatbuffers_1_1vector__downward.html#aa1f13e25b0c619ba9a9c2d6b408e2587", null ],
     [ "data_at", "classflatbuffers_1_1vector__downward.html#ae965771454bef2a2f7ad306bfda275f7", null ],
@@ -12,15 +15,19 @@ var classflatbuffers_1_1vector__downward =
     [ "fill_big", "classflatbuffers_1_1vector__downward.html#a99e13c5b83569b07df357c76feb1e614", null ],
     [ "get_custom_allocator", "classflatbuffers_1_1vector__downward.html#a45866c629916716dd618c55a662b7d99", null ],
     [ "make_space", "classflatbuffers_1_1vector__downward.html#a4a0686bb0afe2feefec0502f527a11bf", null ],
+    [ "operator=", "classflatbuffers_1_1vector__downward.html#adf4ffad30c033d22e613d58a4103b78b", null ],
     [ "pop", "classflatbuffers_1_1vector__downward.html#a23cd3d0692fe86eacc6324ea4b58a599", null ],
     [ "push", "classflatbuffers_1_1vector__downward.html#a8cfd1b66f93043acb9905519e9998ced", null ],
     [ "push_small", "classflatbuffers_1_1vector__downward.html#a23d309dc71c82cc13d1edefff0e7dd8f", null ],
     [ "release", "classflatbuffers_1_1vector__downward.html#aefa75049c70c00591f7786aeb9def1fe", null ],
+    [ "release_raw", "classflatbuffers_1_1vector__downward.html#aaa80edf649eed1849921c1fd6f09a6b2", null ],
     [ "reset", "classflatbuffers_1_1vector__downward.html#a4a5203e2960492f54ac4428d4caee0fc", null ],
     [ "scratch_data", "classflatbuffers_1_1vector__downward.html#a297ab537a68b0a02b4577cfc4b5269a9", null ],
     [ "scratch_end", "classflatbuffers_1_1vector__downward.html#a784ae8d43071ce644df0c0e8d59772d3", null ],
     [ "scratch_pop", "classflatbuffers_1_1vector__downward.html#a96a36503bc1103a11c4a17d26dcaf770", null ],
     [ "scratch_push_small", "classflatbuffers_1_1vector__downward.html#a44f77c18fb0aed4b9c22020ea69ff8c9", null ],
     [ "scratch_size", "classflatbuffers_1_1vector__downward.html#a37856c0e5288338080818681b8aedb5d", null ],
-    [ "size", "classflatbuffers_1_1vector__downward.html#a70c8de02d393caddcedde603a5a45ae7", null ]
+    [ "size", "classflatbuffers_1_1vector__downward.html#a70c8de02d393caddcedde603a5a45ae7", null ],
+    [ "swap", "classflatbuffers_1_1vector__downward.html#a0f613cf5b0523cc6bf5224e5f1c7411e", null ],
+    [ "swap_allocator", "classflatbuffers_1_1vector__downward.html#a0591728ad3c54a3a1cc3479765f1f271", null ]
 ];

@@ -11,6 +11,7 @@ var searchData=
   ['use_20in_20lua',['Use in Lua',['../flatbuffers_guide_use_lua.html',1,'']]],
   ['use_20in_20php',['Use in PHP',['../flatbuffers_guide_use_php.html',1,'']]],
   ['use_20in_20python',['Use in Python',['../flatbuffers_guide_use_python.html',1,'']]],
+  ['use_20in_20rust',['Use in Rust',['../flatbuffers_guide_use_rust.html',1,'']]],
   ['use_20in_20typescript',['Use in TypeScript',['../flatbuffers_guide_use_typescript.html',1,'']]],
   ['using_20the_20schema_20compiler',['Using the schema compiler',['../flatbuffers_guide_using_schema_compiler.html',1,'']]]
 ];

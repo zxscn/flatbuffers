@@ -107,6 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4cfc5582e28916e2faecf3357a6a07fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a4cfc5582e28916e2faecf3357a6a07fd">Add&lt; T &gt;</a> (T[] x)</td></tr>
 <tr class="memdesc:a4cfc5582e28916e2faecf3357a6a07fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an array of type T to the buffer (aligns the data and grows if necessary).  <a href="#a4cfc5582e28916e2faecf3357a6a07fd">More...</a><br /></td></tr>
 <tr class="separator:a4cfc5582e28916e2faecf3357a6a07fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6295f2b29654bc5c77b57839a5fb7fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a6295f2b29654bc5c77b57839a5fb7fd6">Add&lt; T &gt;</a> (Span&lt; T &gt; x)</td></tr>
+<tr class="memdesc:a6295f2b29654bc5c77b57839a5fb7fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a span of type T to the buffer (aligns the data and grows if necessary).  <a href="#a6295f2b29654bc5c77b57839a5fb7fd6">More...</a><br /></td></tr>
+<tr class="separator:a6295f2b29654bc5c77b57839a5fb7fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b66d785555d19cd0f141978eff78e2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a6b66d785555d19cd0f141978eff78e2e">AddBool</a> (bool x)</td></tr>
 <tr class="memdesc:a6b66d785555d19cd0f141978eff78e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <code>bool</code> to the buffer (aligns the data and grows if necessary).  <a href="#a6b66d785555d19cd0f141978eff78e2e">More...</a><br /></td></tr>
 <tr class="separator:a6b66d785555d19cd0f141978eff78e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +152,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b6e42519f278e4a060895633d048070"><td class="memItemLeft" align="right" valign="top">StringOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a3b6e42519f278e4a060895633d048070">CreateString</a> (string s)</td></tr>
 <tr class="memdesc:a3b6e42519f278e4a060895633d048070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode the string <code>s</code> in the buffer using UTF-8.  <a href="#a3b6e42519f278e4a060895633d048070">More...</a><br /></td></tr>
 <tr class="separator:a3b6e42519f278e4a060895633d048070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f78b830641b490bad220244928657df"><td class="memItemLeft" align="right" valign="top">StringOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a6f78b830641b490bad220244928657df">CreateUTF8String</a> (Span&lt; byte &gt; chars)</td></tr>
+<tr class="memdesc:a6f78b830641b490bad220244928657df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a string in the buffer from a Span containing a UTF8 string.  <a href="#a6f78b830641b490bad220244928657df">More...</a><br /></td></tr>
+<tr class="separator:a6f78b830641b490bad220244928657df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82219d659221dfc4c271399d9e56c47a"><td class="memItemLeft" align="right" valign="top">VectorOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a82219d659221dfc4c271399d9e56c47a">CreateVectorOfTables&lt; T &gt;</a> (Offset&lt; T &gt;[] offsets)</td></tr>
 <tr class="memdesc:a82219d659221dfc4c271399d9e56c47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vector of tables.  <a href="#a82219d659221dfc4c271399d9e56c47a">More...</a><br /></td></tr>
 <tr class="separator:a82219d659221dfc4c271399d9e56c47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,6 +176,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae24f93e3f9672846dd241d585d62c63d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#ae24f93e3f9672846dd241d585d62c63d">FlatBufferBuilder</a> (int initialSize)</td></tr>
 <tr class="memdesc:ae24f93e3f9672846dd241d585d62c63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a FlatBufferBuilder with a given initial size.  <a href="#ae24f93e3f9672846dd241d585d62c63d">More...</a><br /></td></tr>
 <tr class="separator:ae24f93e3f9672846dd241d585d62c63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3de6ba2bdf4664678ab9666cce6ea1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a4c3de6ba2bdf4664678ab9666cce6ea1">FlatBufferBuilder</a> (ByteBuffer buffer)</td></tr>
+<tr class="memdesc:a4c3de6ba2bdf4664678ab9666cce6ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a FlatBufferBuilder backed by the pased in ByteBuffer  <a href="#a4c3de6ba2bdf4664678ab9666cce6ea1">More...</a><br /></td></tr>
+<tr class="separator:a4c3de6ba2bdf4664678ab9666cce6ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfd2f4e19cf51f62290a0272683f23b2"><td class="memItemLeft" align="right" valign="top">byte []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#abfd2f4e19cf51f62290a0272683f23b2">SizedByteArray</a> ()</td></tr>
 <tr class="memdesc:abfd2f4e19cf51f62290a0272683f23b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility function to copy and return the ByteBuffer data as a <code>byte[]</code>.  <a href="#abfd2f4e19cf51f62290a0272683f23b2">More...</a><br /></td></tr>
 <tr class="separator:abfd2f4e19cf51f62290a0272683f23b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,7 +203,7 @@ Properties</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae24f93e3f9672846dd241d585d62c63d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae24f93e3f9672846dd241d585d62c63d">&#9670;&nbsp;</a></span>FlatBufferBuilder()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24f93e3f9672846dd241d585d62c63d">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,9 +236,43 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a4c3de6ba2bdf4664678ab9666cce6ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3de6ba2bdf4664678ab9666cce6ea1">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FlatBuffers.FlatBufferBuilder.FlatBufferBuilder </td>
+          <td>(</td>
+          <td class="paramtype">ByteBuffer&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a FlatBufferBuilder backed by the pased in ByteBuffer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The ByteBuffer to write to</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4cfc5582e28916e2faecf3357a6a07fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cfc5582e28916e2faecf3357a6a07fd">&#9670;&nbsp;</a></span>Add< T >()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfc5582e28916e2faecf3357a6a07fd">&#9670;&nbsp;</a></span>Add< T >() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,6 +305,54 @@ Properties</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The array to copy data from</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a6295f2b29654bc5c77b57839a5fb7fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6295f2b29654bc5c77b57839a5fb7fd6">&#9670;&nbsp;</a></span>Add< T >() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlatBuffers.FlatBufferBuilder.Add&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Span&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a span of type T to the buffer (aligns the data and grows if necessary). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the input data</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The span to copy data from</td></tr>
   </table>
   </dd>
 </dl>
@@ -739,6 +830,41 @@ Properties</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to encode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The offset in the buffer where the encoded string starts. </dd></dl>
+
+</div>
+</div>
+<a id="a6f78b830641b490bad220244928657df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f78b830641b490bad220244928657df">&#9670;&nbsp;</a></span>CreateUTF8String()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringOffset FlatBuffers.FlatBufferBuilder.CreateUTF8String </td>
+          <td>(</td>
+          <td class="paramtype">Span&lt; byte &gt;&#160;</td>
+          <td class="paramname"><em>chars</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a string in the buffer from a Span containing a UTF8 string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chars</td><td>the UTF8 string to add to the buffer</td></tr>
   </table>
   </dd>
 </dl>

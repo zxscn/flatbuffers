@@ -1,7 +1,9 @@
 var class_flat_buffers_1_1_flat_buffer_builder =
 [
     [ "FlatBufferBuilder", "class_flat_buffers_1_1_flat_buffer_builder.html#ae24f93e3f9672846dd241d585d62c63d", null ],
+    [ "FlatBufferBuilder", "class_flat_buffers_1_1_flat_buffer_builder.html#a4c3de6ba2bdf4664678ab9666cce6ea1", null ],
     [ "Add< T >", "class_flat_buffers_1_1_flat_buffer_builder.html#a4cfc5582e28916e2faecf3357a6a07fd", null ],
+    [ "Add< T >", "class_flat_buffers_1_1_flat_buffer_builder.html#a6295f2b29654bc5c77b57839a5fb7fd6", null ],
     [ "AddBool", "class_flat_buffers_1_1_flat_buffer_builder.html#a6b66d785555d19cd0f141978eff78e2e", null ],
     [ "AddByte", "class_flat_buffers_1_1_flat_buffer_builder.html#ac11b10888152d4f687e8ce4d60022254", null ],
     [ "AddDouble", "class_flat_buffers_1_1_flat_buffer_builder.html#aef6feaf282148043e6a1c9c1ba9e2094", null ],
@@ -16,6 +18,7 @@ var class_flat_buffers_1_1_flat_buffer_builder =
     [ "AddUshort", "class_flat_buffers_1_1_flat_buffer_builder.html#a52c19b3daa97b0272da0dd7121b2ff5f", null ],
     [ "Clear", "class_flat_buffers_1_1_flat_buffer_builder.html#a74ed0e43043c6e486dbe40b0d2ff63d6", null ],
     [ "CreateString", "class_flat_buffers_1_1_flat_buffer_builder.html#a3b6e42519f278e4a060895633d048070", null ],
+    [ "CreateUTF8String", "class_flat_buffers_1_1_flat_buffer_builder.html#a6f78b830641b490bad220244928657df", null ],
     [ "CreateVectorOfTables< T >", "class_flat_buffers_1_1_flat_buffer_builder.html#a82219d659221dfc4c271399d9e56c47a", null ],
     [ "EndVector", "class_flat_buffers_1_1_flat_buffer_builder.html#a7cacff748cbf996b52de2e31e731af41", null ],
     [ "Finish", "class_flat_buffers_1_1_flat_buffer_builder.html#a709d1ded4ffd922b61bc6f7f4a12fb97", null ],
