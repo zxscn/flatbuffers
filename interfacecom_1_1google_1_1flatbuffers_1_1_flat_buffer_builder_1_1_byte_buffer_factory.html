@@ -116,6 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0db9a9033d232d584443a433d7576f4a"><td class="memItemLeft" align="right" valign="top">ByteBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a0db9a9033d232d584443a433d7576f4a">newByteBuffer</a> (int capacity)</td></tr>
 <tr class="memdesc:a0db9a9033d232d584443a433d7576f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <code>ByteBuffer</code> with a given capacity.  <a href="#a0db9a9033d232d584443a433d7576f4a">More...</a><br /></td></tr>
 <tr class="separator:a0db9a9033d232d584443a433d7576f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc2f5b5077273da8180b63a5db24b8f"><td class="memItemLeft" align="right" valign="top">default void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a6cc2f5b5077273da8180b63a5db24b8f">releaseByteBuffer</a> (ByteBuffer bb)</td></tr>
+<tr class="memdesc:a6cc2f5b5077273da8180b63a5db24b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a ByteBuffer.  <a href="#a6cc2f5b5077273da8180b63a5db24b8f">More...</a><br /></td></tr>
+<tr class="separator:a6cc2f5b5077273da8180b63a5db24b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0db9a9033d232d584443a433d7576f4a"></a>
@@ -144,6 +147,41 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns the new <code>ByteBuffer</code> that was allocated. </dd></dl>
 
 <p>Implemented in <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html#aac26ff51a8162b37a072792ec9068644">com.google.flatbuffers.FlatBufferBuilder.HeapByteBufferFactory</a>.</p>
+
+</div>
+</div>
+<a id="a6cc2f5b5077273da8180b63a5db24b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cc2f5b5077273da8180b63a5db24b8f">&#9670;&nbsp;</a></span>releaseByteBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">default void com.google.flatbuffers.FlatBufferBuilder.ByteBufferFactory.releaseByteBuffer </td>
+          <td>(</td>
+          <td class="paramtype">ByteBuffer&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release a ByteBuffer. </p>
+<p>Current <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a> released any reference to it, so it is safe to dispose the buffer or return it to a pool. It is not guaranteed that the buffer has been created with <a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a0db9a9033d232d584443a433d7576f4a">newByteBuffer(int)</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bb</td><td>the buffer to release </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

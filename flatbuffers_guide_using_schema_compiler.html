@@ -131,6 +131,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><p class="startli"><code>--gen-mutable</code> : Generate additional non-const accessors for mutating FlatBuffers in-place.</p>
 <p class="startli"><code>--gen-object-api</code> : Generate an additional object-based API. This API is more convenient for object construction and mutation than the base API, at the cost of efficiency (object allocation). Recommended only to be used if other options are insufficient.</p>
 </li>
+<li><code>--gen-compare</code> : Generate operator== for object-based API types.</li>
 <li><code>--gen-onefile</code> : Generate single output file (useful for C#)</li>
 <li><code>--gen-all</code>: Generate not just code for the current schema files, but for all files it includes as well. If the language uses a single file for output (by default the case for C++ and JS), all code will end up in this one file.</li>
 <li><code>--no-js-exports</code> : Removes Node.js style export lines (useful for JS)</li>
