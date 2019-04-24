@@ -13,5 +13,8 @@ var searchData=
   ['use_20in_20python',['Use in Python',['../flatbuffers_guide_use_python.html',1,'']]],
   ['use_20in_20rust',['Use in Rust',['../flatbuffers_guide_use_rust.html',1,'']]],
   ['use_20in_20typescript',['Use in TypeScript',['../flatbuffers_guide_use_typescript.html',1,'']]],
-  ['using_20the_20schema_20compiler',['Using the schema compiler',['../flatbuffers_guide_using_schema_compiler.html',1,'']]]
+  ['using_20the_20schema_20compiler',['Using the schema compiler',['../flatbuffers_guide_using_schema_compiler.html',1,'']]],
+  ['utf8',['Utf8',['../classcom_1_1google_1_1flatbuffers_1_1_utf8.html',1,'com::google::flatbuffers']]],
+  ['utf8old',['Utf8Old',['../classcom_1_1google_1_1flatbuffers_1_1_utf8_old.html',1,'com::google::flatbuffers']]],
+  ['utf8safe',['Utf8Safe',['../classcom_1_1google_1_1flatbuffers_1_1_utf8_safe.html',1,'com::google::flatbuffers']]]
 ];

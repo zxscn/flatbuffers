@@ -108,8 +108,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>ByteBufferBackedInputStream</b></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that allows a user to create an InputStream from a ByteBuffer. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface that provides a user of the FlatBufferBuilder class the ability to specify the method in which the internal buffer gets allocated.  <a href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface that provides a user of the FlatBufferBuilder class the ability to specify the method in which the internal buffer gets allocated.  <a href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html">HeapByteBufferFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of the ByteBufferFactory interface that is used when one is not provided by the user.  <a href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html#details">More...</a><br /></td></tr>
@@ -175,9 +175,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ab179d8aa4c4b782d83b3817a6b08ee35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ab179d8aa4c4b782d83b3817a6b08ee35">finishSizePrefixed</a> (int root_table, String file_identifier)</td></tr>
 <tr class="memdesc:ab179d8aa4c4b782d83b3817a6b08ee35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize a buffer, pointing to the given <code>root_table</code>, with the size prefixed.  <a href="#ab179d8aa4c4b782d83b3817a6b08ee35">More...</a><br /></td></tr>
 <tr class="separator:ab179d8aa4c4b782d83b3817a6b08ee35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed1e475e75409625c8df85dc3d396e4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aed1e475e75409625c8df85dc3d396e4c">FlatBufferBuilder</a> (int initial_size, <a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory)</td></tr>
+<tr class="memitem:aed1e475e75409625c8df85dc3d396e4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aed1e475e75409625c8df85dc3d396e4c">FlatBufferBuilder</a> (int initial_size, <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory)</td></tr>
 <tr class="memdesc:aed1e475e75409625c8df85dc3d396e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start with a buffer of size <code>initial_size</code>, then grow as required.  <a href="#aed1e475e75409625c8df85dc3d396e4c">More...</a><br /></td></tr>
 <tr class="separator:aed1e475e75409625c8df85dc3d396e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a48a278d32fd3d4b7075e6a03f27ddf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a9a48a278d32fd3d4b7075e6a03f27ddf">FlatBufferBuilder</a> (int initial_size, <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory, ByteBuffer existing_bb, <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_utf8.html">Utf8</a> utf8)</td></tr>
+<tr class="memdesc:a9a48a278d32fd3d4b7075e6a03f27ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start with a buffer of size <code>initial_size</code>, then grow as required.  <a href="#a9a48a278d32fd3d4b7075e6a03f27ddf">More...</a><br /></td></tr>
+<tr class="separator:a9a48a278d32fd3d4b7075e6a03f27ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49427a6a8a6ec24f3c9cf812f30812d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#af49427a6a8a6ec24f3c9cf812f30812d">FlatBufferBuilder</a> (int initial_size)</td></tr>
 <tr class="memdesc:af49427a6a8a6ec24f3c9cf812f30812d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start with a buffer of size <code>initial_size</code>, then grow as required.  <a href="#af49427a6a8a6ec24f3c9cf812f30812d">More...</a><br /></td></tr>
 <tr class="separator:af49427a6a8a6ec24f3c9cf812f30812d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,7 +188,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ac8a8a558ce1d2531447a765636db2387">FlatBufferBuilder</a> ()</td></tr>
 <tr class="memdesc:ac8a8a558ce1d2531447a765636db2387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start with a buffer of 1KiB, then grow as required. <br /></td></tr>
 <tr class="separator:ac8a8a558ce1d2531447a765636db2387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3388cd4dc6e5233283fb4927b71a1c39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a3388cd4dc6e5233283fb4927b71a1c39">FlatBufferBuilder</a> (ByteBuffer existing_bb, <a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory)</td></tr>
+<tr class="memitem:a3388cd4dc6e5233283fb4927b71a1c39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a3388cd4dc6e5233283fb4927b71a1c39">FlatBufferBuilder</a> (ByteBuffer existing_bb, <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory)</td></tr>
 <tr class="memdesc:a3388cd4dc6e5233283fb4927b71a1c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative constructor allowing reuse of <a class="el" href="">ByteBuffer</a>s.  <a href="#a3388cd4dc6e5233283fb4927b71a1c39">More...</a><br /></td></tr>
 <tr class="separator:a3388cd4dc6e5233283fb4927b71a1c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ad1938219bcdbe99cc4b668f4c0f99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a61ad1938219bcdbe99cc4b668f4c0f99">FlatBufferBuilder</a> (ByteBuffer existing_bb)</td></tr>
@@ -194,7 +197,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aaadff3772bfdff756b4f269afae5ac69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aaadff3772bfdff756b4f269afae5ac69">forceDefaults</a> (boolean forceDefaults)</td></tr>
 <tr class="memdesc:aaadff3772bfdff756b4f269afae5ac69"><td class="mdescLeft">&#160;</td><td class="mdescRight">In order to save space, fields that are set to their default value don't get serialized into the buffer.  <a href="#aaadff3772bfdff756b4f269afae5ac69">More...</a><br /></td></tr>
 <tr class="separator:aaadff3772bfdff756b4f269afae5ac69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf671e70a4d30c85f37393c47a7a7dd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#adf671e70a4d30c85f37393c47a7a7dd1">init</a> (ByteBuffer existing_bb, <a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory)</td></tr>
+<tr class="memitem:adf671e70a4d30c85f37393c47a7a7dd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#adf671e70a4d30c85f37393c47a7a7dd1">init</a> (ByteBuffer existing_bb, <a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a> bb_factory)</td></tr>
 <tr class="memdesc:adf671e70a4d30c85f37393c47a7a7dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative initializer that allows reusing this object on an existing <code>ByteBuffer</code>.  <a href="#adf671e70a4d30c85f37393c47a7a7dd1">More...</a><br /></td></tr>
 <tr class="separator:adf671e70a4d30c85f37393c47a7a7dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3a3fbf645e64ce784a524f935a6e6f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ae3a3fbf645e64ce784a524f935a6e6f2">offset</a> ()</td></tr>
@@ -248,7 +251,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aed1e475e75409625c8df85dc3d396e4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed1e475e75409625c8df85dc3d396e4c">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1e475e75409625c8df85dc3d396e4c">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +268,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
           <td class="paramname"><em>bb_factory</em>&#160;</td>
         </tr>
         <tr>
@@ -292,8 +295,67 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9a48a278d32fd3d4b7075e6a03f27ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a48a278d32fd3d4b7075e6a03f27ddf">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.google.flatbuffers.FlatBufferBuilder.FlatBufferBuilder </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initial_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
+          <td class="paramname"><em>bb_factory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ByteBuffer&#160;</td>
+          <td class="paramname"><em>existing_bb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_utf8.html">Utf8</a>&#160;</td>
+          <td class="paramname"><em>utf8</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start with a buffer of size <code>initial_size</code>, then grow as required. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_size</td><td>The initial size of the internal buffer to use. </td></tr>
+    <tr><td class="paramname">bb_factory</td><td>The factory to be used for allocating the internal buffer </td></tr>
+    <tr><td class="paramname">existing_bb</td><td>The byte buffer to reuse. </td></tr>
+    <tr><td class="paramname">utf8</td><td>The Utf8 codec </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af49427a6a8a6ec24f3c9cf812f30812d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af49427a6a8a6ec24f3c9cf812f30812d">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af49427a6a8a6ec24f3c9cf812f30812d">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +389,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3388cd4dc6e5233283fb4927b71a1c39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3388cd4dc6e5233283fb4927b71a1c39">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3388cd4dc6e5233283fb4927b71a1c39">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,7 +406,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
           <td class="paramname"><em>bb_factory</em>&#160;</td>
         </tr>
         <tr>
@@ -373,7 +435,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a61ad1938219bcdbe99cc4b668f4c0f99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61ad1938219bcdbe99cc4b668f4c0f99">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ad1938219bcdbe99cc4b668f4c0f99">&#9670;&nbsp;</a></span>FlatBufferBuilder() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1213,7 +1275,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html">ByteBufferFactory</a>&#160;</td>
           <td class="paramname"><em>bb_factory</em>&#160;</td>
         </tr>
         <tr>

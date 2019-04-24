@@ -5,14 +5,16 @@ var group__flatbuffers__java__api =
       [ "removeSizePrefix", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util.html#a58d6c39c53a0c981a2f72a5eca7d992c", null ]
     ] ],
     [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html", [
-      [ "ByteBufferFactory", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html", [
-        [ "newByteBuffer", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a0db9a9033d232d584443a433d7576f4a", null ],
-        [ "releaseByteBuffer", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#a6cc2f5b5077273da8180b63a5db24b8f", null ]
+      [ "ByteBufferFactory", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html", [
+        [ "newByteBuffer", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#ad881983a2e1d78c7625c3628116c587f", null ],
+        [ "releaseByteBuffer", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html#ab732dc8eba204b490118c322873c2bca", null ]
       ] ],
       [ "HeapByteBufferFactory", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html", [
-        [ "newByteBuffer", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html#aac26ff51a8162b37a072792ec9068644", null ]
+        [ "newByteBuffer", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html#aac26ff51a8162b37a072792ec9068644", null ],
+        [ "INSTANCE", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html#a2d3f0962d4948ce8c97d710f0fa1962a", null ]
       ] ],
       [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aed1e475e75409625c8df85dc3d396e4c", null ],
+      [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a9a48a278d32fd3d4b7075e6a03f27ddf", null ],
       [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#af49427a6a8a6ec24f3c9cf812f30812d", null ],
       [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ac8a8a558ce1d2531447a765636db2387", null ],
       [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a3388cd4dc6e5233283fb4927b71a1c39", null ],

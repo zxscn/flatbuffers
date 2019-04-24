@@ -4,7 +4,10 @@ var annotated_dup =
       [ "google", null, [
         [ "flatbuffers", null, [
           [ "ByteBufferUtil", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util.html", "classcom_1_1google_1_1flatbuffers_1_1_byte_buffer_util" ],
-          [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder" ]
+          [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder" ],
+          [ "Utf8", "classcom_1_1google_1_1flatbuffers_1_1_utf8.html", "classcom_1_1google_1_1flatbuffers_1_1_utf8" ],
+          [ "Utf8Old", "classcom_1_1google_1_1flatbuffers_1_1_utf8_old.html", "classcom_1_1google_1_1flatbuffers_1_1_utf8_old" ],
+          [ "Utf8Safe", "classcom_1_1google_1_1flatbuffers_1_1_utf8_safe.html", "classcom_1_1google_1_1flatbuffers_1_1_utf8_safe" ]
         ] ]
       ] ]
     ] ],
@@ -21,7 +24,8 @@ var annotated_dup =
       [ "Vector", "classflatbuffers_1_1_vector.html", "classflatbuffers_1_1_vector" ],
       [ "vector_downward", "classflatbuffers_1_1vector__downward.html", "classflatbuffers_1_1vector__downward" ],
       [ "VectorIterator", "structflatbuffers_1_1_vector_iterator.html", "structflatbuffers_1_1_vector_iterator" ],
-      [ "VectorOfAny", "classflatbuffers_1_1_vector_of_any.html", "classflatbuffers_1_1_vector_of_any" ]
+      [ "VectorOfAny", "classflatbuffers_1_1_vector_of_any.html", "classflatbuffers_1_1_vector_of_any" ],
+      [ "VectorReverseIterator", "structflatbuffers_1_1_vector_reverse_iterator.html", "structflatbuffers_1_1_vector_reverse_iterator" ]
     ] ],
     [ "FlatBuffers", "namespace_flat_buffers.html", "namespace_flat_buffers" ],
     [ "Google", null, [

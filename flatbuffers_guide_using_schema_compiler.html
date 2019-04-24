@@ -123,27 +123,45 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>-I PATH</code> : when encountering <code>include</code> statements, attempt to load the files from this path. Paths will be tried in the order given, and if all fail (or none are specified) it will try to load relative to the path of the schema file being parsed.</li>
 <li><code>-M</code> : Print make rules for generated files.</li>
 <li><code>--strict-json</code> : Require &amp; generate strict JSON (field names are enclosed in quotes, no trailing commas in tables/vectors). By default, no quotes are required/generated, and trailing commas are allowed.</li>
+<li><code>--allow-non-utf8</code> : Pass non-UTF-8 input through parser and emit nonstandard  escapes in JSON. (Default is to raise parse error on non-UTF-8 input.)</li>
+<li><code>--natural-utf8</code> : Output strings with UTF-8 as human-readable strings. By default, UTF-8 characters are printed as  escapes."</li>
 <li><code>--defaults-json</code> : Output fields whose value is equal to the default value when writing JSON text.</li>
 <li><code>--no-prefix</code> : Don't prefix enum values in generated C++ by their enum type.</li>
 <li><code>--scoped-enums</code> : Use C++11 style scoped and strongly typed enums in generated C++. This also implies <code>--no-prefix</code>.</li>
 <li><code>--gen-includes</code> : (deprecated), this is the default behavior. If the original behavior is required (no include statements) use <code>--no-includes.</code></li>
 <li><code>--no-includes</code> : Don't generate include statements for included schemas the generated file depends on (C++).</li>
-<li><p class="startli"><code>--gen-mutable</code> : Generate additional non-const accessors for mutating FlatBuffers in-place.</p>
-<p class="startli"><code>--gen-object-api</code> : Generate an additional object-based API. This API is more convenient for object construction and mutation than the base API, at the cost of efficiency (object allocation). Recommended only to be used if other options are insufficient.</p>
-</li>
+<li><code>--gen-mutable</code> : Generate additional non-const accessors for mutating FlatBuffers in-place.</li>
+<li><code>--gen-onefile</code> : Generate single output file for C# and Go.</li>
+<li><code>--gen-name-strings</code> : Generate type name functions for C++.</li>
+<li><code>--gen-object-api</code> : Generate an additional object-based API. This API is more convenient for object construction and mutation than the base API, at the cost of efficiency (object allocation). Recommended only to be used if other options are insufficient.</li>
 <li><code>--gen-compare</code> : Generate operator== for object-based API types.</li>
-<li><code>--gen-onefile</code> : Generate single output file (useful for C#)</li>
-<li><code>--gen-all</code>: Generate not just code for the current schema files, but for all files it includes as well. If the language uses a single file for output (by default the case for C++ and JS), all code will end up in this one file.</li>
+<li><code>--gen-nullable</code> : Add Clang _Nullable for C++ pointer. or  for Java.</li>
+<li><code>--gen-generated</code> : Add  annotation for Java.</li>
+<li><code>--gen-all</code> : Generate not just code for the current schema files, but for all files it includes as well. If the language uses a single file for output (by default the case for C++ and JS), all code will end up in this one file.</li>
+<li><code>--cpp-ptr-type T</code> : Set object API pointer type (default std::unique_ptr)</li>
+<li><code>--cpp-str-type T</code> : Set object API string type (default std::string) T::c_str(), T::length() and T::empty() must be supported. The custom type also needs to be constructible from std::string (see the &ndash;cpp-str-flex-ctor option to change this behavior).</li>
+<li><code>--cpp-str-flex-ctor</code> : Don't construct custom string types by passing std::string from Flatbuffers, but (char* + length). This allows efficient construction of custom string types, including zero-copy construction.</li>
+<li><code>--object-prefix</code> : Customise class prefix for C++ object-based API.</li>
+<li><code>--object-suffix</code> : Customise class suffix for C++ object-based API.</li>
 <li><code>--no-js-exports</code> : Removes Node.js style export lines (useful for JS)</li>
 <li><code>--goog-js-export</code> : Uses goog.exportsSymbol and goog.exportsProperty instead of Node.js style exporting. Needed for compatibility with the Google closure compiler (useful for JS).</li>
 <li><code>--es6-js-export</code> : Generates ECMAScript v6 style export definitions instead of Node.js style exporting. Useful when integrating flatbuffers with modern Javascript projects.</li>
+<li><code>--go-namespace</code> : Generate the overrided namespace in Golang.</li>
+<li><code>--go-import</code> : Generate the overrided import for flatbuffers in Golang. (default is "github.com/google/flatbuffers/go").</li>
 <li><code>--raw-binary</code> : Allow binaries without a file_indentifier to be read. This may crash flatc given a mismatched schema.</li>
+<li><code>--size-prefixed</code> : Input binaries are size prefixed buffers.</li>
 <li><code>--proto</code>: Expect input files to be .proto files (protocol buffers). Output the corresponding .fbs file. Currently supports: <code>package</code>, <code>message</code>, <code>enum</code>, nested declarations, <code>import</code> (use <code>-I</code> for paths), <code>extend</code>, <code>oneof</code>, <code>group</code>. Does not support, but will skip without error: <code>option</code>, <code>service</code>, <code>extensions</code>, and most everything else.</li>
+<li><code>--oneof-union</code> : Translate .proto oneofs to flatbuffer unions.</li>
+<li><code>--grpc</code> : Generate GRPC interfaces for the specified languages.</li>
 <li><code>--schema</code>: Serialize schemas instead of JSON (use with -b). This will output a binary version of the specified schema that itself corresponds to the reflection/reflection.fbs schema. Loading this binary file is the basis for reflection functionality.</li>
 <li><code>--bfbs-comments</code>: Add doc comments to the binary schema files.</li>
 <li><code>--conform FILE</code> : Specify a schema the following schemas should be an evolution of. Gives errors if not. Useful to check if schema modifications don't break schema evolution rules.</li>
+<li><code>--conform-includes PATH</code> : Include path for the schema given with <code>--conform PATH</code>.</li>
 <li><code>--include-prefix PATH</code> : Prefix this path to any generated include statements.</li>
 <li><code>--keep-prefix</code> : Keep original prefix of schema include statement.</li>
+<li><code>--no-fb-impor</code> : Don't include flatbuffers import statement for TypeScript.</li>
+<li><code>--no-ts-reexpor</code> : Don't re-export imported dependencies for TypeScript.</li>
+<li><code>--short-name</code> : Use short function names for JS and TypeScript.</li>
 <li><code>--reflect-types</code> : Add minimal type reflection to code generation.</li>
 <li><code>--reflect-names</code> : Add minimal type/name reflection.</li>
 <li><code>--root-type T</code> : Select or override the default root_type.</li>

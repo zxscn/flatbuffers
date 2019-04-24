@@ -15,6 +15,7 @@ var menudata={children:[
 {text:"Use in Dart",url:"flatbuffers_guide_use_dart.html"},
 {text:"Use in Lua",url:"flatbuffers_guide_use_lua.html"},
 {text:"Use in Lobster",url:"flatbuffers_guide_use_lobster.html"},
+{text:"Use in Rust",url:"flatbuffers_guide_use_rust.html"},
 {text:"Schema-less version",url:"flexbuffers.html"},
 {text:"gRPC",url:"usergroup1.html",children:[
 {text:"Use in C++",url:"flatbuffers_grpc_guide_use_cpp.html"}]}]},

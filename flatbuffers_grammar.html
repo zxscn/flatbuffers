@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('flatbuffers_grammar.html','');});
 <p>namespace_decl = <code>namespace</code> ident ( <code>.</code> ident )* <code>;</code></p>
 <p>attribute_decl = <code>attribute</code> ident | <code>"&lt;/tt&gt;ident&lt;tt&gt;"</code> <code>;</code></p>
 <p>type_decl = ( <code>table</code> | <code>struct</code> ) ident metadata <code>{</code> field_decl+ <code>}</code></p>
-<p>enum_decl = ( <code>enum</code> ident [ <code>:</code> type ] | <code>union</code> ident ) metadata <code>{</code> commasep( enumval_decl ) <code>}</code></p>
+<p>enum_decl = ( <code>enum</code> ident <code>:</code> type | <code>union</code> ident ) metadata <code>{</code> commasep( enumval_decl ) <code>}</code></p>
 <p>root_decl = <code>root_type</code> ident <code>;</code></p>
 <p>field_decl = ident <code>:</code> type [ <code>=</code> scalar ] metadata <code>;</code></p>
 <p>rpc_decl = <code>rpc_service</code> ident <code>{</code> rpc_method+ <code>}</code></p>
@@ -111,10 +111,18 @@ $(document).ready(function(){initNavTree('flatbuffers_grammar.html','');});
 <p>commasep(x) = [ x ( <code>,</code> x )* ]</p>
 <p>file_extension_decl = <code>file_extension</code> string_constant <code>;</code></p>
 <p>file_identifier_decl = <code>file_identifier</code> string_constant <code>;</code></p>
-<p>integer_constant = <code>-?[0-9]+</code> | <code>true</code> | <code>false</code></p>
-<p>float_constant = <code>-?[0-9]+.[0-9]+((e|E)(+|-)?[0-9]+)?</code></p>
 <p>string_constant = <code>\".*?\\"</code></p>
-<p>ident = <code>[a-zA-Z_][a-zA-Z0-9_]*</code> </p>
+<p>ident = <code>[a-zA-Z_][a-zA-Z0-9_]*</code></p>
+<p><code>[:digit:]</code> = <code>[0-9]</code></p>
+<p><code>[:xdigit:]</code> = <code>[0-9a-fA-F]</code></p>
+<p>dec_integer_constant = <code>[-+]?[:digit:]+</code></p>
+<p>hex_integer_constant = <code>[-+]?0[xX][:xdigit:]+</code></p>
+<p>integer_constant = dec_integer_constant | hex_integer_constant</p>
+<p>dec_float_constant = <code>[-+]?(([.][:digit:]+)|([:digit:]+[.][:digit:]*)|([:digit:]+))([eE][-+]?[:digit:]+)?</code></p>
+<p>hex_float_constant = <code>[-+]?0[xX](([.][:xdigit:]+)|([:xdigit:]+[.][:xdigit:]*)|([:xdigit:]+))([pP][-+]?[:digit:]+)</code></p>
+<p>special_float_constant = <code>[-+]?(nan|inf|infinity)</code></p>
+<p>float_constant = decimal_float_constant | hexadecimal_float_constant | special_float_constant</p>
+<p>boolean_constant = <code>(true|false)</code> | (integer_constant ? <code>true</code> : <code>false</code>) </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Google Analytics -->

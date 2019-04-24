@@ -244,6 +244,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a110c2a3298aebef1a9dfa3c44ee84f42"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a110c2a3298aebef1a9dfa3c44ee84f42">CreateVectorOfStructs</a> (const std::vector&lt; T, Alloc &gt; &amp;v)</td></tr>
 <tr class="memdesc:a110c2a3298aebef1a9dfa3c44ee84f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a <code>std::vector</code> of structs into a FlatBuffer <code>vector</code>.  <a href="#a110c2a3298aebef1a9dfa3c44ee84f42">More...</a><br /></td></tr>
 <tr class="separator:a110c2a3298aebef1a9dfa3c44ee84f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4ce606347c10854ab05cf0ef7e8b2c"><td class="memTemplParams" colspan="2"><a id="a8f4ce606347c10854ab05cf0ef7e8b2c"></a>
+template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a8f4ce606347c10854ab05cf0ef7e8b2c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreateVectorScalarCast</b> (const U *v, size_t len)</td></tr>
+<tr class="separator:a8f4ce606347c10854ab05cf0ef7e8b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa905b29dce19a1795c7bce375cf29961"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#aa905b29dce19a1795c7bce375cf29961">DedupVtables</a> (bool dedup)</td></tr>
 <tr class="memdesc:aa905b29dce19a1795c7bce375cf29961"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default vtables are deduped in order to save space.  <a href="#aa905b29dce19a1795c7bce375cf29961">More...</a><br /></td></tr>
 <tr class="separator:aa905b29dce19a1795c7bce375cf29961"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,10 +262,13 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab0173786ea4ec3e4ae10555639b2996c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#ab0173786ea4ec3e4ae10555639b2996c">FlatBufferBuilder</a> (size_t initial_size=1024, <a class="el" href="classflatbuffers_1_1_allocator.html">Allocator</a> *allocator=nullptr, bool own_allocator=false, size_t buffer_minalign=AlignOf&lt; largest_scalar_t &gt;())</td></tr>
 <tr class="memdesc:ab0173786ea4ec3e4ae10555639b2996c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for FlatBufferBuilder.  <a href="#ab0173786ea4ec3e4ae10555639b2996c">More...</a><br /></td></tr>
 <tr class="separator:ab0173786ea4ec3e4ae10555639b2996c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86e1a348b7474fd5d239016ae97afc56"><td class="memItemLeft" align="right" valign="top"><a id="a86e1a348b7474fd5d239016ae97afc56"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a86e1a348b7474fd5d239016ae97afc56">FlatBufferBuilder</a> (<a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a> &amp;&amp;other)</td></tr>
-<tr class="memdesc:a86e1a348b7474fd5d239016ae97afc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor for FlatBufferBuilder. <br /></td></tr>
-<tr class="separator:a86e1a348b7474fd5d239016ae97afc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae91e78212d88465e992d750ea215d091"><td class="memItemLeft" align="right" valign="top"><a id="ae91e78212d88465e992d750ea215d091"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#ae91e78212d88465e992d750ea215d091">FlatBufferBuilder</a> (<a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a> &amp;&amp;other) <a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a>(<a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a> &amp;other)</td></tr>
+<tr class="memdesc:ae91e78212d88465e992d750ea215d091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor for FlatBufferBuilder. <br /></td></tr>
+<tr class="separator:ae91e78212d88465e992d750ea215d091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fcede355ddb6a347edf8b189ada2e42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a5fcede355ddb6a347edf8b189ada2e42">FLATBUFFERS_ATTRIBUTE</a> (deprecated(&quot;use <a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a5e2c3a1e47f0ab4a3a3f07a07a52fb45">Release</a>() instead&quot;)) DetachedBuffer ReleaseBufferPointer()</td></tr>
+<tr class="memdesc:a5fcede355ddb6a347edf8b189ada2e42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the released pointer to the serialized buffer.  <a href="#a5fcede355ddb6a347edf8b189ada2e42">More...</a><br /></td></tr>
+<tr class="separator:a5fcede355ddb6a347edf8b189ada2e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16a8fd46b34ad7727406c37b65b6b27a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a16a8fd46b34ad7727406c37b65b6b27a">ForceDefaults</a> (bool fd)</td></tr>
 <tr class="memdesc:a16a8fd46b34ad7727406c37b65b6b27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">In order to save space, fields that are set to their default value don't get serialized into the buffer.  <a href="#a16a8fd46b34ad7727406c37b65b6b27a">More...</a><br /></td></tr>
 <tr class="separator:a16a8fd46b34ad7727406c37b65b6b27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,9 +291,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5e2c3a1e47f0ab4a3a3f07a07a52fb45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classflatbuffers_1_1_detached_buffer.html">DetachedBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a5e2c3a1e47f0ab4a3a3f07a07a52fb45">Release</a> ()</td></tr>
 <tr class="memdesc:a5e2c3a1e47f0ab4a3a3f07a07a52fb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the released DetachedBuffer.  <a href="#a5e2c3a1e47f0ab4a3a3f07a07a52fb45">More...</a><br /></td></tr>
 <tr class="separator:a5e2c3a1e47f0ab4a3a3f07a07a52fb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e715d9019060b4b753c4e5228be56e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classflatbuffers_1_1_detached_buffer.html">DetachedBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a0e715d9019060b4b753c4e5228be56e8">ReleaseBufferPointer</a> ()</td></tr>
-<tr class="memdesc:a0e715d9019060b4b753c4e5228be56e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the released pointer to the serialized buffer.  <a href="#a0e715d9019060b4b753c4e5228be56e8">More...</a><br /></td></tr>
-<tr class="separator:a0e715d9019060b4b753c4e5228be56e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa090a68856f7b554cc7cac3c279fb416"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#aa090a68856f7b554cc7cac3c279fb416">ReleaseRaw</a> (size_t &amp;size, size_t &amp;offset)</td></tr>
 <tr class="memdesc:aa090a68856f7b554cc7cac3c279fb416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the released pointer to the serialized buffer.  <a href="#aa090a68856f7b554cc7cac3c279fb416">More...</a><br /></td></tr>
 <tr class="separator:aa090a68856f7b554cc7cac3c279fb416"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,6 +300,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 <tr class="memitem:a59f39e7a4d9b0b32a805c77bffed245a"><td class="memItemLeft" align="right" valign="top"><a id="a59f39e7a4d9b0b32a805c77bffed245a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Swap</b> (<a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a> &amp;other)</td></tr>
 <tr class="separator:a59f39e7a4d9b0b32a805c77bffed245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb6de9402ccd756acb912f839f5c112"><td class="memItemLeft" align="right" valign="top"><a id="acbb6de9402ccd756acb912f839f5c112"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SwapBufAllocator</b> (<a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html">FlatBufferBuilder</a> &amp;other)</td></tr>
+<tr class="separator:acbb6de9402ccd756acb912f839f5c112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -1918,6 +1925,36 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a5fcede355ddb6a347edf8b189ada2e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcede355ddb6a347edf8b189ada2e42">&#9670;&nbsp;</a></span>FLATBUFFERS_ATTRIBUTE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">flatbuffers::FlatBufferBuilder::FLATBUFFERS_ATTRIBUTE </td>
+          <td>(</td>
+          <td class="paramtype">deprecated(&quot;use <a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a5e2c3a1e47f0ab4a3a3f07a07a52fb45">Release</a>() instead&quot;)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the released pointer to the serialized buffer. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do NOT attempt to use this FlatBufferBuilder afterwards! </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>FlatBuffer</code> that owns the buffer and its allocator and behaves similar to a <code>unique_ptr</code> with a deleter. </dd></dl>
+
+</div>
+</div>
 <a id="a16a8fd46b34ad7727406c37b65b6b27a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16a8fd46b34ad7727406c37b65b6b27a">&#9670;&nbsp;</a></span>ForceDefaults()</h2>
 
@@ -2092,35 +2129,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a0e715d9019060b4b753c4e5228be56e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e715d9019060b4b753c4e5228be56e8">&#9670;&nbsp;</a></span>ReleaseBufferPointer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classflatbuffers_1_1_detached_buffer.html">DetachedBuffer</a> flatbuffers::FlatBufferBuilder::ReleaseBufferPointer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the released pointer to the serialized buffer. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Do NOT attempt to use this FlatBufferBuilder afterwards! </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>A <code>FlatBuffer</code> that owns the buffer and its allocator and behaves similar to a <code>unique_ptr</code> with a deleter. Deprecated: use Release() instead </dd></dl>
-
-</div>
-</div>
 <a id="aa090a68856f7b554cc7cac3c279fb416"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa090a68856f7b554cc7cac3c279fb416">&#9670;&nbsp;</a></span>ReleaseRaw()</h2>
 
@@ -2164,7 +2172,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A raw pointer to the start of the memory block containing the serialized <code>FlatBuffer</code>. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>If the allocator is owned, it gets deleted during this call. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>If the allocator is owned, it gets deleted when the destructor is called.. </dd></dl>
 
 </div>
 </div>

@@ -1,8 +1,9 @@
 var classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder =
 [
-    [ "ByteBufferFactory", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html", "interfacecom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory" ],
+    [ "ByteBufferFactory", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory.html", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_byte_buffer_factory" ],
     [ "HeapByteBufferFactory", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory.html", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder_1_1_heap_byte_buffer_factory" ],
     [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aed1e475e75409625c8df85dc3d396e4c", null ],
+    [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a9a48a278d32fd3d4b7075e6a03f27ddf", null ],
     [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#af49427a6a8a6ec24f3c9cf812f30812d", null ],
     [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ac8a8a558ce1d2531447a765636db2387", null ],
     [ "FlatBufferBuilder", "classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a3388cd4dc6e5233283fb4927b71a1c39", null ],
