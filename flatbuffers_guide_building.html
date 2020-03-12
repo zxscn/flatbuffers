@@ -99,6 +99,13 @@ cmake -G "Xcode" -DCMAKE_BUILD_TYPE=Release
 <p>Optionally, run the <code>flattests</code> executable from the root <code>flatbuffers/</code> directory to ensure everything is working correctly on your system. If this fails, please contact us!</p>
 <p>Building should also produce two sample executables, <code>flatsamplebinary</code> and <code>flatsampletext</code>, see the corresponding <code>.cpp</code> files in the <code>flatbuffers/samples</code> directory.</p>
 <p><em>Note that you MUST be in the root of the FlatBuffers distribution when you run 'flattests' or <code>flatsampletext</code>, or it will fail to load its files.</em></p>
+<h2>Building with VCPKG</h2>
+<p>You can download and install flatbuffers using the <a href="https://github.com/Microsoft/vcpkg/">vcpkg</a> dependency manager: </p><pre class="fragment">git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.sh
+./vcpkg integrate install
+./vcpkg install flatbuffers
+</pre><p>The flatbuffers port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please <a href="https://github.com/Microsoft/vcpkg">create an issue or pull request</a> on the vcpkg repository.</p>
 <h2>Building for Android</h2>
 <p>There is a <code>flatbuffers/android</code> directory that contains all you need to build the test executable on android (use the included <code>build_apk.sh</code> script, or use <code>ndk_build</code> / <code>adb</code> etc. as usual). Upon running, it will output to the log if tests succeeded or not.</p>
 <p>You may also run an android sample from inside the <code>flatbuffers/samples</code>, by running the <code>android_sample.sh</code> script. Optionally, you may go to the <code>flatbuffers/samples/android</code> folder and build the sample with the <code>build_apk.sh</code> script or <code>ndk_build</code> / <code>adb</code> etc.</p>

@@ -30,7 +30,7 @@ var group__flatbuffers__cpp__api =
       [ "CreateStruct", "classflatbuffers_1_1_flat_buffer_builder.html#a43f51ba9c8f4f24ea2247a3979d095b8", null ],
       [ "CreateUninitializedVector", "classflatbuffers_1_1_flat_buffer_builder.html#ac2b96292fa0fb1534fe7fd218a094d0c", null ],
       [ "CreateUninitializedVector", "classflatbuffers_1_1_flat_buffer_builder.html#a2305b63d367845972b51669dd995cc50", null ],
-      [ "CreateUninitializedVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#a7f9032692fea71e6b61e3f3de499f130", null ],
+      [ "CreateUninitializedVectorOfStructs", "classflatbuffers_1_1_flat_buffer_builder.html#a88b9be99b1abf1356857f91c24c5b22b", null ],
       [ "CreateVector", "classflatbuffers_1_1_flat_buffer_builder.html#a2cca5c89246a53e80e6ad9487f4c36f3", null ],
       [ "CreateVector", "classflatbuffers_1_1_flat_buffer_builder.html#a44960c5aca0227f960c96a7ed4b881b4", null ],
       [ "CreateVector", "classflatbuffers_1_1_flat_buffer_builder.html#af715dd24dd37cb0151dc7a980ad0f207", null ],

@@ -17,6 +17,7 @@ var class_flat_buffers_1_1_flat_buffer_builder =
     [ "AddUlong", "class_flat_buffers_1_1_flat_buffer_builder.html#aa9cc4371456b85d6393958ab56cbc515", null ],
     [ "AddUshort", "class_flat_buffers_1_1_flat_buffer_builder.html#a52c19b3daa97b0272da0dd7121b2ff5f", null ],
     [ "Clear", "class_flat_buffers_1_1_flat_buffer_builder.html#a74ed0e43043c6e486dbe40b0d2ff63d6", null ],
+    [ "CreateSharedString", "class_flat_buffers_1_1_flat_buffer_builder.html#a6b1376d2c28cf12e5ce69cdacd7637d6", null ],
     [ "CreateString", "class_flat_buffers_1_1_flat_buffer_builder.html#a3b6e42519f278e4a060895633d048070", null ],
     [ "CreateUTF8String", "class_flat_buffers_1_1_flat_buffer_builder.html#a6f78b830641b490bad220244928657df", null ],
     [ "CreateVectorOfTables< T >", "class_flat_buffers_1_1_flat_buffer_builder.html#a82219d659221dfc4c271399d9e56c47a", null ],

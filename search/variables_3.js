@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['createlong',['createLong',['../group__flatbuffers__javascript__api.html#ga8c5bb4a00c46fb6665787fa9ff52089b',1,'flatbuffers.js']]],
-  ['createstring',['createString',['../group__flatbuffers__javascript__api.html#gaa7a7bd67cb1c3190792d4b2b3e66376f',1,'flatbuffers.js']]]
+  ['kfileidentifierlength',['kFileIdentifierLength',['../classflatbuffers_1_1_flat_buffer_builder.html#af8c7583c92e1d1d6f438977da5158d19',1,'flatbuffers::FlatBufferBuilder']]]
 ];

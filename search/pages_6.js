@@ -5,7 +5,6 @@ var searchData=
   ['use_20in_20c_2b_2b',['Use in C++',['../flatbuffers_guide_use_cpp.html',1,'']]],
   ['use_20in_20dart',['Use in Dart',['../flatbuffers_guide_use_dart.html',1,'']]],
   ['use_20in_20go',['Use in Go',['../flatbuffers_guide_use_go.html',1,'']]],
-  ['use_20in_20java_2fc_23',['Use in Java/C#',['../flatbuffers_guide_use_java_c-sharp.html',1,'']]],
   ['use_20in_20javascript',['Use in JavaScript',['../flatbuffers_guide_use_javascript.html',1,'']]],
   ['use_20in_20lobster',['Use in Lobster',['../flatbuffers_guide_use_lobster.html',1,'']]],
   ['use_20in_20lua',['Use in Lua',['../flatbuffers_guide_use_lua.html',1,'']]],

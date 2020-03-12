@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <div class="title">Using the schema compiler </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Usage: </p><pre class="fragment">flatc [ GENERATOR OPTIONS ] [ -o PATH ] [ -I PATH ] [ -S ] FILES...
+<div class="textblock"><p>Usage: </p><pre class="fragment">flatc [ GENERATOR OPTIONS ] [ -o PATH ] [ -I PATH ] FILES...
       [ -- FILES...]
 </pre><p>The files are read and parsed in order, and can contain either schemas or data (see below). Data files are processed according to the definitions of the most recent schema specified.</p>
 <p><code>--</code> indicates that the following files are binary files in FlatBuffer format conforming to the schema indicated before it.</p>
@@ -100,6 +100,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <ul>
 <li><code>--cpp</code>, <code>-c</code> : Generate a C++ header for all definitions in this file (as <code>filename_generated.h</code>).</li>
 <li><code>--java</code>, <code>-j</code> : Generate Java code.</li>
+<li><code>--kotlin</code>, <code>-k</code> : Generate Kotlin code.</li>
 <li><code>--csharp</code>, <code>-n</code> : Generate C# code.</li>
 <li><code>--go</code>, <code>-g</code> : Generate Go code.</li>
 <li><code>--python</code>, <code>-p</code>: Generate Python code.</li>
@@ -111,6 +112,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--lua</code>: Generate Lua code.</li>
 <li><code>--lobster</code>: Generate Lobster code.</li>
 <li><code>--rust</code>, <code>-r</code> : Generate Rust code.</li>
+<li><code>--swift</code>: Generate Swift code.</li>
 </ul>
 <p>For any data input files:</p>
 <ul>
@@ -129,7 +131,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--no-prefix</code> : Don't prefix enum values in generated C++ by their enum type.</li>
 <li><code>--scoped-enums</code> : Use C++11 style scoped and strongly typed enums in generated C++. This also implies <code>--no-prefix</code>.</li>
 <li><code>--gen-includes</code> : (deprecated), this is the default behavior. If the original behavior is required (no include statements) use <code>--no-includes.</code></li>
-<li><code>--no-includes</code> : Don't generate include statements for included schemas the generated file depends on (C++).</li>
+<li><code>--no-includes</code> : Don't generate include statements for included schemas the generated file depends on (C++ / Python).</li>
 <li><code>--gen-mutable</code> : Generate additional non-const accessors for mutating FlatBuffers in-place.</li>
 <li><code>--gen-onefile</code> : Generate single output file for C# and Go.</li>
 <li><code>--gen-name-strings</code> : Generate type name functions for C++.</li>
@@ -138,9 +140,15 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--gen-nullable</code> : Add Clang _Nullable for C++ pointer. or  for Java.</li>
 <li><code>--gen-generated</code> : Add  annotation for Java.</li>
 <li><code>--gen-all</code> : Generate not just code for the current schema files, but for all files it includes as well. If the language uses a single file for output (by default the case for C++ and JS), all code will end up in this one file.</li>
+<li><code>--cpp-include</code> : Adds an include in generated file</li>
 <li><code>--cpp-ptr-type T</code> : Set object API pointer type (default std::unique_ptr)</li>
 <li><code>--cpp-str-type T</code> : Set object API string type (default std::string) T::c_str(), T::length() and T::empty() must be supported. The custom type also needs to be constructible from std::string (see the &ndash;cpp-str-flex-ctor option to change this behavior).</li>
 <li><code>--cpp-str-flex-ctor</code> : Don't construct custom string types by passing std::string from Flatbuffers, but (char* + length). This allows efficient construction of custom string types, including zero-copy construction.</li>
+<li><code>--cpp-std CPP_STD</code> : Generate a C++ code using features of selected C++ standard. Supported <code>CPP_STD</code> values:<ul>
+<li><code>c++0x</code> - generate code compatible with old compilers (VS2010).</li>
+<li><code>c++11</code> - use C++11 code generator (default);</li>
+</ul>
+</li>
 <li><code>--object-prefix</code> : Customise class prefix for C++ object-based API.</li>
 <li><code>--object-suffix</code> : Customise class suffix for C++ object-based API.</li>
 <li><code>--no-js-exports</code> : Removes Node.js style export lines (useful for JS)</li>
@@ -157,6 +165,8 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--bfbs-comments</code>: Add doc comments to the binary schema files.</li>
 <li><code>--conform FILE</code> : Specify a schema the following schemas should be an evolution of. Gives errors if not. Useful to check if schema modifications don't break schema evolution rules.</li>
 <li><code>--conform-includes PATH</code> : Include path for the schema given with <code>--conform PATH</code>.</li>
+<li><code>--filename-suffix SUFFIX</code> : The suffix appended to the generated file names. Default is '_generated'.</li>
+<li><code>--filename-ext EXTENSION</code> : The extension appended to the generated file names. Default is language-specific (e.g. "h" for C++). This should not be used when multiple languages are specified.</li>
 <li><code>--include-prefix PATH</code> : Prefix this path to any generated include statements.</li>
 <li><code>--keep-prefix</code> : Keep original prefix of schema include statement.</li>
 <li><code>--no-fb-impor</code> : Don't include flatbuffers import statement for TypeScript.</li>
@@ -167,6 +177,7 @@ $(document).ready(function(){initNavTree('flatbuffers_guide_using_schema_compile
 <li><code>--root-type T</code> : Select or override the default root_type.</li>
 <li><code>--force-defaults</code> : Emit default values in binary output from JSON.</li>
 <li><code>--force-empty</code> : When serializing from object API representation, force strings and vectors to empty rather than null.</li>
+<li><code>--force-empty-vectors</code> : When serializing from object API representation, force vectors to empty rather than null.</li>
 </ul>
 <p>NOTE: short-form options for generators are deprecated, use the long form whenever possible. </p>
 </div></div><!-- contents -->

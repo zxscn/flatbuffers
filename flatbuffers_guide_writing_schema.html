@@ -147,6 +147,17 @@ root_type Monster;
 <li>References to other tables or structs, enums or unions (see below).</li>
 </ul>
 <p>You can't change types of fields once they're used, with the exception of same-size data where a <code>reinterpret_cast</code> would give you a desirable result, e.g. you could change a <code>uint</code> to an <code>int</code> if no values in current data use the high bit yet.</p>
+<h3>Arrays</h3>
+<p>Arrays are a convenience short-hand for a fixed-length collection of elements. Arrays can be used to replace the following schema: </p><pre class="fragment">struct Vec3 {
+    x:float;
+    y:float;
+    z:float;
+}
+</pre><p>with the following schema: </p><pre class="fragment">struct Vec3 {
+    v:[float:3];
+}
+</pre><p>Both representations are binary equivalent.</p>
+<p>Arrays are currently only supported in a <code>struct</code>.</p>
 <h3>(Default) Values</h3>
 <p>Values are a sequence of digits. Values may be optionally followed by a decimal point (<code>.</code>) and more digits, for float constants, or optionally prefixed by a <code>-</code>. Floats may also be in scientific notation; optionally ending with an <code>e</code> or <code>E</code>, followed by a <code>+</code> or <code>-</code> and more digits.</p>
 <p>Only scalar values can have defaults, non-scalar (string/vector/table) fields default to <code>NULL</code> when not present.</p>
@@ -201,6 +212,7 @@ union Position {
 <li><code>deprecated</code> (on a field): do not generate accessors for this field anymore, code should stop using this data. Old data may still contain this field, but it won't be accessible anymore by newer code. Note that if you deprecate a field that was previous required, old code may fail to validate new data (when using the optional verifier).</li>
 <li><code>required</code> (on a non-scalar table field): this field must always be set. By default, all fields are optional, i.e. may be left out. This is desirable, as it helps with forwards/backwards compatibility, and flexibility of data structures. It is also a burden on the reading code, since for non-scalar fields it requires you to check against NULL and take appropriate action. By specifying this field, you force code that constructs FlatBuffers to ensure this field is initialized, so the reading code may access it directly, without checking for NULL. If the constructing code does not initialize this field, they will get an assert, and also the verifier will fail on buffers that have missing required fields. Note that if you add this attribute to an existing field, this will only be valid if existing data always contains this field / existing code always writes this field.</li>
 <li><code>force_align: size</code> (on a struct): force the alignment of this struct to be something higher than what it is naturally aligned to. Causes these structs to be aligned to that amount inside a buffer, IF that buffer is allocated with that alignment (which is not necessarily the case for buffers accessed directly inside a <code>FlatBufferBuilder</code>). Note: currently not guaranteed to have an effect when used with <code>--object-api</code>, since that may allocate objects at alignments less than what you specify with <code>force_align</code>.</li>
+<li><code>force_align: size</code> (on a vector): force the alignment of this vector to be something different than what the element size would normally dictate. Note: Now only work for generated C++ code.</li>
 <li><code>bit_flags</code> (on an unsigned enum): the values of this field indicate bits, meaning that any unsigned value N specified in the schema will end up representing 1&lt;&lt;N, or if you don't specify values at all, you'll get the sequence 1, 2, 4, 8, ...</li>
 <li><code>nested_flatbuffer: "table_name"</code> (on a field): this indicates that the field (which must be a vector of ubyte) contains flatbuffer data, for which the root type is given by <code>table_name</code>. The generated code will then produce a convenient accessor for the nested FlatBuffer.</li>
 <li><code>flexbuffer</code> (on a field): this indicates that the field (which must be a vector of ubyte) contains flexbuffer data. The generated code will then produce a convenient accessor for the FlexBuffer root.</li>
@@ -238,11 +250,16 @@ union Position {
 <ul>
 <li>An integer literal can have any number of leading zero <code>0</code> digits. Unlike C/C++, the parser ignores a leading zero, not interpreting it as the beginning of the octal number. The numbers <code>[081, -00094]</code> are equal to <code>[81, -94]</code> decimal integers.</li>
 <li>The parser accepts unsigned and signed hexadecimal integer numbers. For example: <code>[0x123, +0x45, -0x67]</code> are equal to <code>[291, 69, -103]</code> decimals.</li>
-<li><p class="startli">The format of float-point numbers is fully compatible with C/C++ format. If a modern C++ compiler is used the parser accepts hexadecimal and special float-point literals as well: <code>[-1.0, 2., .3e0, 3.e4, 0x21.34p-5, -inf, nan]</code>. The exponent suffix of hexadecimal float-point number is mandatory.</p>
-<p class="startli">Extended float-point support was tested with:</p><ul>
+<li><p class="startli">The format of float-point numbers is fully compatible with C/C++ format. If a modern C++ compiler is used the parser accepts hexadecimal and special floating-point literals as well: <code>[-1.0, 2., .3e0, 3.e4, 0x21.34p-5, -inf, nan]</code>.</p>
+<p class="startli">The following conventions for floating-point numbers are used:</p><ul>
+<li>The exponent suffix of hexadecimal floating-point number is mandatory.</li>
+<li>Parsed <code>NaN</code> converted to unsigned IEEE-754 <code>quiet-NaN</code> value.</li>
+</ul>
+<p class="startli">Extended floating-point support was tested with:</p><ul>
 <li>x64 Windows: <code>MSVC2015</code> and higher.</li>
 <li>x64 Linux: <code>LLVM 6.0</code>, <code>GCC 4.9</code> and higher.</li>
 </ul>
+<p class="startli">For details, see <a class="el" href="flatbuffers_guide_use_cpp.html">Use in C++</a> section.</p>
 </li>
 <li>For compatibility with a JSON lint tool all numeric literals of scalar fields can be wrapped to quoted string: <code>"1", "2.0", "0x48A", "0x0C.0Ep-1", "-inf", "true"</code>.</li>
 </ul>
@@ -280,7 +297,7 @@ union Position {
 <p>If we have the following original schema: </p><pre class="fragment">table { a:int; b:int; }
 </pre><p>And we extend it: </p><pre class="fragment">table { a:int; b:int; c:int; }
 </pre><p>This is ok. Code compiled with the old schema reading data generated with the new one will simply ignore the presence of the new field. Code compiled with the new schema reading old data will get the default value for <code>c</code> (which is 0 in this case, since it is not specified). </p><pre class="fragment">table { a:int (deprecated); b:int; }
-</pre><p>This is also ok. Code compiled with the old schema reading newer data will now always get the default value for <code>a</code> since it is not present. Code compiled with the new schema now cannot read nor write <code>a</code> anymore (any existing code that tries to do so will result in compile errors), but can still read old data (they will ignore the field). </p><pre class="fragment">table { c:int a:int; b:int; }
+</pre><p>This is also ok. Code compiled with the old schema reading newer data will now always get the default value for <code>a</code> since it is not present. Code compiled with the new schema now cannot read nor write <code>a</code> anymore (any existing code that tries to do so will result in compile errors), but can still read old data (they will ignore the field). </p><pre class="fragment">table { c:int; a:int; b:int; }
 </pre><p>This is NOT ok, as this makes the schemas incompatible. Old code reading newer data will interpret <code>c</code> as if it was <code>a</code>, and new code reading old data accessing <code>a</code> will instead receive <code>b</code>. </p><pre class="fragment">table { c:int (id: 2); a:int (id: 0); b:int (id: 1); }
 </pre><p>This is ok. If your intent was to order/group fields in a way that makes sense semantically, you can do so using explicit id assignment. Now we are compatible with the original schema, and the fields can be ordered in any way, as long as we keep the sequence of ids. </p><pre class="fragment">table { b:int; }
 </pre><p>NOT ok. We can only remove a field by deprecation, regardless of wether we use explicit ids or not. </p><pre class="fragment">table { a:uint; b:uint; }

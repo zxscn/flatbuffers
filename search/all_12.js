@@ -1,20 +1,13 @@
 var searchData=
 [
-  ['use_20in_20c_2b_2b',['Use in C++',['../flatbuffers_grpc_guide_use_cpp.html',1,'']]],
-  ['use_20in_20c',['Use in C',['../flatbuffers_guide_use_c.html',1,'']]],
-  ['use_20in_20c_2b_2b',['Use in C++',['../flatbuffers_guide_use_cpp.html',1,'']]],
-  ['use_20in_20dart',['Use in Dart',['../flatbuffers_guide_use_dart.html',1,'']]],
-  ['use_20in_20go',['Use in Go',['../flatbuffers_guide_use_go.html',1,'']]],
-  ['use_20in_20java_2fc_23',['Use in Java/C#',['../flatbuffers_guide_use_java_c-sharp.html',1,'']]],
-  ['use_20in_20javascript',['Use in JavaScript',['../flatbuffers_guide_use_javascript.html',1,'']]],
-  ['use_20in_20lobster',['Use in Lobster',['../flatbuffers_guide_use_lobster.html',1,'']]],
-  ['use_20in_20lua',['Use in Lua',['../flatbuffers_guide_use_lua.html',1,'']]],
-  ['use_20in_20php',['Use in PHP',['../flatbuffers_guide_use_php.html',1,'']]],
-  ['use_20in_20python',['Use in Python',['../flatbuffers_guide_use_python.html',1,'']]],
-  ['use_20in_20rust',['Use in Rust',['../flatbuffers_guide_use_rust.html',1,'']]],
-  ['use_20in_20typescript',['Use in TypeScript',['../flatbuffers_guide_use_typescript.html',1,'']]],
-  ['using_20the_20schema_20compiler',['Using the schema compiler',['../flatbuffers_guide_using_schema_compiler.html',1,'']]],
-  ['utf8',['Utf8',['../classcom_1_1google_1_1flatbuffers_1_1_utf8.html',1,'com::google::flatbuffers']]],
-  ['utf8old',['Utf8Old',['../classcom_1_1google_1_1flatbuffers_1_1_utf8_old.html',1,'com::google::flatbuffers']]],
-  ['utf8safe',['Utf8Safe',['../classcom_1_1google_1_1flatbuffers_1_1_utf8_safe.html',1,'com::google::flatbuffers']]]
+  ['setdefault',['setDefault',['../classcom_1_1google_1_1flatbuffers_1_1_utf8.html#a59a8ffdd2205343d3c64d0b764eeab17',1,'com::google::flatbuffers::Utf8']]],
+  ['shortvector',['ShortVector',['../classcom_1_1google_1_1flatbuffers_1_1_short_vector.html',1,'com::google::flatbuffers']]],
+  ['size',['size',['../classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_key_vector.html#a6c07c1e2cb7031cffb971c1e2f695bee',1,'com::google::flatbuffers::FlexBuffers::KeyVector']]],
+  ['sizedbytearray',['SizedByteArray',['../class_flat_buffers_1_1_flat_buffer_builder.html#abfd2f4e19cf51f62290a0272683f23b2',1,'FlatBuffers.FlatBufferBuilder.SizedByteArray()'],['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#a81a5c2d7ab36e913cc16d9499aabe078',1,'com.google.flatbuffers.FlatBufferBuilder.sizedByteArray(int start, int length)'],['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#aa636cf5190524c43212b6d96239d7672',1,'com.google.flatbuffers.FlatBufferBuilder.sizedByteArray()'],['../class_google_1_1_flat_buffers_1_1_flatbuffer_builder.html#a967e7dc8f051d4e73b3155e3b281d7b4',1,'Google\FlatBuffers\FlatbufferBuilder\sizedByteArray()']]],
+  ['sizedinputstream',['sizedInputStream',['../classcom_1_1google_1_1flatbuffers_1_1_flat_buffer_builder.html#ab8fc86fe501b182b4a1a50fcdbcb3e6b',1,'com::google::flatbuffers::FlatBufferBuilder']]],
+  ['startmap',['startMap',['../classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_builder.html#aa22c107245be88bcf973fa180169fa53',1,'com::google::flatbuffers::FlexBuffersBuilder']]],
+  ['startvector',['startVector',['../classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_builder.html#a8f2b9e6c23717899cfc6f1e2b66a1baa',1,'com::google::flatbuffers::FlexBuffersBuilder']]],
+  ['string',['String',['../structflatbuffers_1_1_string.html',1,'flatbuffers']]],
+  ['stringoffsetcompare',['StringOffsetCompare',['../structflatbuffers_1_1_flat_buffer_builder_1_1_string_offset_compare.html',1,'flatbuffers::FlatBufferBuilder']]],
+  ['stringvector',['StringVector',['../classcom_1_1google_1_1flatbuffers_1_1_string_vector.html',1,'com::google::flatbuffers']]]
 ];

@@ -149,6 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a74ed0e43043c6e486dbe40b0d2ff63d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a74ed0e43043c6e486dbe40b0d2ff63d6">Clear</a> ()</td></tr>
 <tr class="memdesc:a74ed0e43043c6e486dbe40b0d2ff63d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the FlatBufferBuilder by purging all data that it holds.  <a href="#a74ed0e43043c6e486dbe40b0d2ff63d6">More...</a><br /></td></tr>
 <tr class="separator:a74ed0e43043c6e486dbe40b0d2ff63d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1376d2c28cf12e5ce69cdacd7637d6"><td class="memItemLeft" align="right" valign="top">StringOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a6b1376d2c28cf12e5ce69cdacd7637d6">CreateSharedString</a> (string s)</td></tr>
+<tr class="memdesc:a6b1376d2c28cf12e5ce69cdacd7637d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a string in the buffer, which can contain any binary data.  <a href="#a6b1376d2c28cf12e5ce69cdacd7637d6">More...</a><br /></td></tr>
+<tr class="separator:a6b1376d2c28cf12e5ce69cdacd7637d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b6e42519f278e4a060895633d048070"><td class="memItemLeft" align="right" valign="top">StringOffset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flat_buffers_1_1_flat_buffer_builder.html#a3b6e42519f278e4a060895633d048070">CreateString</a> (string s)</td></tr>
 <tr class="memdesc:a3b6e42519f278e4a060895633d048070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode the string <code>s</code> in the buffer using UTF-8.  <a href="#a3b6e42519f278e4a060895633d048070">More...</a><br /></td></tr>
 <tr class="separator:a3b6e42519f278e4a060895633d048070"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -799,6 +802,42 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reset the FlatBufferBuilder by purging all data that it holds. </p>
+
+</div>
+</div>
+<a id="a6b1376d2c28cf12e5ce69cdacd7637d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b1376d2c28cf12e5ce69cdacd7637d6">&#9670;&nbsp;</a></span>CreateSharedString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringOffset FlatBuffers.FlatBufferBuilder.CreateSharedString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Store a string in the buffer, which can contain any binary data. </p>
+<p>If a string with this exact contents has already been serialized before, instead simply returns the offset of the existing string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>The string to encode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The offset in the buffer where the encoded string starts. </dd></dl>
 
 </div>
 </div>

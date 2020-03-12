@@ -166,10 +166,10 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2305b63d367845972b51669dd995cc50"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a2305b63d367845972b51669dd995cc50">CreateUninitializedVector</a> (size_t len, T **buf)</td></tr>
 <tr class="memdesc:a2305b63d367845972b51669dd995cc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized version of <code>CreateVector</code> for non-copying use cases.  <a href="#a2305b63d367845972b51669dd995cc50">More...</a><br /></td></tr>
 <tr class="separator:a2305b63d367845972b51669dd995cc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f9032692fea71e6b61e3f3de499f130"><td class="memTemplParams" colspan="2"><a id="a7f9032692fea71e6b61e3f3de499f130"></a>
+<tr class="memitem:a88b9be99b1abf1356857f91c24c5b22b"><td class="memTemplParams" colspan="2"><a id="a88b9be99b1abf1356857f91c24c5b22b"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7f9032692fea71e6b61e3f3de499f130"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreateUninitializedVectorOfStructs</b> (size_t len, T **buf)</td></tr>
-<tr class="separator:a7f9032692fea71e6b61e3f3de499f130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b9be99b1abf1356857f91c24c5b22b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; const T * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreateUninitializedVectorOfStructs</b> (size_t len, T **buf)</td></tr>
+<tr class="separator:a88b9be99b1abf1356857f91c24c5b22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cca5c89246a53e80e6ad9487f4c36f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2cca5c89246a53e80e6ad9487f4c36f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structflatbuffers_1_1_offset.html">Offset</a>&lt; <a class="el" href="classflatbuffers_1_1_vector.html">Vector</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classflatbuffers_1_1_flat_buffer_builder.html#a2cca5c89246a53e80e6ad9487f4c36f3">CreateVector</a> (const T *v, size_t len)</td></tr>
 <tr class="memdesc:a2cca5c89246a53e80e6ad9487f4c36f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize an array into a FlatBuffer <code>vector</code>.  <a href="#a2cca5c89246a53e80e6ad9487f4c36f3">More...</a><br /></td></tr>
@@ -1262,10 +1262,11 @@ template&lt;typename T , typename S &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A const reference to the <code>std::vector</code> of structs to serialize into the buffer as a <code>vector</code>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a typed <code>Offset</code> into the serialized data indicating where the vector is stored. </dd></dl>
 
 </div>
 </div>
@@ -1305,10 +1306,11 @@ template&lt;typename T , typename S &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A const reference to the <code>std::vector</code> of structs to serialize into the buffer as a <code>vector</code>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a typed <code>Offset</code> into the serialized data indicating where the vector is stored. </dd></dl>
 
 </div>
 </div>
@@ -1402,10 +1404,11 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A const reference to the <code>std::vector</code> of structs to serialize into the buffer as a <code>vector</code>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a typed <code>Offset</code> into the serialized data indicating where the vector is stored. </dd></dl>
 
 </div>
 </div>
@@ -1694,7 +1697,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>A function that takes the current iteration 0..vector_size-1 and a pointer to the struct that must be filled. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filler</td><td>A function that takes the current iteration 0..vector_size-1 and a pointer to the struct that must be filled. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1797,10 +1800,11 @@ template&lt;typename T , typename Alloc &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A const reference to the <code>std::vector</code> of structs to serialize into the buffer as a <code>vector</code>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a typed <code>Offset</code> into the serialized data indicating where the vector is stored. </dd></dl>
 
 </div>
 </div>
@@ -1831,7 +1835,7 @@ template&lt;typename T , typename Alloc &gt; </div>
 <p>By default vtables are deduped in order to save space. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bool</td><td>dedup When set to <code>true</code>, dedup vtables. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dedup</td><td>When set to <code>true</code>, dedup vtables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1982,7 +1986,7 @@ template&lt;typename T &gt; </div>
 <p>In order to save space, fields that are set to their default value don't get serialized into the buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bool</td><td>fd When set to <code>true</code>, always serializes default values that are set. Optional fields which are not set explicitly, will still not be serialized. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>When set to <code>true</code>, always serializes default values that are set. Optional fields which are not set explicitly, will still not be serialized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2166,8 +2170,8 @@ template&lt;typename T &gt; </div>
 <p>Get the released pointer to the serialized buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>size of the memory block containing the serialized <code>FlatBuffer</code>. </td></tr>
-    <tr><td class="paramname">The</td><td>offset from the released pointer where the finished <code>FlatBuffer</code> starts. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the memory block containing the serialized <code>FlatBuffer</code>. </td></tr>
+    <tr><td class="paramname">offset</td><td>The offset from the released pointer where the finished <code>FlatBuffer</code> starts. </td></tr>
   </table>
   </dd>
 </dl>

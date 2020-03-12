@@ -10,7 +10,8 @@ var NAVTREE =
       [ "Use in C++", "flatbuffers_guide_use_cpp.html", null ],
       [ "Use in C", "flatbuffers_guide_use_c.html", null ],
       [ "Use in Go", "flatbuffers_guide_use_go.html", null ],
-      [ "Use in Java/C#", "flatbuffers_guide_use_java_c-sharp.html", null ],
+      [ "Use in Java", "@ref flatbuffers_guide_use_java", null ],
+      [ "Use in C#", "@ref flatbuffers_guide_use_c-sharp", null ],
       [ "Use in JavaScript", "flatbuffers_guide_use_javascript.html", null ],
       [ "Use in TypeScript", "flatbuffers_guide_use_typescript.html", null ],
       [ "Use in PHP", "flatbuffers_guide_use_php.html", null ],
@@ -19,7 +20,7 @@ var NAVTREE =
       [ "Use in Lua", "flatbuffers_guide_use_lua.html", null ],
       [ "Use in Lobster", "flatbuffers_guide_use_lobster.html", null ],
       [ "Use in Rust", "flatbuffers_guide_use_rust.html", null ],
-      [ "Schema-less version", "flexbuffers.html", null ],
+      [ "FlexBuffers (Schema-less version)", "flexbuffers.html", null ],
       [ "gRPC", "usergroup1.html", [
         [ "Use in C++", "flatbuffers_grpc_guide_use_cpp.html", null ]
       ] ]
@@ -36,8 +37,8 @@ var NAVTREE =
         [ "Class Index", "classes.html", null ],
         [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
         [ "Class Members", "functions.html", [
-          [ "All", "functions.html", null ],
-          [ "Functions", "functions_func.html", null ],
+          [ "All", "functions.html", "functions_dup" ],
+          [ "Functions", "functions_func.html", "functions_func" ],
           [ "Variables", "functions_vars.html", null ],
           [ "Properties", "functions_prop.html", null ]
         ] ]
@@ -50,6 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
+"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a73355c070fbb12912f016f8ce543d30c",
 "classflatbuffers_1_1_vector.html#aa754e17cb08c36fb8442784c6bc442da"
 ];
 
