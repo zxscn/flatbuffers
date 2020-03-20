@@ -10,8 +10,8 @@ var NAVTREE =
       [ "Use in C++", "flatbuffers_guide_use_cpp.html", null ],
       [ "Use in C", "flatbuffers_guide_use_c.html", null ],
       [ "Use in Go", "flatbuffers_guide_use_go.html", null ],
-      [ "Use in Java", "@ref flatbuffers_guide_use_java", null ],
-      [ "Use in C#", "@ref flatbuffers_guide_use_c-sharp", null ],
+      [ "Use in Java", "flatbuffers_guide_use_java.html", null ],
+      [ "Use in C#", "flatbuffers_guide_use_c-sharp.html", null ],
       [ "Use in JavaScript", "flatbuffers_guide_use_javascript.html", null ],
       [ "Use in TypeScript", "flatbuffers_guide_use_typescript.html", null ],
       [ "Use in PHP", "flatbuffers_guide_use_php.html", null ],
@@ -20,6 +20,7 @@ var NAVTREE =
       [ "Use in Lua", "flatbuffers_guide_use_lua.html", null ],
       [ "Use in Lobster", "flatbuffers_guide_use_lobster.html", null ],
       [ "Use in Rust", "flatbuffers_guide_use_rust.html", null ],
+      [ "Use in Swift", "flatbuffers_guide_use_swift.html", null ],
       [ "FlexBuffers (Schema-less version)", "flexbuffers.html", null ],
       [ "gRPC", "usergroup1.html", [
         [ "Use in C++", "flatbuffers_grpc_guide_use_cpp.html", null ]
@@ -51,8 +52,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a73355c070fbb12912f016f8ce543d30c",
-"classflatbuffers_1_1_vector.html#aa754e17cb08c36fb8442784c6bc442da"
+"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a7bc5bc1def05910a487f71f73b11ae07",
+"classflatbuffers_1_1_vector.html#abf919e27aa3e9b60ac30386972c94e65"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

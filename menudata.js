@@ -7,8 +7,8 @@ var menudata={children:[
 {text:"Use in C++",url:"flatbuffers_guide_use_cpp.html"},
 {text:"Use in C",url:"flatbuffers_guide_use_c.html"},
 {text:"Use in Go",url:"flatbuffers_guide_use_go.html"},
-{text:"Use in Java",url:"@ref flatbuffers_guide_use_java"},
-{text:"Use in C#",url:"@ref flatbuffers_guide_use_c-sharp"},
+{text:"Use in Java",url:"flatbuffers_guide_use_java.html"},
+{text:"Use in C#",url:"flatbuffers_guide_use_c-sharp.html"},
 {text:"Use in JavaScript",url:"flatbuffers_guide_use_javascript.html"},
 {text:"Use in TypeScript",url:"flatbuffers_guide_use_typescript.html"},
 {text:"Use in PHP",url:"flatbuffers_guide_use_php.html"},
@@ -17,6 +17,7 @@ var menudata={children:[
 {text:"Use in Lua",url:"flatbuffers_guide_use_lua.html"},
 {text:"Use in Lobster",url:"flatbuffers_guide_use_lobster.html"},
 {text:"Use in Rust",url:"flatbuffers_guide_use_rust.html"},
+{text:"Use in Swift",url:"flatbuffers_guide_use_swift.html"},
 {text:"FlexBuffers (Schema-less version)",url:"flexbuffers.html"},
 {text:"gRPC",url:"usergroup1.html",children:[
 {text:"Use in C++",url:"flatbuffers_grpc_guide_use_cpp.html"}]}]},

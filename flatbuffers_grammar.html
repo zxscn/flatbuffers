@@ -104,8 +104,8 @@ $(document).ready(function(){initNavTree('flatbuffers_grammar.html','');});
 <p>type = <code>bool</code> | <code>byte</code> | <code>ubyte</code> | <code>short</code> | <code>ushort</code> | <code>int</code> | <code>uint</code> | <code>float</code> | <code>long</code> | <code>ulong</code> | <code>double</code> | <code>int8</code> | <code>uint8</code> | <code>int16</code> | <code>uint16</code> | <code>int32</code> | <code>uint32</code>| <code>int64</code> | <code>uint64</code> | <code>float32</code> | <code>float64</code> | <code>string</code> | <code>[</code> type <code>]</code> | ident</p>
 <p>enumval_decl = ident [ <code>=</code> integer_constant ]</p>
 <p>metadata = [ <code>(</code> commasep( ident [ <code>:</code> single_value ] ) <code>)</code> ]</p>
-<p>scalar = integer_constant | float_constant</p>
-<p>object = { commasep( ident <code>:</code> value ) }</p>
+<p>scalar = boolean_constant | integer_constant | float_constant</p>
+<p>object = <code>{</code> commasep( ident <code>:</code> value ) <code>}</code></p>
 <p>single_value = scalar | string_constant</p>
 <p>value = single_value | object | <code>[</code> commasep( value ) <code>]</code></p>
 <p>commasep(x) = [ x ( <code>,</code> x )* ]</p>
@@ -121,8 +121,8 @@ $(document).ready(function(){initNavTree('flatbuffers_grammar.html','');});
 <p>dec_float_constant = <code>[-+]?(([.][:digit:]+)|([:digit:]+[.][:digit:]*)|([:digit:]+))([eE][-+]?[:digit:]+)?</code></p>
 <p>hex_float_constant = <code>[-+]?0[xX](([.][:xdigit:]+)|([:xdigit:]+[.][:xdigit:]*)|([:xdigit:]+))([pP][-+]?[:digit:]+)</code></p>
 <p>special_float_constant = <code>[-+]?(nan|inf|infinity)</code></p>
-<p>float_constant = decimal_float_constant | hexadecimal_float_constant | special_float_constant</p>
-<p>boolean_constant = <code>(true|false)</code> | (integer_constant ? <code>true</code> : <code>false</code>) </p>
+<p>float_constant = dec_integer_constant | hex_integer_constant | special_float_constant</p>
+<p>boolean_constant = <code>true</code> | <code>false</code> </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Google Analytics -->

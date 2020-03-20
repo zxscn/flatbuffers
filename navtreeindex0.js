@@ -6,8 +6,6 @@ var NAVTREEINDEX0 =
 ".html":[7,1,0,3],
 ".html":[7,1,0,3,0],
 ".html":[7,1,0,1],
-"@ref flatbuffers_guide_use_c-sharp":[1,8],
-"@ref flatbuffers_guide_use_java":[1,7],
 "annotated.html":[7,1,0],
 "class_flat_buffers_1_1_flat_buffer_builder.html":[7,1,0,2,0],
 "class_flat_buffers_1_1_flat_buffer_builder.html#a0b2addc87bde29213424a187b7b08707":[7,1,0,2,0,11],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a56f68f9011ac1d8ba3e59acdbee9407a":[7,0,1,2,5,10],
 "classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a5d0eb9fdcce3680d939ebfbc859ca286":[7,0,1,2,5,19],
 "classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a6599ee9390ccb44e5be8a0798c1f1b70":[7,0,1,2,5,12],
-"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a6ca5bef9eb0589c9d3758ccdeedd42a8":[7,0,1,2,5,2]
+"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a6ca5bef9eb0589c9d3758ccdeedd42a8":[7,0,1,2,5,2],
+"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a73355c070fbb12912f016f8ce543d30c":[7,0,1,2,5,11],
+"classcom_1_1google_1_1flatbuffers_1_1_flex_buffers_1_1_reference.html#a7514601001d371504968558a5f28004e":[7,0,1,2,5,18]
 };
