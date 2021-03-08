@@ -79,7 +79,6 @@ cc_library(
     ],
     hdrs = [
         "python_generator.h",
-        "python_private_generator.h",
         ":common_headers",
     ],
     include_prefix = "src/compiler",
@@ -97,6 +96,22 @@ cc_library(
     ],
     hdrs = [
         "swift_generator.h",
+        ":common_headers",
+    ],
+    include_prefix = "src/compiler",
+    strip_include_prefix = "/grpc/src/compiler",
+    deps = [
+        "//:flatbuffers",
+    ],
+)
+
+cc_library(
+    name = "ts_generator",
+    srcs = [
+        "ts_generator.cc",
+    ],
+    hdrs = [
+        "ts_generator.h",
         ":common_headers",
     ],
     include_prefix = "src/compiler",
